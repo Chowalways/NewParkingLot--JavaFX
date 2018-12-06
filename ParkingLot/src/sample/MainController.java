@@ -1,10 +1,15 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 public class MainController {
+    @FXML
+    Label lblTime;
 
     public void up(ActionEvent event) {
+        lblTime.setText("Hello, World.");
         System.out.println("Up");
     }
 

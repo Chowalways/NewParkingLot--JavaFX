@@ -6,8 +6,6 @@ import javafx.event.EventType;
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.layout.Region;
 
 public class GameObject {
     private Node view;
@@ -120,6 +118,9 @@ public class GameObject {
     }
 
     public boolean isColliding(GameObject other) {
+        if(other == this) {
+            return false;
+        }
         return getView().getBoundsInParent().intersects(other.getView().getBoundsInParent());
     }
 }

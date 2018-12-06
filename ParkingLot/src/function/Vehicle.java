@@ -1,0 +1,14 @@
+package function;
+
+public class Vehicle extends BasicObj {
+
+    private int wheelNo;
+    private double weight;
+
+    public Vehicle(CheckInTicket ticket, String id, int wheelNo, double weight) {
+        super(ticket, id);
+        this.wheelNo = wheelNo;
+        this.weight = weight;
+    }
+
+}

@@ -4,12 +4,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main extends Application {
+
+    GameScene gameScene;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -18,6 +18,9 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
+        gameScene = new GameScene((Pane) root.lookup("#gamePane"));
+        gameScene.setControl(primaryStage);
+        gameScene.startTimer();
     }
 
 

@@ -2,11 +2,9 @@ package sample;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.beans.property.ObjectProperty;
-import javafx.event.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
+import javafx.geometry.Bounds;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -14,15 +12,14 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
-public class GameScene extends Application {
+public class GameScene {
 
     List<GameObject> cars = new ArrayList<>();
     GameObject selectedObject = null;
@@ -30,13 +27,28 @@ public class GameScene extends Application {
     @FXML
     private Pane pane;
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        // load fxml Scene from url
-        Parent root = FXMLLoader.load(getClass().getResource("gameScene.fxml"));
-        primaryStage.setTitle("Check In System");
-        Scene scene = new Scene(root);
+    GameScene(Pane pane) {
+        if(pane == null) {
+            throw new Error("Pane must not null");
+        }
+        this.pane = pane;
+    }
 
+    void spawnCar() {
+
+        Random random = new Random();
+        random.setSeed(new Date().getTime());
+        Bounds bound = pane.getLayoutBounds();
+
+        Car car = Car.createCar();
+        Bounds carBound = car.getView().getLayoutBounds();
+        System.out.println(bound.getWidth());
+        System.out.println(carBound.getWidth());
+        addCar(car, random.nextDouble() * 1000 % (bound.getWidth() - carBound.getWidth()), random.nextDouble() * 1000 % (bound.getHeight() - carBound.getHeight()));
+    }
+
+
+    void startTimer() {
         // Update scene timer
         AnimationTimer timer = new AnimationTimer() {
             @Override
@@ -44,48 +56,74 @@ public class GameScene extends Application {
                 onUpdate();
             }
         };
-
         timer.start();
-
-        primaryStage.setScene(scene);
-        setControl(primaryStage);
-
-        // find pane from root
-        pane = (Pane) root.lookup("#pane");
-
-        // show the stage
-        primaryStage.show();
-
-        // create car if there is not exists (testing use)
-        if(cars.size() == 0) {
-            Car car = Car.createCar();
-
-            addCar(car, 300, 300);
-            car = Car.createCar();
-            addCar(car, 100, 200);
-        }
     }
 
+//    @Override
+//    public void start(Stage primaryStage) throws Exception {
+//        // load fxml Scene from url
+//        Parent root = FXMLLoader.load(getClass().getResource("gameScene.fxml"));
+//        primaryStage.setTitle("Check In System");
+//        Scene scene = new Scene(root);
+//
+//
+//
+//
+//        primaryStage.setScene(scene);
+//
+//        // set Scene
+//        setControl(primaryStage);
+//
+//        // find pane from root
+//        pane = (Pane) root.lookup("#pane");
+//
+//        // show the stage
+//        primaryStage.show();
+//
+//        // create car if there is not exists (testing use)
+//        if(cars.size() == 0) {
+//            Car car = Car.createCar();
+//
+//            addCar(car, 300, 300);
+//            car = Car.createCar();
+//            addCar(car, 100, 200);
+//        }
+//    }
+
     public void setControl(Stage stage) {
+
+        if(stage.getScene() == null) {
+            throw new Error("Scene must not null");
+        }
+
+        System.out.println("Try Control");
+
         stage.getScene().setOnKeyPressed(e -> {
+            System.out.println("Try Control");
+            System.out.println(e.getCode());
+
+            if(e.getCode() == KeyCode.ENTER) {
+                spawnCar();
+            }
+
             // ensure there has one car (Testing use)
             if(selectedObject == null) {
                 return;
             }
 
-            if(e.getCode() == KeyCode.DOWN) {
+            if(e.getCode() == KeyCode.S) {
                 selectedObject.toggleReverse();
             }
 
-            if(e.getCode() == KeyCode.UP) {
+            if(e.getCode() == KeyCode.W) {
                 selectedObject.toggleStop();
             }
 
-            if(e.getCode() == KeyCode.LEFT) {
+            if(e.getCode() == KeyCode.A) {
                 selectedObject.rotateLeft();
             }
 
-            if(e.getCode() == KeyCode.RIGHT) {
+            if(e.getCode() == KeyCode.D) {
                 selectedObject.rotateRight();
             }
         });
@@ -106,20 +144,30 @@ public class GameScene extends Application {
         object.getView().setTranslateX(x);
         object.getView().setTranslateY(y);
         pane.getChildren().add(object.getView());
-
     }
 
     private void onUpdate() {
+        cars.forEach( car1 -> {
+            cars.forEach( car2 -> {
+                if(car1.isColliding(car2)) {
+                    GameObject deadCar;
+                    if(car1 == selectedObject)
+                        deadCar = car2;
+                    else
+                        deadCar = car1;
+                    deadCar.setAlive(false);
+                    pane.getChildren().remove(deadCar.getView());
+                    return;
+                }
+            });
+        });
+
+        cars.removeIf(GameObject::isDead);
+
         cars.forEach(GameObject::update);
     }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-
-
     static class Car extends GameObject {
-
 
         public Car(ImageView image) {
             super(image);
