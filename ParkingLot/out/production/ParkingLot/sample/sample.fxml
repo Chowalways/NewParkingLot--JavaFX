@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
   <tabs>
     <Tab text="Untitled Tab 1">
          <content>
@@ -22,7 +22,15 @@
                   <Pane prefHeight="200.0" prefWidth="200.0" />
                   <VBox maxWidth="200.0" prefHeight="200.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
                      <children>
-                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="Label" textAlignment="CENTER" textFill="#ff0101">
+                        <Label fx:id="lblTime" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="50.0" style="-fx-background-color: white;" text="Time" textFill="RED">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label id="tv_balance" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="Balance" textAlignment="CENTER" textFill="#ff0101">
                            <font>
                               <Font size="30.0" />
                            </font>
@@ -30,9 +38,10 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </Label>
-                        <BorderPane>
+
+                         <BorderPane id="remote" style="-fx-background-color: white;">
                            <top>
-                              <Button fx:id="btn_up" mnemonicParsing="false" onAction="#up" BorderPane.alignment="CENTER">
+                              <Button id="btn_up" fx:id="btn_up" mnemonicParsing="false" onAction="#up" BorderPane.alignment="CENTER">
                                  <graphic>
                                     <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -42,7 +51,7 @@
                               </Button>
                            </top>
                             <left>
-                                <Button mnemonicParsing="false" onAction="#left" BorderPane.alignment="CENTER">
+                                <Button id="btn_left" mnemonicParsing="false" onAction="#left" BorderPane.alignment="CENTER">
                                     <graphic>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -54,7 +63,7 @@
                             </left>
 
                             <center>
-                                <Button mnemonicParsing="false" onAction="#down" BorderPane.alignment="CENTER">
+                                <Button id="btn_down" mnemonicParsing="false" onAction="#down" BorderPane.alignment="CENTER">
                                     <graphic>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -66,7 +75,7 @@
                             </center>
 
                             <right>
-                                <Button mnemonicParsing="false" onAction="#right" BorderPane.alignment="CENTER">
+                                <Button id="btn_right" mnemonicParsing="false" onAction="#right" BorderPane.alignment="CENTER">
                                     <graphic>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -75,12 +84,17 @@
                                     </graphic>
                                 </Button>
                             </right>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
                         </BorderPane>
                      </children>
                   </VBox>
                </items>
             </SplitPane>
          </content></Tab>
-    <Tab text="Untitled Tab 2" />
   </tabs>
 </TabPane>
