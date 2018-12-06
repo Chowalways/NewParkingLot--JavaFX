@@ -3,12 +3,13 @@ package function;
 import java.util.Date;
 
 public class CheckInTicket {
-    public String lotNo;
-    public Date checkInTime;
-    public Date checkOutTime;
-    public Date payDate;
-    public CheckInType type;
-    public boolean pay;
+
+    protected String lotNo;
+    protected Date checkInTime;
+    protected Date checkOutTime;
+    protected Date payDate;
+    protected CheckInType type;
+    protected boolean pay;
 
     public static CheckInTicket getTicket(){
 

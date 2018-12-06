@@ -1,5 +1,3 @@
 package function;
 
-public enum Gender {
-    MALE, FEMAlE
-}
+public enum Gender { MALE, FEMAlE }

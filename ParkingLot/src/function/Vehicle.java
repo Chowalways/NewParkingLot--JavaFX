@@ -13,8 +13,4 @@ public class Vehicle extends BasicObj {
         this.weight = weight;
     }
 
-    public void setID(String id){
-        super.Id = id;
-    }
-
 }

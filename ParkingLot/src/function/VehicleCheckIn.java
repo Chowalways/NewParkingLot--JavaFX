@@ -9,7 +9,7 @@ import java.util.List;
 public class VehicleCheckIn {
 
     protected String vehicleId;
-    public List ticketHistory = new ArrayList();
+    protected List ticketHistory = new ArrayList();
 
     public CheckInTicket signIn(BasicObj obj){
         obj.ticket =  CheckInTicket.getTicket();

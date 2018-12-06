@@ -2,9 +2,9 @@ package function;
 
 public class CheckInSystem {
 
-    public CheckIn checkIn;
-    public int count;
-    public final int lotTotal = 100; //test Value
+    protected CheckIn checkIn;
+    protected int count = 1;
+    private final int lotTotal = 100; //test Value
     //public ArrayList<CheckInTicket> ticketHistory = new ArrayList<CheckInTicket>();
 
     public CheckInSystem(BasicObj obj){

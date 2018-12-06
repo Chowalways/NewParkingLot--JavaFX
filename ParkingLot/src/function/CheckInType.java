@@ -1,7 +1,3 @@
 package function;
 
-public enum CheckInType {
-    GUEST,
-    MONTHLY,
-    FREE
-}
+public enum CheckInType { GUEST, MONTHLY, FREE }
