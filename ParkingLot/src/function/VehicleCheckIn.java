@@ -1,4 +1,7 @@
-package sample;
+package function;
+
+import function.BasicObj;
+import function.CheckInTicket;
 
 import java.util.ArrayList;
 import java.util.List;

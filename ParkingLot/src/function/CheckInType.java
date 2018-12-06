@@ -1,4 +1,4 @@
-package sample;
+package function;
 
 public enum CheckInType {
     GUEST,

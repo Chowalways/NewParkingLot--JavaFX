@@ -1,4 +1,7 @@
-package sample;
+package function;
+
+import function.BasicObj;
+import function.Gender;
 
 public class Person extends BasicObj {
     private Gender gender;
