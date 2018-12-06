@@ -13,14 +13,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
   <tabs>
     <Tab text="Untitled Tab 1">
          <content>
-            <SplitPane dividerPositions="0.7" prefHeight="200.0" prefWidth="200.0">
+            <SplitPane dividerPositions="0.0" prefHeight="200.0" prefWidth="200.0">
                <items>
                   <Pane prefHeight="200.0" prefWidth="200.0" />
-                  <VBox prefHeight="200.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
+                  <VBox maxWidth="200.0" prefHeight="200.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
                      <children>
                         <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="Label" textAlignment="CENTER" textFill="#ff0101">
                            <font>
@@ -32,21 +32,21 @@
                         </Label>
                         <BorderPane>
                            <top>
-                              <Button mnemonicParsing="false" BorderPane.alignment="CENTER">
+                              <Button fx:id="btn_up" mnemonicParsing="false" onAction="#up" BorderPane.alignment="CENTER">
                                  <graphic>
                                     <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../assets/images/up-arrow.png" />
+                                          <Image url="@../res/images/up-arrow.png" />
                                        </image></ImageView>
                                  </graphic>
                               </Button>
                            </top>
                             <left>
-                                <Button mnemonicParsing="false" BorderPane.alignment="CENTER">
+                                <Button mnemonicParsing="false" onAction="#left" BorderPane.alignment="CENTER">
                                     <graphic>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../assets/images/left-arrow.png" />
+                                          <Image url="@../res/images/left-arrow.png" />
                                        </image></ImageView>
                                         
                                     </graphic>
@@ -54,11 +54,11 @@
                             </left>
 
                             <center>
-                                <Button mnemonicParsing="false" BorderPane.alignment="CENTER">
+                                <Button mnemonicParsing="false" onAction="#down" BorderPane.alignment="CENTER">
                                     <graphic>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../assets/images/down-arrow.png" />
+                                          <Image url="@../res/images/down-arrow.png" />
                                        </image>
                                         </ImageView>
                                     </graphic>
@@ -66,11 +66,11 @@
                             </center>
 
                             <right>
-                                <Button mnemonicParsing="false" BorderPane.alignment="CENTER">
+                                <Button mnemonicParsing="false" onAction="#right" BorderPane.alignment="CENTER">
                                     <graphic>
                                         <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@../../assets/images/right-arrow.png" />
+                                          <Image url="@../res/images/right-arrow.png" />
                                        </image></ImageView>
                                     </graphic>
                                 </Button>
