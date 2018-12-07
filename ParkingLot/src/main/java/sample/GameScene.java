@@ -1,7 +1,6 @@
 package sample;
 
 import javafx.animation.AnimationTimer;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
 import javafx.scene.Parent;
@@ -15,10 +14,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
-import javafx.scene.control.Label;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -206,7 +202,6 @@ public class GameScene {
 //            });
 //        });
 
-
         // car parking mode
         cars.forEach( car1 -> {
             carParks.forEach(carPark -> {
@@ -218,7 +213,20 @@ public class GameScene {
 
         cars.removeIf(GameObject::isDead);
 
-        cars.forEach(GameObject::update);
+        // Check
+        cars.forEach(car -> {
+            boolean collide = false;
+            for (GameObject car2 : cars) {
+                if(car.getMoveSide().compare(car.isColliding(car2))) {
+                    collide = true;
+                }
+            }
+            if(!collide) {
+                car.update();
+            }
+        });
+
+//        cars.forEach(GameObject::update);
     }
 
     static class Car extends GameObject {
@@ -232,7 +240,7 @@ public class GameScene {
             Image image = new Image("res/images/car.png");
             imageView.setImage(image);
             imageView.setFitWidth(25);
-            imageView.setFitHeight(25);
+            imageView.setFitHeight(20);
 
             return new Car(imageView);
         }
@@ -266,11 +274,13 @@ public class GameScene {
                 ((Rectangle) getView()).setFill(Color.GREEN);
                 car = null;
             }
-
         }
 
         public boolean isParkedBy(GameObject other) {
-            boolean parked = this.isColliding(other);
+
+            boolean parked = isColliding(other) == Side.INSIDE;
+            System.out.println(other);
+            System.out.println(other.isColliding(this));
             if(car == null) {
                 if(parked) {
                     setStatus(parked);
@@ -278,7 +288,7 @@ public class GameScene {
                 }
                 return parked;
             } else {
-                if(!this.isColliding(car)) {
+                if(isColliding(car) == Side.NONE) {
                     setStatus(false);
                     car = null;
                     return false;
@@ -288,6 +298,8 @@ public class GameScene {
             }
 
         }
+
+
     }
 
 }

@@ -3,6 +3,7 @@ package sample;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
+import javafx.geometry.BoundingBox;
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
@@ -27,23 +28,23 @@ public class GameObject {
         this.view = view;
     }
 
-    public Point2D getVelocity() {
+    public final Point2D getVelocity() {
         return velocity;
     }
 
-    public void setVelocity(Point2D velocity) {
+    public final void setVelocity(Point2D velocity) {
         this.velocity = velocity;
     }
 
-    public void toggleStop() {
+    public final void toggleStop() {
         move = !move;
     }
 
-    public void toggleReverse() {
+    public final void toggleReverse() {
         reverse = !reverse;
     }
 
-    public void update() {
+    public final void update() {
         double newX = view.getTranslateX(),
                 newY = view.getTranslateY();
 
@@ -61,6 +62,24 @@ public class GameObject {
             if(checkY(newY))
                 view.setTranslateY(newY);
         }
+    }
+
+    public Side getMoveSide() {
+
+        double currentX = view.getTranslateX(),
+                currentY = view.getTranslateY(),
+                newX = currentX,
+                newY = currentY;
+
+        if(reverse){
+            newX -= velocity.getX();
+            newY -= velocity.getY();
+        } else {
+            newX += velocity.getX();
+            newY += velocity.getY();
+        }
+
+        return Side.calcMovingSide(currentX, currentY, newX, newY);
     }
 
     private boolean checkX(double x) {
@@ -114,10 +133,50 @@ public class GameObject {
         view.removeEventFilter(eventType, eventFilter);
     }
 
-    public boolean isColliding(GameObject other) {
+    public Side isColliding(GameObject other) {
+        int checkLoop = 5;
+
         if(other == this) {
-            return false;
+            return Side.NONE;
         }
-        return getView().getBoundsInParent().intersects(other.getView().getBoundsInParent());
+
+        Bounds selfBound = getView().getBoundsInParent();
+        Bounds otherBound = other.getView().getBoundsInParent();
+        Bounds temp;
+
+
+        Boolean isCollision = selfBound.intersects(otherBound);
+
+        if(isCollision) {
+            return Side.INSIDE;
+        }
+
+        // Detect Left
+        for(double i = 1; i < checkLoop; i += 0.5) {
+            temp = new BoundingBox(selfBound.getMinX() - i, selfBound.getMinY() + 1, selfBound.getWidth(), selfBound.getHeight() - 2);
+            if(temp.intersects(otherBound))
+                return Side.LEFT;
+        }
+
+        // Detect Right
+        for(double i = 1; i < checkLoop; i += 0.5) {
+            temp = new BoundingBox(selfBound.getMinX() + i, selfBound.getMinY() + 1, selfBound.getWidth(), selfBound.getHeight() - 2);
+            if(temp.intersects(otherBound))
+                return Side.RIGHT;
+        }
+
+        // Detect Top
+        for(double i = 1; i < checkLoop; i += 0.5) {
+            temp = new BoundingBox(selfBound.getMinX() + 1, selfBound.getMinY() - i, selfBound.getWidth() - 2, selfBound.getHeight());
+            if (temp.intersects(otherBound))
+                return Side.TOP;
+        }
+        // Detect Bottom
+        for(double i = 1; i < checkLoop; i += 0.5) {
+            temp = new BoundingBox(selfBound.getMinX() + 1, selfBound.getMinY() + i, selfBound.getWidth() - 2, selfBound.getHeight());
+            if (temp.intersects(otherBound))
+                return Side.BOTTOM;
+        }
+        return Side.NONE;
     }
 }

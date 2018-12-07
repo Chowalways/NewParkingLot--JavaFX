@@ -21,7 +21,8 @@ public class Main extends Application {
 
     GameScene gameScene;
 
-    Label lblTIme;
+    Label lblTime;
+    Label lblTime1;
     Label carNumberLbl;
 
     @Override
@@ -33,7 +34,8 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        lblTIme = (Label) root.lookup("#lblTime");
+        lblTime = (Label) root.lookup("#lblTime");
+        lblTime1 = (Label) root.lookup("#lblTime1");
         carNumberLbl = (Label) root.lookup("#carNumberLbl");
 
         // Create Game Scene
@@ -44,7 +46,8 @@ public class Main extends Application {
         timeInterval(event -> {
             LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of("UTC+08:00"));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
-            lblTIme.setText(formatter.format(localDateTime));
+            lblTime.setText(formatter.format(localDateTime));
+            lblTime1.setText(formatter.format(localDateTime));
             carNumberLbl.setText(String.format("%d Cars", gameScene.getCars()));
         }, 1);
 
