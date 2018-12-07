@@ -1,10 +1,16 @@
 package sample;
 
 import javafx.animation.AnimationTimer;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -24,14 +30,41 @@ public class GameScene {
     private List<CarPark> carParks = new ArrayList<>();
     private GameObject selectedObject = null;
 
-    private Pane pane;
 
-    GameScene(Pane pane, Label carNumberLbl) {
-        if(pane == null) {
+    Scene scene;
+    private Pane pane;
+    private TabPane tabPane;
+
+    GameScene(Parent parent) {
+
+        this.pane = (Pane) parent.lookup("#gamePane");
+        this.tabPane = (TabPane) parent.lookup("#tabPane");
+        this.scene = parent.getScene();
+
+        if(this.pane == null) {
             throw new Error("Pane must not null");
         }
 
-        this.pane = pane;
+        if(this.tabPane == null) {
+            throw new Error("Tab pane must not null");
+        }
+
+        if(this.scene == null) {
+            throw new Error("Scene must not null");
+        }
+
+        this.tabPane.getSelectionModel().selectedItemProperty().addListener(
+                (observable, oldValue, newValue) -> {
+                    if(newValue.getId().compareToIgnoreCase("carSystem") == 0) {
+                        setControl();
+                    } else if (newValue.getId().compareToIgnoreCase("workSystem") == 0) {
+                        removeControl();
+                    }
+                }
+        );
+
+        setControl();
+
         initialPath();
     }
 
@@ -54,7 +87,6 @@ public class GameScene {
         CarPark carPark = CarPark.createCarPark();
         addCarPark(carPark, x, y);
     }
-
 
     void startTimer() {
         // Update scene timer
@@ -86,38 +118,43 @@ public class GameScene {
         }
     }
 
-    public void setControl(Stage stage) {
-
-        if(stage.getScene() == null) {
-            throw new Error("Scene must not null");
+    public EventHandler event = (EventHandler<KeyEvent>) e -> {
+        if(e.getCode() == KeyCode.ENTER) {
+            spawnCar();
         }
 
-        stage.getScene().setOnKeyPressed(e -> {
-            if(e.getCode() == KeyCode.ENTER) {
-                spawnCar();
-            }
+        // ensure there has one car (Testing use)
+        if(selectedObject == null) {
+            return;
+        }
 
-            // ensure there has one car (Testing use)
-            if(selectedObject == null) {
-                return;
-            }
+        if(e.getCode() == KeyCode.BACK_SPACE) {
+            removeCar(selectedObject);
+        }
 
-            if(e.getCode() == KeyCode.S) {
-                selectedObject.toggleReverse();
-            }
+        if(e.getCode() == KeyCode.S) {
+            selectedObject.toggleReverse();
+        }
 
-            if(e.getCode() == KeyCode.W) {
-                selectedObject.toggleStop();
-            }
+        if(e.getCode() == KeyCode.W) {
+            selectedObject.toggleStop();
+        }
 
-            if(e.getCode() == KeyCode.A) {
-                selectedObject.rotateLeft();
-            }
+        if(e.getCode() == KeyCode.A) {
+            selectedObject.rotateLeft();
+        }
 
-            if(e.getCode() == KeyCode.D) {
-                selectedObject.rotateRight();
-            }
-        });
+        if(e.getCode() == KeyCode.D) {
+            selectedObject.rotateRight();
+        }
+    };
+
+    public void setControl() {
+        scene.setOnKeyPressed(event);
+    }
+
+    public void removeControl() {
+        scene.setOnKeyPressed(null);
     }
 
     private void addCar(GameObject object, double x, double y) {
@@ -131,6 +168,14 @@ public class GameScene {
         cars.add(object);
         addGameObject(object, x, y);
     }
+
+    private void removeCar(GameObject object) {
+        cars.remove(object);
+        pane.getChildren().remove(object.getView());
+        carParks.forEach(c -> c.setStatus(false));
+        selectedObject = null;
+    }
+
 
     private void addCarPark(CarPark object, double x, double y) {
         carParks.add(object);
@@ -217,8 +262,11 @@ public class GameScene {
         private void setStatus(boolean status) {
             if(status)
                 ((Rectangle) getView()).setFill(Color.RED);
-            else
+            else {
                 ((Rectangle) getView()).setFill(Color.GREEN);
+                car = null;
+            }
+
         }
 
         public boolean isParkedBy(GameObject other) {

@@ -37,8 +37,7 @@ public class Main extends Application {
         carNumberLbl = (Label) root.lookup("#carNumberLbl");
 
         // Create Game Scene
-        gameScene = new GameScene((Pane) root.lookup("#gamePane"), carNumberLbl);
-        gameScene.setControl(primaryStage);
+        gameScene = new GameScene(root);
         gameScene.startTimer();
 
         // Schedule update time
@@ -49,6 +48,8 @@ public class Main extends Application {
             carNumberLbl.setText(String.format("%d Cars", gameScene.getCars()));
         }, 1);
 
+
+        System.out.println(scene);
     }
 
     private void timeInterval(EventHandler event, long secondDuration) {
