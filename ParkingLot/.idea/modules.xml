@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ParkingLot.iml" filepath="$PROJECT_DIR$/ParkingLot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Software_Achitecture_Design_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Software_Achitecture_Design_main.iml" group="Software_Achitecture_Design" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Software_Achitecture_Design_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Software_Achitecture_Design_test.iml" group="Software_Achitecture_Design" />
     </modules>
   </component>
 </project>

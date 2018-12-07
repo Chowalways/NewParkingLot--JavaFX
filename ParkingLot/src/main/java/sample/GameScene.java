@@ -51,7 +51,6 @@ public class GameScene {
     }
 
     void spawnCarPark(int x, int y) {
-        System.out.println("Spawn Car Park");
         CarPark carPark = CarPark.createCarPark();
         addCarPark(carPark, x, y);
     }
@@ -70,6 +69,7 @@ public class GameScene {
 
     void initialPath() {
 
+        System.out.println("Spawn Car Park");
         int TOTALCARPARK = 40,
                 x = 0,
                 y = 0,
