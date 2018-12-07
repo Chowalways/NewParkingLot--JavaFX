@@ -95,14 +95,11 @@ public class GameObject {
     public void rotateRight() {
         view.setRotate((view.getRotate() + 5) % 360);
         setVelocity(new Point2D(Math.cos(Math.toRadians(getRotate())), Math.sin(Math.toRadians(getRotate()))));
-        System.out.println(getRotate());
-        System.out.println(getVelocity());
     }
 
     public void rotateLeft() {
         view.setRotate((view.getRotate() - 5) % 360);
         setVelocity(new Point2D(Math.cos(Math.toRadians(getRotate())), Math.sin(Math.toRadians(getRotate()))));
-        System.out.println(getRotate());
     }
 
     public final <T extends Event> void addEventFilter(
