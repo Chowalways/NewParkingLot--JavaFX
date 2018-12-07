@@ -22,6 +22,7 @@ public class Main extends Application {
     GameScene gameScene;
 
     Label lblTIme;
+    Label carNumberLbl;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -33,22 +34,20 @@ public class Main extends Application {
         primaryStage.show();
 
         lblTIme = (Label) root.lookup("#lblTime");
+        carNumberLbl = (Label) root.lookup("#carNumberLbl");
 
         // Create Game Scene
-        gameScene = new GameScene((Pane) root.lookup("#gamePane"));
+        gameScene = new GameScene((Pane) root.lookup("#gamePane"), carNumberLbl);
         gameScene.setControl(primaryStage);
         gameScene.startTimer();
-
 
         // Schedule update time
         timeInterval(event -> {
             LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of("UTC+08:00"));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
             lblTIme.setText(formatter.format(localDateTime));
+            carNumberLbl.setText(String.format("%d Cars", gameScene.getCars()));
         }, 1);
-
-
-        System.out.println(getClass().getResource("res/css/main.css"));
 
     }
 

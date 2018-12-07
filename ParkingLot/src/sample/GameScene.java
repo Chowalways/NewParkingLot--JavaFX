@@ -1,12 +1,7 @@
 package sample;
 
 import javafx.animation.AnimationTimer;
-import javafx.application.Application;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Bounds;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
@@ -15,8 +10,9 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
-import org.w3c.dom.css.Rect;
+import javafx.scene.control.Label;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -24,35 +20,38 @@ import java.util.Random;
 
 public class GameScene {
 
-    List<GameObject> cars = new ArrayList<>();
-    List<CarPark> carParks = new ArrayList<>();
-    GameObject selectedObject = null;
+    private List<GameObject> cars = new ArrayList<>();
+    private List<CarPark> carParks = new ArrayList<>();
+    private GameObject selectedObject = null;
 
-    @FXML
     private Pane pane;
 
-    GameScene(Pane pane) {
+    GameScene(Pane pane, Label carNumberLbl) {
         if(pane == null) {
             throw new Error("Pane must not null");
         }
+
         this.pane = pane;
         initialPath();
     }
 
-    void spawnCar() {
+    public int getCars() {
+        return cars.size();
+    }
 
+    void spawnCar() {
+        System.out.println("Spawn Car");
         Random random = new Random();
         random.setSeed(new Date().getTime());
         Bounds bound = pane.getLayoutBounds();
 
         Car car = Car.createCar();
         Bounds carBound = car.getView().getLayoutBounds();
-        System.out.println(bound.getWidth());
-        System.out.println(carBound.getWidth());
         addCar(car, random.nextDouble() * 1000 % (bound.getWidth() - carBound.getWidth()), random.nextDouble() * 1000 % (bound.getHeight() - carBound.getHeight()));
     }
 
     void spawnCarPark(int x, int y) {
+        System.out.println("Spawn Car Park");
         CarPark carPark = CarPark.createCarPark();
         addCarPark(carPark, x, y);
     }
@@ -126,7 +125,6 @@ public class GameScene {
         object
             .addEventFilter(MouseEvent.MOUSE_CLICKED,
             e -> {
-                System.out.println("Click");
                 selectedObject = object;
             });
 
