@@ -12,7 +12,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import org.w3c.dom.css.Rect;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,6 +25,7 @@ import java.util.Random;
 public class GameScene {
 
     List<GameObject> cars = new ArrayList<>();
+    List<CarPark> carParks = new ArrayList<>();
     GameObject selectedObject = null;
 
     @FXML
@@ -32,6 +36,7 @@ public class GameScene {
             throw new Error("Pane must not null");
         }
         this.pane = pane;
+        initialPath();
     }
 
     void spawnCar() {
@@ -47,6 +52,11 @@ public class GameScene {
         addCar(car, random.nextDouble() * 1000 % (bound.getWidth() - carBound.getWidth()), random.nextDouble() * 1000 % (bound.getHeight() - carBound.getHeight()));
     }
 
+    void spawnCarPark(int x, int y) {
+        CarPark carPark = CarPark.createCarPark();
+        addCarPark(carPark, x, y);
+    }
+
 
     void startTimer() {
         // Update scene timer
@@ -59,36 +69,23 @@ public class GameScene {
         timer.start();
     }
 
-//    @Override
-//    public void start(Stage primaryStage) throws Exception {
-//        // load fxml Scene from url
-//        Parent root = FXMLLoader.load(getClass().getResource("gameScene.fxml"));
-//        primaryStage.setTitle("Check In System");
-//        Scene scene = new Scene(root);
-//
-//
-//
-//
-//        primaryStage.setScene(scene);
-//
-//        // set Scene
-//        setControl(primaryStage);
-//
-//        // find pane from root
-//        pane = (Pane) root.lookup("#pane");
-//
-//        // show the stage
-//        primaryStage.show();
-//
-//        // create car if there is not exists (testing use)
-//        if(cars.size() == 0) {
-//            Car car = Car.createCar();
-//
-//            addCar(car, 300, 300);
-//            car = Car.createCar();
-//            addCar(car, 100, 200);
-//        }
-//    }
+    void initialPath() {
+
+        int TOTALCARPARK = 40,
+                x = 0,
+                y = 0,
+                carPerColumn = 5,
+                xSpacing = 50,
+                ySpacing = 10;
+        for (int i = 0; i < TOTALCARPARK; i++) {
+            if (i != 0 && i % carPerColumn == 0) {
+                y = 0;
+                x += CarPark.WIDTH + xSpacing;
+            }
+            spawnCarPark(x, y);
+            y += CarPark.HEIGHT + ySpacing;
+        }
+    }
 
     public void setControl(Stage stage) {
 
@@ -96,12 +93,7 @@ public class GameScene {
             throw new Error("Scene must not null");
         }
 
-        System.out.println("Try Control");
-
         stage.getScene().setOnKeyPressed(e -> {
-            System.out.println("Try Control");
-            System.out.println(e.getCode());
-
             if(e.getCode() == KeyCode.ENTER) {
                 spawnCar();
             }
@@ -130,13 +122,20 @@ public class GameScene {
     }
 
     private void addCar(GameObject object, double x, double y) {
-        object.addEventFilter(MouseEvent.MOUSE_CLICKED,
-                e -> {
-                    System.out.println("Click");
-                    selectedObject = object;
-//                    System.out.println(object instanceof Car);
-                });
+
+        object
+            .addEventFilter(MouseEvent.MOUSE_CLICKED,
+            e -> {
+                System.out.println("Click");
+                selectedObject = object;
+            });
+
         cars.add(object);
+        addGameObject(object, x, y);
+    }
+
+    private void addCarPark(CarPark object, double x, double y) {
+        carParks.add(object);
         addGameObject(object, x, y);
     }
 
@@ -147,16 +146,28 @@ public class GameScene {
     }
 
     private void onUpdate() {
+
+        // destroyed car mode
+//        cars.forEach( car1 -> {
+//            cars.forEach( car2 -> {
+//                if(car1.isColliding(car2)) {
+//                    GameObject deadCar;
+//                    if(car1 == selectedObject)
+//                        deadCar = car2;
+//                    else
+//                        deadCar = car1;
+//                    deadCar.setAlive(false);
+//                    pane.getChildren().remove(deadCar.getView());
+//                    return;
+//                }
+//            });
+//        });
+
+
+        // car parking mode
         cars.forEach( car1 -> {
-            cars.forEach( car2 -> {
-                if(car1.isColliding(car2)) {
-                    GameObject deadCar;
-                    if(car1 == selectedObject)
-                        deadCar = car2;
-                    else
-                        deadCar = car1;
-                    deadCar.setAlive(false);
-                    pane.getChildren().remove(deadCar.getView());
+            carParks.forEach(carPark -> {
+                if(carPark.isParkedBy(car1)) {
                     return;
                 }
             });
@@ -169,7 +180,7 @@ public class GameScene {
 
     static class Car extends GameObject {
 
-        public Car(ImageView image) {
+        private Car(ImageView image) {
             super(image);
         }
 
@@ -182,7 +193,55 @@ public class GameScene {
 
             return new Car(imageView);
         }
+    }
 
+    static class CarPark extends GameObject {
+
+        GameObject car;
+        public static final int WIDTH = 30;
+        public static final int HEIGHT = 30;
+
+
+        private CarPark(Rectangle rectangle) {
+            super(rectangle);
+        }
+
+        public static CarPark createCarPark() {
+            Rectangle rectangle = new Rectangle(WIDTH, HEIGHT);
+
+            rectangle.setFill(Color.GREEN);
+            rectangle.setStrokeWidth(2);
+            rectangle.setStroke(Color.GRAY);
+
+            return new CarPark(rectangle);
+        }
+
+        private void setStatus(boolean status) {
+            if(status)
+                ((Rectangle) getView()).setFill(Color.RED);
+            else
+                ((Rectangle) getView()).setFill(Color.GREEN);
+        }
+
+        public boolean isParkedBy(GameObject other) {
+            boolean parked = this.isColliding(other);
+            if(car == null) {
+                if(parked) {
+                    setStatus(parked);
+                    car = other;
+                }
+                return parked;
+            } else {
+                if(!this.isColliding(car)) {
+                    setStatus(false);
+                    car = null;
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+        }
     }
 
 }
