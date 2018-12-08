@@ -23,6 +23,7 @@ public class Main extends Application {
 
     Label lblTime;
     Label lblTime1;
+    private Label balanceCarPark;
     Label carNumberLbl;
 
     @Override
@@ -37,6 +38,7 @@ public class Main extends Application {
         lblTime = (Label) root.lookup("#lblTime");
         lblTime1 = (Label) root.lookup("#lblTime1");
         carNumberLbl = (Label) root.lookup("#carNumberLbl");
+        balanceCarPark = (Label) root.lookup("#balanceLabel");
 
         // Create Game Scene
         gameScene = new GameScene(root);
@@ -49,6 +51,7 @@ public class Main extends Application {
             lblTime.setText(formatter.format(localDateTime));
             lblTime1.setText(formatter.format(localDateTime));
             carNumberLbl.setText(String.format("%d Cars", gameScene.getCars()));
+            balanceCarPark.setText(String.format("%d Available", gameScene.getAvailableCarPark()));
         }, 1);
 
 

@@ -5,6 +5,7 @@ import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -25,9 +26,9 @@ public class GameScene {
     private List<GameObject> cars = new ArrayList<>();
     private List<CarPark> carParks = new ArrayList<>();
     private GameObject selectedObject = null;
-
-
+    public final int TOTALCARPARK = 40;
     Scene scene;
+
     private Pane pane;
     private TabPane tabPane;
 
@@ -68,6 +69,17 @@ public class GameScene {
         return cars.size();
     }
 
+    public int getAvailableCarPark() {
+        int count = 0;
+        for (CarPark carPark : carParks) {
+
+            if (!carPark.isParked()) {
+                count += 1;
+            }
+        }
+        return count;
+    }
+
     void spawnCar() {
         System.out.println("Spawn Car");
         Random random = new Random();
@@ -98,12 +110,11 @@ public class GameScene {
     void initialPath() {
 
         System.out.println("Spawn Car Park");
-        int TOTALCARPARK = 40,
-                x = 0,
-                y = 0,
-                carPerColumn = 5,
-                xSpacing = 50,
-                ySpacing = 10;
+        int x = 0,
+            y = 0,
+            carPerColumn = 5,
+            xSpacing = 50,
+            ySpacing = 10;
         for (int i = 0; i < TOTALCARPARK; i++) {
             if (i != 0 && i % carPerColumn == 0) {
                 y = 0;
@@ -274,6 +285,10 @@ public class GameScene {
                 ((Rectangle) getView()).setFill(Color.GREEN);
                 car = null;
             }
+        }
+
+        public boolean isParked() {
+            return car != null;
         }
 
         public boolean isParkedBy(GameObject other) {

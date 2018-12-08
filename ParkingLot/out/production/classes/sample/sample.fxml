@@ -7,6 +7,7 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -20,7 +21,7 @@
                   <Pane fx:id="gamePane" prefHeight="200.0" prefWidth="200.0" />
                   <VBox maxWidth="200.0" prefHeight="200.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
                      <children>
-                        <Label fx:id="lblTime" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="50.0" style="-fx-background-color: white;" text="00-00-00 00:00:00" textFill="RED">
+                        <Label fx:id="lblTime" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="50.0" style="-fx-background-color: gray;" text="00-00-00 00:00:00" textFill="RED">
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
@@ -28,9 +29,9 @@
                               <Font size="17.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="Balance" textAlignment="CENTER" textFill="#ff0101">
+                        <Label fx:id="balanceLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="50 Available" textAlignment="CENTER" textFill="#ff0101">
                            <font>
-                              <Font size="30.0" />
+                              <Font size="20.0" />
                            </font>
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -44,15 +45,40 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </Label>
-                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
-                           <children>
-                              <Button fx:id="CheckIn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Check In" />
-                              <Button fx:id="Checkout" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Check Out" />
-                              <JFXButton fx:id="Send" buttonType="RAISED" maxWidth="1.7976931348623157E308" mnemonicParsing="false" ripplerFill="#cdcdcd" style="-fx-background-color: teal;" text=" Send" />
-                           </children>
+                        <VBox maxHeight="80.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: gray;">
                            <padding>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" text="Price">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                              <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" style="-fx-background-color: white; -fx-background-radius: 5;" text="\$0.00">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <JFXButton disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: teal;" text="Insert Card" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton disable="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: teal;" text="Pay " textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
                         </VBox>
                      </children>
                   </VBox>
