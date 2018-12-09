@@ -1,20 +1,21 @@
 package sample;
 
+import Unit.Gate;
+import Unit.ParkingLot;
+import Unit.Car;
+
+import Unit.Enum.Direction;
+import Unit.Wall;
 import javafx.animation.AnimationTimer;
 import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,9 +25,11 @@ import java.util.Random;
 public class GameScene {
 
     private List<GameObject> cars = new ArrayList<>();
-    private List<CarPark> carParks = new ArrayList<>();
+    private List<ParkingLot> parkingLots = new ArrayList<>();
+    private List<Wall> walls = new ArrayList<>();
+    private List<Gate> gates = new ArrayList<>();
     private GameObject selectedObject = null;
-    public final int TOTALCARPARK = 40;
+    public final int TOTALPARKINGLOT = 20;
     Scene scene;
 
     private Pane pane;
@@ -71,29 +74,13 @@ public class GameScene {
 
     public int getAvailableCarPark() {
         int count = 0;
-        for (CarPark carPark : carParks) {
+        for (ParkingLot parkingLot : parkingLots) {
 
-            if (!carPark.isParked()) {
+            if (!parkingLot.isParked()) {
                 count += 1;
             }
         }
         return count;
-    }
-
-    void spawnCar() {
-        System.out.println("Spawn Car");
-        Random random = new Random();
-        random.setSeed(new Date().getTime());
-        Bounds bound = pane.getLayoutBounds();
-
-        Car car = Car.createCar();
-        Bounds carBound = car.getView().getLayoutBounds();
-        addCar(car, random.nextDouble() * 1000 % (bound.getWidth() - carBound.getWidth()), random.nextDouble() * 1000 % (bound.getHeight() - carBound.getHeight()));
-    }
-
-    void spawnCarPark(int x, int y) {
-        CarPark carPark = CarPark.createCarPark();
-        addCarPark(carPark, x, y);
     }
 
     void startTimer() {
@@ -110,19 +97,49 @@ public class GameScene {
     void initialPath() {
 
         System.out.println("Spawn Car Park");
-        int x = 0,
-            y = 0,
+        int ParkingLotPadding = 20,
+                x = ParkingLotPadding,
+            y = ParkingLotPadding,
             carPerColumn = 5,
             xSpacing = 50,
             ySpacing = 10;
-        for (int i = 0; i < TOTALCARPARK; i++) {
+
+        for (int i = 0; i < TOTALPARKINGLOT; i++) {
             if (i != 0 && i % carPerColumn == 0) {
-                y = 0;
-                x += CarPark.WIDTH + xSpacing;
+                y = ParkingLotPadding;
+                x += ParkingLot.WIDTH + xSpacing;
             }
-            spawnCarPark(x, y);
-            y += CarPark.HEIGHT + ySpacing;
+            spawnParkingLot(x, y);
+            y += ParkingLot.HEIGHT + ySpacing;
         }
+
+
+        int wallPadding = ParkingLotPadding - 10,
+                parkingLotWidth = x + ParkingLot.WIDTH + 60,
+            parkingLotHeight = y + 200;
+        // Generate TOP Wall
+        for (int i = 0; i * Wall.LONG < parkingLotWidth; i ++ ) {
+            spawnHorizontalWall(i * Wall.LONG + wallPadding, 0 + wallPadding);
+        }
+
+        // Generate Bottom Wall
+        for (int i = 0; i * Wall.LONG < parkingLotWidth; i ++ ) {
+            spawnHorizontalWall(i * Wall.LONG + wallPadding, parkingLotHeight + wallPadding);
+        }
+
+        // Generate LEFT Wall
+        for (int i = 0; i * Wall.LONG < parkingLotHeight; i ++ ) {
+            spawnVerticalWall(0 + wallPadding, i * Wall.LONG + wallPadding);
+        }
+
+        // Generate RIGHT Wall
+        for (int i = 0; i * Wall.LONG < parkingLotHeight; i ++ ) {
+            spawnVerticalWall(parkingLotWidth + wallPadding + 10, i * Wall.LONG + wallPadding);
+        }
+
+        // generate Gate
+        spawnHorizontalGate(55, parkingLotHeight + wallPadding - 10);
+
     }
 
     public EventHandler event = (EventHandler<KeyEvent>) e -> {
@@ -164,6 +181,23 @@ public class GameScene {
         scene.setOnKeyPressed(null);
     }
 
+    private void addGameObject(GameObject object, double x, double y) {
+        object.getView().setTranslateX(x);
+        object.getView().setTranslateY(y);
+        pane.getChildren().add(object.getView());
+    }
+
+    void spawnCar() {
+        System.out.println("Spawn Car");
+        Random random = new Random();
+        random.setSeed(new Date().getTime());
+        Bounds bound = pane.getLayoutBounds();
+
+        Car car = Car.createCar();
+        Bounds carBound = car.getView().getLayoutBounds();
+        addCar(car, random.nextDouble() * 1000 % (bound.getWidth() - carBound.getWidth()), random.nextDouble() * 1000 % (bound.getHeight() - carBound.getHeight()));
+    }
+
     private void addCar(GameObject object, double x, double y) {
 
         object
@@ -179,20 +213,48 @@ public class GameScene {
     private void removeCar(GameObject object) {
         cars.remove(object);
         pane.getChildren().remove(object.getView());
-        carParks.forEach(c -> c.setStatus(false));
+        parkingLots.forEach(c -> c.setStatus(false));
         selectedObject = null;
     }
 
+    void spawnParkingLot(int x, int y) {
+        ParkingLot parkingLot = ParkingLot.createCarPark();
+        addParkingLot(parkingLot, x, y);
+    }
 
-    private void addCarPark(CarPark object, double x, double y) {
-        carParks.add(object);
+    private void addParkingLot(ParkingLot object, double x, double y) {
+        parkingLots.add(object);
         addGameObject(object, x, y);
     }
 
-    private void addGameObject(GameObject object, double x, double y) {
-        object.getView().setTranslateX(x);
-        object.getView().setTranslateY(y);
-        pane.getChildren().add(object.getView());
+    void spawnHorizontalWall(int x, int y) {
+        Wall wall = Wall.creteWall(Direction.HORIZONTAL);
+        addWall(wall, x, y);
+    }
+
+    void spawnVerticalWall(int x, int y) {
+        Wall wall = Wall.creteWall(Direction.VERTICAL);
+        addWall(wall, x, y);
+    }
+
+    private void addWall(Wall wall, int x, int y) {
+        walls.add(wall);
+        addGameObject(wall, x, y);
+    }
+
+    void spawnHorizontalGate(int x, int y) {
+        Gate gate = Gate.createGate(Direction.HORIZONTAL);
+        addGate(gate, x, y);
+    }
+
+    void spawnVerticalGate(int x, int y) {
+        Gate gate = Gate.createGate(Direction.VERTICAL);
+        addGate(gate, x, y);
+    }
+
+    private void addGate(Gate gate, int x, int y) {
+        gates.add(gate);
+        addGameObject(gate, x, y);
     }
 
     private void onUpdate() {
@@ -215,8 +277,8 @@ public class GameScene {
 
         // car parking mode
         cars.forEach( car1 -> {
-            carParks.forEach(carPark -> {
-                if(carPark.isParkedBy(car1)) {
+            parkingLots.forEach(parkingLot -> {
+                if(parkingLot.isParkedBy(car1)) {
                     return;
                 }
             });
@@ -230,91 +292,41 @@ public class GameScene {
             for (GameObject car2 : cars) {
                 if(car.getMoveSide().compare(car.isColliding(car2))) {
                     collide = true;
+                    break;
                 }
             }
+
+            for (Wall wall : walls) {
+                if(car.getMoveSide().compare(car.isColliding(wall))) {
+                    collide = true;
+                    break;
+                }
+            }
+
+            for (Gate gate : gates) {
+                if(car.getMoveSide().compare(car.isColliding(gate))) {
+                    collide = true;
+                    break;
+                }
+            }
+
             if(!collide) {
                 car.update();
             }
         });
 
+        // remove wall when collided with gate
+        for (Wall wall : walls) {
+            for (Gate gate : gates) {
+                if(gate.isColliding(wall) == Side.INSIDE) {
+                    wall.setAlive(false);
+                    pane.getChildren().remove(wall.getView());
+                }
+            }
+        }
+        walls.removeIf(GameObject::isDead);
+
 //        cars.forEach(GameObject::update);
-    }
-
-    static class Car extends GameObject {
-
-        private Car(ImageView image) {
-            super(image);
-        }
-
-        public static Car createCar() {
-            ImageView imageView = new ImageView();
-            Image image = new Image("res/images/car.png");
-            imageView.setImage(image);
-            imageView.setFitWidth(25);
-            imageView.setFitHeight(20);
-
-            return new Car(imageView);
-        }
-    }
-
-    static class CarPark extends GameObject {
-
-        GameObject car;
-        public static final int WIDTH = 30;
-        public static final int HEIGHT = 30;
-
-
-        private CarPark(Rectangle rectangle) {
-            super(rectangle);
-        }
-
-        public static CarPark createCarPark() {
-            Rectangle rectangle = new Rectangle(WIDTH, HEIGHT);
-
-            rectangle.setFill(Color.GREEN);
-            rectangle.setStrokeWidth(2);
-            rectangle.setStroke(Color.GRAY);
-
-            return new CarPark(rectangle);
-        }
-
-        private void setStatus(boolean status) {
-            if(status)
-                ((Rectangle) getView()).setFill(Color.RED);
-            else {
-                ((Rectangle) getView()).setFill(Color.GREEN);
-                car = null;
-            }
-        }
-
-        public boolean isParked() {
-            return car != null;
-        }
-
-        public boolean isParkedBy(GameObject other) {
-
-            boolean parked = isColliding(other) == Side.INSIDE;
-            System.out.println(other);
-            System.out.println(other.isColliding(this));
-            if(car == null) {
-                if(parked) {
-                    setStatus(parked);
-                    car = other;
-                }
-                return parked;
-            } else {
-                if(isColliding(car) == Side.NONE) {
-                    setStatus(false);
-                    car = null;
-                    return false;
-                } else {
-                    return true;
-                }
-            }
-
-        }
-
-
     }
 
 }
