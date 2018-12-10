@@ -6,7 +6,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import sample.GameObject;
+import main.GameObject;
 
 public class Gate extends GameObject implements Openable {
 
@@ -14,11 +14,13 @@ public class Gate extends GameObject implements Openable {
     public static final int BodyHeight = 25;
     public static final int ArmWidth = 35;
     public static final int ArmHeight = 5;
+
     public Boolean status = false;
     public Rectangle arm;
 
-    private Gate(Node view) {
+    private Gate(Node view, Rectangle arm) {
         super(view);
+        this.arm = arm;
     }
 
     public static Gate createGate(Direction direction) {
@@ -39,9 +41,12 @@ public class Gate extends GameObject implements Openable {
         arm.setTranslateY(5);
         pane.getChildren().add(body);
         pane.getChildren().add(arm);
-        return new Gate(pane);
+        return new Gate(pane, arm);
     }
 
+    public boolean checkCarStatus(Car car) {
+        return car.hasTicket();
+    }
 
     @Override
     public void open() {
@@ -49,7 +54,22 @@ public class Gate extends GameObject implements Openable {
     }
 
     @Override
-    public void closse() {
+    public void close() {
         status = false;
+    }
+
+    public void update() {
+        if(arm == null)
+            return;
+        Pane pane = (Pane) getView();
+        if(status) {
+//            if(pane.getChildren().contains(arm))
+//                pane.getChildren().remove(arm);
+            arm.setVisible(false);
+        } else {
+//            if(!pane.getChildren().contains(arm))
+//                pane.getChildren().add(arm);
+            arm.setVisible(true);
+        }
     }
 }

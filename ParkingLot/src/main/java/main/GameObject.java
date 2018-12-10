@@ -1,4 +1,4 @@
-package sample;
+package main;
 
 import javafx.event.Event;
 import javafx.event.EventHandler;
@@ -44,7 +44,7 @@ public abstract class GameObject {
         reverse = !reverse;
     }
 
-    public final void update() {
+    public void update() {
         double newX = view.getTranslateX(),
                 newY = view.getTranslateY();
 

@@ -2,5 +2,5 @@ package Unit.Interface;
 
 public interface Openable {
     public void open();
-    public void closse();
+    public void close();
 }

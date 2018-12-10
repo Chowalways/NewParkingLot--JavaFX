@@ -1,20 +1,27 @@
 package function;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
-public class CheckInTicket {
+public abstract class CheckInTicket {
 
-    protected String lotNo;
-    protected Date checkInTime;
-    protected Date checkOutTime;
-    protected Date payDate;
-    protected CheckInType type;
-    protected boolean pay;
+    protected String id;
+    protected LocalDateTime checkInTime;
+    protected LocalDateTime checkOutTime = null;
+    protected LocalDateTime payDate = null;
 
-    public static CheckInTicket getTicket(){
-
-        //TODO
-        return null;
+    public CheckInTicket(String id, LocalDateTime checkInTime) {
+        this.id = id;
+        this.checkInTime = checkInTime;
     }
+
+    public boolean isPaid() {
+        return this.payDate != null;
+    }
+
+    public void checkOut(LocalDateTime time) {
+        this.checkOutTime = time;
+    }
+
+    public abstract CheckInTicket clone();
 
 }

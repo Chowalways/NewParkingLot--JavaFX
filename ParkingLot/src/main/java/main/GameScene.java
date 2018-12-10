@@ -1,19 +1,26 @@
-package sample;
+package main;
 
 import Unit.*;
 
-import Unit.Enum.Direction;
 import com.jfoenix.controls.JFXButton;
+import function.BasicObj;
+import function.CheckInSystem;
+import function.Vehicle;
+import function.VehicleCheck;
 import javafx.animation.AnimationTimer;
 import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.SplitPane;
 import javafx.scene.control.TabPane;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -24,9 +31,12 @@ public class GameScene {
 
     private List<GameObject> cars = new ArrayList<>();
     private GameObject selectedObject = null;
+    private Gate gate = null;
     private CarPark carPark = null;
     private JFXButton checkIn;
     private JFXButton checkOut;
+    private JFXButton insertCard;
+    private JFXButton pay;
 
     Scene scene;
 
@@ -34,11 +44,12 @@ public class GameScene {
     private TabPane tabPane;
 
     GameScene(Parent parent) {
-
         this.pane = (Pane) parent.lookup("#gamePane");
         this.tabPane = (TabPane) parent.lookup("#tabPane");
-        this.checkIn = (JFXButton) parent.lookup("");
-        this.checkOut = (JFXButton) parent.lookup("");
+        this.checkIn = (JFXButton) parent.lookup("#check_in");
+        this.checkOut = (JFXButton) parent.lookup("#check_out");
+        this.insertCard = (JFXButton) parent.lookup("#insert_card");
+        this.pay = (JFXButton) parent.lookup("#pay");
         this.scene = parent.getScene();
 
         if(this.pane == null) {
@@ -51,6 +62,22 @@ public class GameScene {
 
         if(this.scene == null) {
             throw new Error("Scene must not null");
+        }
+
+        if(this.checkIn == null) {
+            throw new Error("Check In Button must not null");
+        }
+
+        if(this.checkOut == null) {
+            throw new Error("Check Out Button must not null");
+        }
+
+        if(this.insertCard == null) {
+            throw new Error("Insert Card Button Button must not null");
+        }
+
+        if(this.pay == null) {
+            throw new Error("Pay Button must not null");
         }
 
         this.tabPane.getSelectionModel().selectedItemProperty().addListener(
@@ -69,7 +96,31 @@ public class GameScene {
         carPark = new CarPark(pane);
         carPark.generateParkingLot();
 
+
+        checkIn.addEventFilter(MouseEvent.MOUSE_CLICKED, checkInHandler);
+        checkOut.addEventFilter(MouseEvent.MOUSE_CLICKED, checkOutHandler);
+        insertCard.addEventFilter(MouseEvent.MOUSE_CLICKED, insertCardHandler);
+        pay.addEventFilter(MouseEvent.MOUSE_CLICKED, payHandler);
+
+
     }
+
+    private EventHandler checkInHandler = e -> {
+        System.out.println("Check In");
+        gate.open();
+    };
+
+    private EventHandler checkOutHandler = e -> {
+        System.out.println("Check Out");
+    };
+
+    private EventHandler insertCardHandler = e -> {
+        System.out.println("Insert Card");
+    };
+
+    private EventHandler payHandler = e -> {
+        System.out.println("Pay");
+    };
 
     public int getCars() {
         return cars.size();
@@ -211,15 +262,30 @@ public class GameScene {
 //        });
 
         // car parking mode
-        if(carPark != null) {
-            cars.forEach( car1 -> {
-                carPark.getParkingLots().forEach(parkingLot -> {
-                    if(parkingLot.isParkedBy(car1)) {
-                        return;
+//        if(carPark != null) {
+//            cars.forEach( car1 -> {
+//            });
+//        }
+
+        // close Gate after pass
+        carPark.getGates().forEach(gate1 -> {
+            boolean noCarNearGate = true;
+            if (gate1.status) {
+                for (GameObject car : cars) {
+                    if(car.isColliding(gate1) != Side.NONE) {
+                        noCarNearGate = false;
+                        break;
                     }
-                });
-            });
-        }
+                }
+            }
+            if(noCarNearGate) {
+                gate1.close();
+            }
+        });
+
+        carPark.getGates().forEach(gate1 -> {
+            gate1.update();
+        });
 
         cars.removeIf(GameObject::isDead);
 
@@ -243,11 +309,20 @@ public class GameScene {
                 }
 
                 for (Gate gate : carPark.getGates()) {
-                    if(car.getMoveSide().compare(car.isColliding(gate))) {
-                        collide = true;
-                        break;
+                    if(!gate.status) {
+                        if(car.getMoveSide().compare(car.isColliding(gate))) {
+                            collide = true;
+                            break;
+                        }
                     }
                 }
+
+
+                carPark.getParkingLots().forEach(parkingLot -> {
+                    if(parkingLot.isParkedBy(car)) {
+                        return;
+                    }
+                });
             }
 
             if(!collide) {
@@ -256,6 +331,28 @@ public class GameScene {
         });
 
 //        cars.forEach(GameObject::update);
+
+        // check Car Near Payment Machine
+        if(selectedObject != null && selectedObject instanceof Car) {
+            Car selectedCar = (Car) selectedObject;
+
+            Gate gate = carPark.checkCarNearbyGate(selectedCar);
+            if(gate != null) {
+                this.gate = gate;
+                boolean carStatus = gate.checkCarStatus(selectedCar);
+                if(carStatus) {
+                    checkIn.setDisable(true);
+                    checkOut.setDisable(false);
+                } else {
+                    checkIn.setDisable(false);
+                    checkOut.setDisable(true);
+                }
+            } else {
+                this.gate = null;
+                checkIn.setDisable(true);
+                checkOut.setDisable(true);
+            }
+        }
     }
 
 }

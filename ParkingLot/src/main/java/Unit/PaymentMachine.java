@@ -1,10 +1,12 @@
 package Unit;
 
 import Unit.Enum.Direction;
+import function.Check;
 import function.CheckInSystem;
+import function.VehicleCheck;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
-import sample.GameObject;
+import main.GameObject;
 
 public class PaymentMachine extends GameObject {
 
@@ -13,9 +15,10 @@ public class PaymentMachine extends GameObject {
     private CheckInSystem checkInSystem;
 
 
-    private PaymentMachine(Node view) {
+    private PaymentMachine(Node view, double pricePerHour) {
         super(view);
-        checkInSystem = new CheckInSystem();
+        Check vehicleCheck = new VehicleCheck(100);
+        checkInSystem = new CheckInSystem(vehicleCheck);
     }
 
     public static PaymentMachine create(Direction direction) {
@@ -29,7 +32,11 @@ public class PaymentMachine extends GameObject {
             imageView.setFitWidth(HEIGHT);
         }
 
-        return new PaymentMachine(imageView);
+        return new PaymentMachine(imageView, 100);
+    }
+
+    public boolean checkCarStatus(Car car) {
+        return car.hasTicket();
     }
 
 }

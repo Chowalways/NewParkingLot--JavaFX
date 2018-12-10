@@ -1,5 +1,6 @@
-package sample;
+package main;
 
+import config.ConfigManager;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -26,8 +27,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
+        ConfigManager.init("config");
+        Parent root = FXMLLoader.load(getClass().getResource("gameScene.fxml"));
         primaryStage.setTitle("Hello World");
+        primaryStage.setResizable(false);
         Scene scene = new Scene(root);
         scene.getStylesheets().add(ClassLoader.getSystemResource("css/main.css").toExternalForm());
         primaryStage.setScene(scene);
@@ -44,12 +48,11 @@ public class Main extends Application {
 
         // Schedule update time
         timeInterval(event -> {
-            LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of("UTC+08:00"));
+            LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE")));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
             lblTime.setText(formatter.format(localDateTime));
             lblTime1.setText(formatter.format(localDateTime));
             carNumberLbl.setText(String.format("%d Cars", gameScene.getCars()));
-
 
             int balanceCP = gameScene.getAvailableParkingLots(); // if no car park will return -1
             if(balanceCP != -1)
@@ -58,8 +61,6 @@ public class Main extends Application {
                 balanceCarPark.setText("No Available.");
         }, 1);
 
-
-        System.out.println(scene);
     }
 
     private void timeInterval(EventHandler event, long secondDuration) {

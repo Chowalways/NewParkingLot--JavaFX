@@ -9,6 +9,12 @@ public abstract class BasicObj {
         this.id = id;
     }
 
+    public final boolean hasTicket() {
+        if(ticket != null)
+            return true;
+        return false;
+    }
+
     public final CheckInTicket getTicket() {
         return ticket;
     }

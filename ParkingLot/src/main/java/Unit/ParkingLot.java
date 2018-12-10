@@ -2,8 +2,8 @@ package Unit;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import sample.GameObject;
-import sample.Side;
+import main.GameObject;
+import main.Side;
 
 public class ParkingLot extends GameObject {
 
@@ -42,8 +42,6 @@ public class ParkingLot extends GameObject {
         public boolean isParkedBy(GameObject other) {
 
             boolean parked = isColliding(other) == Side.INSIDE;
-            System.out.println(other);
-            System.out.println(other.isColliding(this));
             if(car == null) {
                 if(parked) {
                     setStatus(parked);

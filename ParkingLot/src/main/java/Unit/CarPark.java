@@ -1,9 +1,10 @@
 package Unit;
 
 import Unit.Enum.Direction;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
-import sample.GameObject;
-import sample.Side;
+import main.GameObject;
+import main.Side;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,7 @@ public class CarPark extends GameObject {
 
     private Pane pane;
     public final int TotalParkingLot = 20;
+    public final int ParkingLotPerColumn = 5;
 
 
     public CarPark(Pane pane) {
@@ -29,13 +31,13 @@ public class CarPark extends GameObject {
         int ParkingLotPadding = 20,
                 x = ParkingLotPadding,
                 y = ParkingLotPadding,
-                carPerColumn = 5,
-                xSpacing = 50,
-                ySpacing = 10;
+                parkingLotPerColumn = ParkingLotPerColumn,
+                xSpacing = 100, // ParkingLot xSpacing
+                ySpacing = 20; // ParkingLot ySpacing
 
         // Generate Parking Lot
         for (int i = 0; i < TotalParkingLot; i++) {
-            if (i != 0 && i % carPerColumn == 0) {
+            if (i != 0 && i % parkingLotPerColumn == 0) {
                 y = ParkingLotPadding;
                 x += ParkingLot.WIDTH + xSpacing;
             }
@@ -68,11 +70,13 @@ public class CarPark extends GameObject {
             spawnVerticalWall(parkingLotWidth + wallPadding + 10, i * Wall.LONG + wallPadding);
         }
 
+
+
         // generate Gate
         spawnHorizontalGate(55, parkingLotHeight + wallPadding - 10);
 
         // spawn Payment Machine
-        spawnPaymentMachine(55, parkingLotHeight - 100 );
+        spawnPaymentMachine(parkingLotWidth - 5, parkingLotHeight - 30 );
 
         // remove wall when collided with gate
         for (Wall wall : walls) {
@@ -142,6 +146,28 @@ public class CarPark extends GameObject {
         PaymentMachine paymentMachine = PaymentMachine.create(Direction.HORIZONTAL);
         machines.add(paymentMachine);
         addGameObject(paymentMachine, x, y);
+    }
+
+    public Gate checkCarNearbyGate(Car car) {
+        for (Gate gate : gates) {
+            if(gate.isColliding(car) != Side.NONE) {
+                return gate;
+            }
+        }
+        return null;
+    }
+
+    public PaymentMachine checkCarNearbyPaymentMachine(Car car) {
+        for (PaymentMachine machine : machines) {
+            if(machine.isColliding(car) != Side.NONE) {
+                return machine;
+            }
+        }
+        return null;
+    }
+
+    public boolean checkHasTicket(PaymentMachine machine, Car car) {
+        return machine.checkCarStatus(car);
     }
 
     // add Game Object to main pane

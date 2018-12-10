@@ -1,4 +1,4 @@
-package sample;
+package main;
 
 public enum Side {
     LEFT, RIGHT, TOP, BOTTOM, INSIDE, OUTSIDE, TOPLEFT, TOPRIGHT, BOTTOMLEFT, BOTTOMRIGHT, NONE;

@@ -5,7 +5,7 @@ import function.CheckInTicket;
 import function.Vehicle;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import sample.GameObject;
+import main.GameObject;
 
 public class Car extends GameObject {
 
@@ -32,6 +32,10 @@ public class Car extends GameObject {
 
     public final CheckInTicket getTicket() {
         return vehicle.getTicket();
+    }
+
+    public final boolean hasTicket() {
+        return vehicle.hasTicket();
     }
 
     public final void removeTicket() {
