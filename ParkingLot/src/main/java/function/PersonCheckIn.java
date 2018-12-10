@@ -12,8 +12,9 @@ public class PersonCheckIn implements CheckIn {
 
     public CheckInTicket signIn(BasicObj obj){
         this.obj = obj;
-        obj.ticket =  CheckInTicket.getTicket();
-        return obj.ticket;
+        CheckInTicket ticket = CheckInTicket.getTicket();
+        obj.setTicket(ticket);
+        return ticket;
     }
 
     public boolean checkout(CheckInTicket ticket){

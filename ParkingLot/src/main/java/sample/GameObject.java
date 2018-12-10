@@ -8,7 +8,7 @@ import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.Node;
 
-public class GameObject {
+public abstract class GameObject {
     private Node view;
     private Point2D velocity = new Point2D(1, 0);
     private boolean move = false;

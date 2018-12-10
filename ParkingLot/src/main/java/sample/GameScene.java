@@ -1,11 +1,9 @@
 package sample;
 
-import Unit.Gate;
-import Unit.ParkingLot;
-import Unit.Car;
+import Unit.*;
 
 import Unit.Enum.Direction;
-import Unit.Wall;
+import com.jfoenix.controls.JFXButton;
 import javafx.animation.AnimationTimer;
 import javafx.event.EventHandler;
 import javafx.geometry.Bounds;
@@ -25,11 +23,11 @@ import java.util.Random;
 public class GameScene {
 
     private List<GameObject> cars = new ArrayList<>();
-    private List<ParkingLot> parkingLots = new ArrayList<>();
-    private List<Wall> walls = new ArrayList<>();
-    private List<Gate> gates = new ArrayList<>();
     private GameObject selectedObject = null;
-    public final int TOTALPARKINGLOT = 20;
+    private CarPark carPark = null;
+    private JFXButton checkIn;
+    private JFXButton checkOut;
+
     Scene scene;
 
     private Pane pane;
@@ -39,6 +37,8 @@ public class GameScene {
 
         this.pane = (Pane) parent.lookup("#gamePane");
         this.tabPane = (TabPane) parent.lookup("#tabPane");
+        this.checkIn = (JFXButton) parent.lookup("");
+        this.checkOut = (JFXButton) parent.lookup("");
         this.scene = parent.getScene();
 
         if(this.pane == null) {
@@ -55,6 +55,7 @@ public class GameScene {
 
         this.tabPane.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
+                    // set Event Listener with to selected tab
                     if(newValue.getId().compareToIgnoreCase("carSystem") == 0) {
                         setControl();
                     } else if (newValue.getId().compareToIgnoreCase("workSystem") == 0) {
@@ -65,21 +66,37 @@ public class GameScene {
 
         setControl();
 
-        initialPath();
+        carPark = new CarPark(pane);
+        carPark.generateParkingLot();
+
     }
 
     public int getCars() {
         return cars.size();
     }
 
-    public int getAvailableCarPark() {
+    public void setCarPark(CarPark carPark) {
+        this.carPark = carPark;
+    }
+
+    public void removeCarPark() {
+        this.carPark = null;
+    }
+
+    public int getAvailableParkingLots() {
+        // get Available Parking Lot from car Park Object
+        if(carPark == null) {
+            return -1;
+        }
+
         int count = 0;
-        for (ParkingLot parkingLot : parkingLots) {
+        for (ParkingLot parkingLot : carPark.getParkingLots()) {
 
             if (!parkingLot.isParked()) {
                 count += 1;
             }
         }
+
         return count;
     }
 
@@ -94,54 +111,8 @@ public class GameScene {
         timer.start();
     }
 
-    void initialPath() {
-
-        System.out.println("Spawn Car Park");
-        int ParkingLotPadding = 20,
-                x = ParkingLotPadding,
-            y = ParkingLotPadding,
-            carPerColumn = 5,
-            xSpacing = 50,
-            ySpacing = 10;
-
-        for (int i = 0; i < TOTALPARKINGLOT; i++) {
-            if (i != 0 && i % carPerColumn == 0) {
-                y = ParkingLotPadding;
-                x += ParkingLot.WIDTH + xSpacing;
-            }
-            spawnParkingLot(x, y);
-            y += ParkingLot.HEIGHT + ySpacing;
-        }
-
-
-        int wallPadding = ParkingLotPadding - 10,
-                parkingLotWidth = x + ParkingLot.WIDTH + 60,
-            parkingLotHeight = y + 200;
-        // Generate TOP Wall
-        for (int i = 0; i * Wall.LONG < parkingLotWidth; i ++ ) {
-            spawnHorizontalWall(i * Wall.LONG + wallPadding, 0 + wallPadding);
-        }
-
-        // Generate Bottom Wall
-        for (int i = 0; i * Wall.LONG < parkingLotWidth; i ++ ) {
-            spawnHorizontalWall(i * Wall.LONG + wallPadding, parkingLotHeight + wallPadding);
-        }
-
-        // Generate LEFT Wall
-        for (int i = 0; i * Wall.LONG < parkingLotHeight; i ++ ) {
-            spawnVerticalWall(0 + wallPadding, i * Wall.LONG + wallPadding);
-        }
-
-        // Generate RIGHT Wall
-        for (int i = 0; i * Wall.LONG < parkingLotHeight; i ++ ) {
-            spawnVerticalWall(parkingLotWidth + wallPadding + 10, i * Wall.LONG + wallPadding);
-        }
-
-        // generate Gate
-        spawnHorizontalGate(55, parkingLotHeight + wallPadding - 10);
-
-    }
-
+    // This is a variable
+    // Car System Simulator keyboard event Handler
     public EventHandler event = (EventHandler<KeyEvent>) e -> {
         if(e.getCode() == KeyCode.ENTER) {
             spawnCar();
@@ -174,10 +145,12 @@ public class GameScene {
     };
 
     public void setControl() {
+        // Set Control
         scene.setOnKeyPressed(event);
     }
 
     public void removeControl() {
+        // remove eventHandler
         scene.setOnKeyPressed(null);
     }
 
@@ -193,7 +166,7 @@ public class GameScene {
         random.setSeed(new Date().getTime());
         Bounds bound = pane.getLayoutBounds();
 
-        Car car = Car.createCar();
+        Car car = Car.createCar(String.format("A%08d", cars.size() + 1), 4, 40.0);
         Bounds carBound = car.getView().getLayoutBounds();
         addCar(car, random.nextDouble() * 1000 % (bound.getWidth() - carBound.getWidth()), random.nextDouble() * 1000 % (bound.getHeight() - carBound.getHeight()));
     }
@@ -213,48 +186,10 @@ public class GameScene {
     private void removeCar(GameObject object) {
         cars.remove(object);
         pane.getChildren().remove(object.getView());
-        parkingLots.forEach(c -> c.setStatus(false));
+        if(carPark != null) {
+            carPark.getParkingLots().forEach(c -> c.setStatus(false));
+        }
         selectedObject = null;
-    }
-
-    void spawnParkingLot(int x, int y) {
-        ParkingLot parkingLot = ParkingLot.createCarPark();
-        addParkingLot(parkingLot, x, y);
-    }
-
-    private void addParkingLot(ParkingLot object, double x, double y) {
-        parkingLots.add(object);
-        addGameObject(object, x, y);
-    }
-
-    void spawnHorizontalWall(int x, int y) {
-        Wall wall = Wall.creteWall(Direction.HORIZONTAL);
-        addWall(wall, x, y);
-    }
-
-    void spawnVerticalWall(int x, int y) {
-        Wall wall = Wall.creteWall(Direction.VERTICAL);
-        addWall(wall, x, y);
-    }
-
-    private void addWall(Wall wall, int x, int y) {
-        walls.add(wall);
-        addGameObject(wall, x, y);
-    }
-
-    void spawnHorizontalGate(int x, int y) {
-        Gate gate = Gate.createGate(Direction.HORIZONTAL);
-        addGate(gate, x, y);
-    }
-
-    void spawnVerticalGate(int x, int y) {
-        Gate gate = Gate.createGate(Direction.VERTICAL);
-        addGate(gate, x, y);
-    }
-
-    private void addGate(Gate gate, int x, int y) {
-        gates.add(gate);
-        addGameObject(gate, x, y);
     }
 
     private void onUpdate() {
@@ -276,17 +211,19 @@ public class GameScene {
 //        });
 
         // car parking mode
-        cars.forEach( car1 -> {
-            parkingLots.forEach(parkingLot -> {
-                if(parkingLot.isParkedBy(car1)) {
-                    return;
-                }
+        if(carPark != null) {
+            cars.forEach( car1 -> {
+                carPark.getParkingLots().forEach(parkingLot -> {
+                    if(parkingLot.isParkedBy(car1)) {
+                        return;
+                    }
+                });
             });
-        });
+        }
 
         cars.removeIf(GameObject::isDead);
 
-        // Check
+        // Check Car Collided
         cars.forEach(car -> {
             boolean collide = false;
             for (GameObject car2 : cars) {
@@ -296,17 +233,20 @@ public class GameScene {
                 }
             }
 
-            for (Wall wall : walls) {
-                if(car.getMoveSide().compare(car.isColliding(wall))) {
-                    collide = true;
-                    break;
+            // check Car collided with wall and gate
+            if(carPark != null) {
+                for (Wall wall : carPark.getWalls()) {
+                    if(car.getMoveSide().compare(car.isColliding(wall))) {
+                        collide = true;
+                        break;
+                    }
                 }
-            }
 
-            for (Gate gate : gates) {
-                if(car.getMoveSide().compare(car.isColliding(gate))) {
-                    collide = true;
-                    break;
+                for (Gate gate : carPark.getGates()) {
+                    if(car.getMoveSide().compare(car.isColliding(gate))) {
+                        collide = true;
+                        break;
+                    }
                 }
             }
 
@@ -314,17 +254,6 @@ public class GameScene {
                 car.update();
             }
         });
-
-        // remove wall when collided with gate
-        for (Wall wall : walls) {
-            for (Gate gate : gates) {
-                if(gate.isColliding(wall) == Side.INSIDE) {
-                    wall.setAlive(false);
-                    pane.getChildren().remove(wall.getView());
-                }
-            }
-        }
-        walls.removeIf(GameObject::isDead);
 
 //        cars.forEach(GameObject::update);
     }

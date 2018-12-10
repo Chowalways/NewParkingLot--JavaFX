@@ -9,9 +9,10 @@ public class VehicleCheckIn {
     protected List ticketHistory = new ArrayList();
 
     public CheckInTicket signIn(BasicObj obj){
-        obj.ticket =  CheckInTicket.getTicket();
-        ticketHistory.add(obj.ticket);
-        return obj.ticket;
+        CheckInTicket ticket = CheckInTicket.getTicket();
+        obj.setTicket(ticket);
+        ticketHistory.add(ticket);
+        return ticket;
     }
 
     public void signOut(CheckInTicket ticket) {

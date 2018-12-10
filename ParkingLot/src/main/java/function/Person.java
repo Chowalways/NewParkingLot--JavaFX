@@ -6,7 +6,7 @@ public class Person extends BasicObj {
     private int age;
 
     public Person(CheckInTicket ticket, String id, Gender gender, int age){
-        super(ticket,id);
+        super(id);
         this.gender = gender;
         this.age = age;
     }

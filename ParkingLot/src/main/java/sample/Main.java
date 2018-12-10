@@ -3,13 +3,11 @@ package sample;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -51,7 +49,13 @@ public class Main extends Application {
             lblTime.setText(formatter.format(localDateTime));
             lblTime1.setText(formatter.format(localDateTime));
             carNumberLbl.setText(String.format("%d Cars", gameScene.getCars()));
-            balanceCarPark.setText(String.format("%d Available", gameScene.getAvailableCarPark()));
+
+
+            int balanceCP = gameScene.getAvailableParkingLots(); // if no car park will return -1
+            if(balanceCP != -1)
+                balanceCarPark.setText(String.format("%d Available", balanceCP));
+            else
+                balanceCarPark.setText("No Available.");
         }, 1);
 
 

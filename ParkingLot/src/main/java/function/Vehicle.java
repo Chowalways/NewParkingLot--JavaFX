@@ -2,12 +2,12 @@ package function;
 
 public class Vehicle extends BasicObj {
 
-    private int wheelNo;
+    private int numberOfWheels;
     private double weight;
 
-    public Vehicle(CheckInTicket ticket, String id, int wheelNo, double weight) {
-        super(ticket, id);
-        this.wheelNo = wheelNo;
+    public Vehicle(String id, int numberOfWheels, double weight) {
+        super(id);
+        this.numberOfWheels = numberOfWheels;
         this.weight = weight;
     }
 
