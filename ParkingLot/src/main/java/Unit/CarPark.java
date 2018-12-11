@@ -1,7 +1,9 @@
 package Unit;
 
 import Unit.Enum.Direction;
-import javafx.scene.layout.AnchorPane;
+import function.Check;
+import function.CheckInSystem;
+import function.VehicleCheck;
 import javafx.scene.layout.Pane;
 import main.GameObject;
 import main.Side;
@@ -13,16 +15,20 @@ public class CarPark extends GameObject {
     private ArrayList<ParkingLot> parkingLots = new ArrayList<>();
     private ArrayList<Wall> walls = new ArrayList<>();
     private ArrayList<Gate> gates = new ArrayList<>();
-    private ArrayList<PaymentMachine> machines = new ArrayList<>();
+    private ArrayList<PaymentMachine> paymentMachines = new ArrayList<>();
+    private CheckInSystem checkInSystem;
 
     private Pane pane;
     public final int TotalParkingLot = 20;
     public final int ParkingLotPerColumn = 5;
 
 
-    public CarPark(Pane pane) {
+    public CarPark(Pane pane, double pricePerHour) {
         super(pane);
         this.pane = pane;
+
+        Check check = new VehicleCheck(pricePerHour);
+        checkInSystem = new CheckInSystem(check);
     }
 
     public void generateParkingLot() {
@@ -101,6 +107,9 @@ public class CarPark extends GameObject {
     public ArrayList<Gate> getGates() {
         return (ArrayList<Gate>) gates.clone();
     }
+    public ArrayList<PaymentMachine> getPaymentMachines() {
+        return paymentMachines;
+    }
 
     void spawnParkingLot(int x, int y) {
         ParkingLot parkingLot = ParkingLot.createCarPark();
@@ -129,11 +138,13 @@ public class CarPark extends GameObject {
 
     void spawnHorizontalGate(int x, int y) {
         Gate gate = Gate.createGate(Direction.HORIZONTAL);
+        gate.connectSystem(checkInSystem);
         addGate(gate, x, y);
     }
 
     void spawnVerticalGate(int x, int y) {
         Gate gate = Gate.createGate(Direction.VERTICAL);
+        gate.connectSystem(checkInSystem);
         addGate(gate, x, y);
     }
 
@@ -143,8 +154,10 @@ public class CarPark extends GameObject {
     }
 
     void spawnPaymentMachine(int x, int y) {
+        // Horizontal Machine
         PaymentMachine paymentMachine = PaymentMachine.create(Direction.HORIZONTAL);
-        machines.add(paymentMachine);
+        paymentMachine.connectSystem(checkInSystem);
+        paymentMachines.add(paymentMachine);
         addGameObject(paymentMachine, x, y);
     }
 
@@ -158,7 +171,7 @@ public class CarPark extends GameObject {
     }
 
     public PaymentMachine checkCarNearbyPaymentMachine(Car car) {
-        for (PaymentMachine machine : machines) {
+        for (PaymentMachine machine : paymentMachines) {
             if(machine.isColliding(car) != Side.NONE) {
                 return machine;
             }

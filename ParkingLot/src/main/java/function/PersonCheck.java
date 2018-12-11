@@ -44,4 +44,9 @@ public class PersonCheck implements Check {
     public double calculatePrice(CheckInTicket ticket) {
         return 0;
     }
+
+    @Override
+    public double calculatePriceExceed(CheckInTicket ticket) {
+        return 0;
+    }
 }

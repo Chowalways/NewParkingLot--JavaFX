@@ -2,6 +2,10 @@ package Unit;
 
 import Unit.Enum.Direction;
 import Unit.Interface.Openable;
+import function.BasicObj;
+import function.CheckInStatus;
+import function.CheckInSystem;
+import function.CheckInTicket;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -9,6 +13,8 @@ import javafx.scene.shape.Rectangle;
 import main.GameObject;
 
 public class Gate extends GameObject implements Openable {
+
+    private CheckInSystem checkInSystem;
 
     public static final int BodyWidth = 15;
     public static final int BodyHeight = 25;
@@ -44,8 +50,25 @@ public class Gate extends GameObject implements Openable {
         return new Gate(pane, arm);
     }
 
+    public void connectSystem(CheckInSystem checkInSystem) {
+        this.checkInSystem = checkInSystem;
+    }
+
     public boolean checkCarStatus(Car car) {
         return car.hasTicket();
+    }
+
+    public void giveTicket(BasicObj basicObj) {
+        checkInSystem.giveTicket(basicObj);
+    }
+
+    public CheckInStatus checkOut(BasicObj basicObj) {
+        CheckInTicket ticket = basicObj.getTicket();
+        CheckInStatus status = checkInSystem.checkOut(ticket);
+        if(status == CheckInStatus.Done) {
+            basicObj.setTicket(null);
+        }
+        return status;
     }
 
     @Override

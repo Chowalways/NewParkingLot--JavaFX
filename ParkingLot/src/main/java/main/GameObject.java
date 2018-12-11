@@ -107,6 +107,14 @@ public abstract class GameObject {
         return !alive;
     }
 
+    public boolean isMove() {
+        return move;
+    }
+
+    public boolean isReverse() {
+        return reverse;
+    }
+
     public double getRotate() {
         return view.getRotate();
     }

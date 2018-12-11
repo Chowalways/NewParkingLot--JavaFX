@@ -1,11 +1,10 @@
 package function;
 
-import java.time.LocalDate;
+import config.ConfigManager;
+
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class CheckInSystem {
 
@@ -25,24 +24,25 @@ public class CheckInSystem {
         this.tickets.add(ticket);
     }
 
-    public CheckInStatus insertTicket(CheckInTicket ticket) {
+    public CheckInStatus validTicket(CheckInTicket ticket) {
         CheckInTicket updateTicket = findTicket(ticket);
 
         if(updateTicket == null) {
             throw new Error("Invalid Ticket");
         }
 
-        CheckInStatus status = check.validate(ticket);
+        // validate ticket from system data
+        CheckInStatus status = check.validate(updateTicket);
 
-        if(status == CheckInStatus.Done) {
-            updateTicket.payDate = ticket.payDate;
-            check.checkout(updateTicket);
-        }
         return status;
     }
 
     public double calculatePrice(CheckInTicket ticket) {
         return check.calculatePrice(ticket);
+    }
+
+    public double calculatePriceExceed(CheckInTicket ticket) {
+        return check.calculatePriceExceed(ticket);
     }
 
     private CheckInTicket findTicket(CheckInTicket ticket) {
@@ -51,6 +51,22 @@ public class CheckInSystem {
                 return checkInTicket;
         }
         return null;
+    }
+
+    public void payTicket(CheckInTicket ticket) {
+        CheckInTicket updateTicket = findTicket(ticket);
+        updateTicket.payTime = LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE")));
+        ticket.payTime = updateTicket.payTime;
+    }
+
+    public CheckInStatus checkOut(CheckInTicket ticket) {
+        CheckInTicket updateTicket = findTicket(ticket);
+        CheckInStatus status = validTicket(updateTicket);
+
+        if(status == CheckInStatus.Done) {
+            updateTicket.checkOut(LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE"))));
+        }
+        return status;
     }
 
 }

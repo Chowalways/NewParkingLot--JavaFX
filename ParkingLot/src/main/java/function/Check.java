@@ -7,5 +7,6 @@ public interface Check {
     boolean checkout(CheckInTicket ticket);
     CheckInStatus validate(CheckInTicket ticket);
     double calculatePrice(CheckInTicket ticket);
+    double calculatePriceExceed(CheckInTicket ticket);
 
 }

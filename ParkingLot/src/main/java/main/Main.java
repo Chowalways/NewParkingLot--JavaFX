@@ -20,8 +20,8 @@ public class Main extends Application {
 
     GameScene gameScene;
 
-    Label lblTime;
-    Label lblTime1;
+    Label carTimeLabel;
+    Label workTimeLabel;
     private Label balanceCarPark;
     Label carNumberLbl;
 
@@ -37,21 +37,22 @@ public class Main extends Application {
         primaryStage.setScene(scene);
         primaryStage.show();
 
-        lblTime = (Label) root.lookup("#lblTime");
-        lblTime1 = (Label) root.lookup("#lblTime1");
+        carTimeLabel = (Label) root.lookup("#carTimeLabel");
+        workTimeLabel = (Label) root.lookup("#workTimeLabel");
         carNumberLbl = (Label) root.lookup("#carNumberLbl");
         balanceCarPark = (Label) root.lookup("#balanceLabel");
 
         // Create Game Scene
-        gameScene = new GameScene(root);
+        GameScene.init(root);
+        gameScene = GameScene.getInstance();
         gameScene.startTimer();
 
         // Schedule update time
         timeInterval(event -> {
             LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE")));
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
-            lblTime.setText(formatter.format(localDateTime));
-            lblTime1.setText(formatter.format(localDateTime));
+            carTimeLabel.setText(formatter.format(localDateTime));
+            workTimeLabel.setText(formatter.format(localDateTime));
             carNumberLbl.setText(String.format("%d Cars", gameScene.getCars()));
 
             int balanceCP = gameScene.getAvailableParkingLots(); // if no car park will return -1

@@ -5,7 +5,6 @@ import config.ConfigManager;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class VehicleCheck implements Check {
 
@@ -13,12 +12,11 @@ public class VehicleCheck implements Check {
 
     public VehicleCheck(double pricePerHour) {
         this.pricePerHour = pricePerHour;
-
     }
 
     @Override
     public CheckInTicket signIn(BasicObj obj, String id) {
-        CheckInTicket ticket = new VehincleCheckInTicket(id, LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE"))), CheckInType.GUEST);
+        CheckInTicket ticket = new VehicleCheckInTicket(id, LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE"))), CheckInType.GUEST);
         obj.setTicket(ticket);
         return ticket;
     }
@@ -38,7 +36,7 @@ public class VehicleCheck implements Check {
         LocalDateTime currentDate = LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE")));
 
         // exceed 15 minutes
-        if(currentDate.getMinute() - ticket.payDate.getMinute()  > 15 ) {
+        if(currentDate.getMinute() - ticket.payTime.getMinute()  > 15 ) {
             return CheckInStatus.TimeExceed;
         }
 
@@ -60,4 +58,19 @@ public class VehicleCheck implements Check {
 
         return price;
     }
+
+    @Override
+    public double calculatePriceExceed(CheckInTicket ticket) {
+
+        double price = 0;
+
+        LocalDateTime currentDate = LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE")));
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY-MM-DD hh:mm:ss");
+        int diffHour = currentDate.getHour() - ticket.payTime.getHour();
+        int diffMinutes = currentDate.getMinute() - ticket.payTime.getMinute();
+
+        price += diffHour * pricePerHour;
+        price += diffMinutes > 0 ? 1 * pricePerHour : 0;
+
+        return price;    }
 }

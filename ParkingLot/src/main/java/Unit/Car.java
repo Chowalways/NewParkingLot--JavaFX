@@ -16,6 +16,10 @@ public class Car extends GameObject {
         vehicle = new Vehicle(id, numberOfWheels, weight);
     }
 
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
     public static Car createCar(String id, int numberOfWheels, double weight) {
         ImageView imageView = new ImageView();
         Image image = new Image("res/images/car.png");

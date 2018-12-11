@@ -2,57 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a02c18ce-64a2-4c57-bac0-62c4fc1bbdb9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/config/ConfigManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/function/Check.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/function/CheckInStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/Car.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/CarPark.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/CarPark.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Gate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/Gate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/ParkingLot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/PaymentMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/PaymentMachine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/Wall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/CheckIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/function/Check.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/function/Check.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/function/CheckInSystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/function/CheckInSystem.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/function/CheckInTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/function/CheckInTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/PersonCheckIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/PersonCheckInTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/function/PersonCheckInTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/VehicleCheckIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/VehincleCheckInTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/function/VehincleCheckInTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/Collision.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/GameObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/GameScene$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/GameScene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/Side$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/Side.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/gameScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/function/PersonCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/function/PersonCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/function/VehicleCheck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/function/VehicleCheck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/function/VehincleCheckInTicket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/GameScene$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/GameScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Car.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unit/CarPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/CarPark.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Gate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Interface/Openable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Interface/Openable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/ParkingLot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Wall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/BasicObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/BasicObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/CheckIn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/function/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/Check.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/function/CheckInSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/CheckInSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/function/CheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/CheckInTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/PersonCheckIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/PersonCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/PersonCheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/PersonCheckInTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/VehicleCheckIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/VehicleCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/VehincleCheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/VehincleCheckInTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Collision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Collision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/GameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/Side.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Side.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/gameScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sample/sample.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/function/PersonCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/PersonCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/function/VehicleCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/VehicleCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/function/VehincleCheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/function/VehicleCheckInTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/GameObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/GameScene.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -76,11 +54,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+      <file leaf-file-name="GameScene.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/GameScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="500" column="44" selection-start-line="500" selection-start-column="44" selection-end-line="500" selection-end-column="44" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1388#1389#0" expanded="true" />
+                <element signature="e#1440#1441#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckInSystem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/function/CheckInSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,11 +80,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CheckInTicket.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/function/CheckInTicket.java">
+      <file leaf-file-name="Check.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/function/Check.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+            <state relative-caret-position="135">
+              <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VehicleCheck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/function/VehicleCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+              <folding>
+                <element signature="e#267#268#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,78 +112,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameScene.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/GameScene.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="269" column="32" selection-start-line="269" selection-start-column="32" selection-end-line="269" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarPark.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Unit/CarPark.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="147" column="44" lean-forward="true" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2971#2972#0" expanded="true" />
-                <element signature="e#3037#3038#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Gate.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-357">
-              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1379#1380#0" expanded="true" />
-                <element signature="e#1408#1409#0" expanded="true" />
-                <element signature="e#1480#1481#0" expanded="true" />
-                <element signature="e#1510#1511#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PaymentMachine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="37" column="28" selection-start-line="37" selection-end-line="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonCheck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/function/PersonCheck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="32" column="87" selection-start-line="32" selection-start-column="87" selection-end-line="32" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Car.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+            <state relative-caret-position="135">
+              <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
                 <element signature="e#895#896#0" expanded="true" />
                 <element signature="e#937#938#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,36 +153,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>isParkedBy</find>
-      <find>spawnCarPark</find>
-      <find>carParks</find>
-      <find>carP</find>
-      <find>initial</find>
-      <find>spawnGate</find>
-      <find>addGate</find>
-      <find>Gate</find>
-      <find>addGa</find>
-      <find>spawn</find>
-      <find>spawnHori</find>
-      <find>remove</find>
-      <find>spawnHorizontalGate</find>
-      <find>addGameObject</find>
+      <find>check</find>
+      <find>checkIn</find>
+      <find>Handler</find>
       <find>car</find>
-      <find>Time</find>
-      <find>DATE</find>
-      <find>UTC</find>
-      <find>-fx-background-radius</find>
-      <find>Pane</find>
-      <find>Clicked</find>
-      <find>payment</find>
+      <find>onUpdate</find>
+      <find>CheckIn</find>
+      <find>this.carpark</find>
+      <find>create</find>
+      <find>giveTicket</find>
+      <find>checkInSystem</find>
+      <find>gameScene</find>
+      <find>CheckOut</find>
+      <find>checkOut</find>
+      <find>this.carPark</find>
+      <find>CarPark</find>
+      <find>clone</find>
+      <find>Pay</find>
+      <find>gates</find>
+      <find>Alert.</find>
+      <find>Confirm</find>
+      <find>spawn</find>
+      <find>pay</find>
+      <find>exceed</find>
+      <find>excee</find>
+      <find>exce</find>
       <find>spawnCar</find>
-      <find>system.out</find>
-      <find>System.out`</find>
-      <find>disabled</find>
-      <find>System.out</find>
-      <find>getGates</find>
-      <find>update</find>
-      <find>gate</find>
+      <find>isA</find>
+      <find>selectedCar</find>
+      <find>selectedCa</find>
+      <find>removeCar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -547,27 +503,29 @@
         <option value="$PROJECT_DIR$/src/main/java/function/PersonCheckIn.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/CheckIn.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/VehicleCheckIn.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/CheckInTicket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/Check.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/VehincleCheckInTicket.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/PersonCheckInTicket.java" />
         <option value="$PROJECT_DIR$/out/production/classes/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/function/PropertiesManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/ResourceManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/ConfigManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/PersonCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/function/CheckInSystem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/function/VehicleCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/function/BasicObj.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Unit/Car.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Unit/ParkingLot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Unit/CarPark.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/CheckInTicket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/Check.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/PersonCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/VehincleCheckInTicket.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/VehicleCheckInTicket.java" />
         <option value="$PROJECT_DIR$/src/main/java/Unit/Gate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/CheckInSystem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Unit/CarPark.java" />
+        <option value="$PROJECT_DIR$/src/main/java/function/VehicleCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Unit/Car.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/GameObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/main/GameScene.java" />
       </list>
     </option>
@@ -587,11 +545,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-237" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="983" />
+    <option name="width" value="1680" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -629,30 +586,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="function" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Unit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
@@ -792,15 +726,15 @@
       <workItem from="1544174960009" duration="23876000" />
       <workItem from="1544268113659" duration="2052000" />
       <workItem from="1544321315268" duration="12575000" />
-      <workItem from="1544448031607" duration="18016000" />
+      <workItem from="1544448031607" duration="29451000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58911000" />
+    <option name="totallyTimeSpent" value="70346000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="983" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="953" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -816,16 +750,16 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32893288" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3287827" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3179318" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3287827" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.330033" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21875" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32893288" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287827" />
       <window_info anchor="right" id="Gradle" order="7" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -845,7 +779,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1051,27 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/PersonCheckInTicket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/Vehicle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/VehincleCheckInTicket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/function/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1093,66 +1006,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/CheckInStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/Check.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/CheckInSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/VehicleCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="45" lean-forward="true" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/BasicObj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
-          <folding>
-            <element signature="e#215#216#0" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="20" column="51" lean-forward="true" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#937#938#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1166,33 +1023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/function/PersonCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="32" column="87" selection-start-line="32" selection-start-column="87" selection-end-line="32" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="37" column="28" selection-start-line="37" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="46" column="28" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1200,10 +1030,174 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/BasicObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="e#335#336#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/PersonCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="49" column="17" lean-forward="true" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding>
+            <element signature="e#1228#1229#0" expanded="true" />
+            <element signature="e#1252#1253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/Vehicle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/PersonCheckInTicket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding>
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#217#218#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/VehicleCheckInTicket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/function/CheckInTicket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+        <state relative-caret-position="430">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#596#597#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/CarPark.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="113" column="14" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3385#3386#0" expanded="true" />
+            <element signature="e#3439#3440#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+            <element signature="e#3524#3525#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Gate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/CheckInStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/CheckInSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="44" column="24" lean-forward="true" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/Check.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/function/VehicleCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#937#938#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="109" column="21" lean-forward="true" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2615#2616#0" expanded="true" />
+            <element signature="e#2642#2643#0" expanded="true" />
+            <element signature="e#2676#2677#0" expanded="true" />
+            <element signature="e#2706#2707#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1215,48 +1209,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/CarPark.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="147" column="44" lean-forward="true" selection-start-line="147" selection-start-column="44" selection-end-line="147" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2971#2972#0" expanded="true" />
-            <element signature="e#3037#3038#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Gate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1379#1380#0" expanded="true" />
-            <element signature="e#1408#1409#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
-            <element signature="e#1510#1511#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/GameScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="269" column="32" selection-start-line="269" selection-start-column="32" selection-end-line="269" selection-end-column="32" />
+        <state relative-caret-position="285">
+          <caret line="500" column="44" selection-start-line="500" selection-start-column="44" selection-end-line="500" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1440#1441#0" expanded="true" />
           </folding>
         </state>
       </provider>
