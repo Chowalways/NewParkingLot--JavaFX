@@ -2,8 +2,8 @@ package Unit;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import main.GameObject;
-import main.Side;
+import Abstract.GameObject;
+import Unit.Enum.Side;
 
 public class ParkingLot extends GameObject {
 

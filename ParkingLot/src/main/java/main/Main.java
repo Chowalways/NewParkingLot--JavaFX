@@ -18,7 +18,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Main extends Application {
 
-    GameScene gameScene;
+    VehicleGameScene vehicleGameScene;
 
     Label carTimeLabel;
     Label workTimeLabel;
@@ -43,9 +43,9 @@ public class Main extends Application {
         balanceCarPark = (Label) root.lookup("#balanceLabel");
 
         // Create Game Scene
-        GameScene.init(root);
-        gameScene = GameScene.getInstance();
-        gameScene.startTimer();
+        VehicleGameScene.init(root);
+        vehicleGameScene = VehicleGameScene.getInstance();
+        vehicleGameScene.startTimer();
 
         // Schedule update time
         timeInterval(event -> {
@@ -53,9 +53,9 @@ public class Main extends Application {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
             carTimeLabel.setText(formatter.format(localDateTime));
             workTimeLabel.setText(formatter.format(localDateTime));
-            carNumberLbl.setText(String.format("%d Cars", gameScene.getCars()));
+            carNumberLbl.setText(String.format("%d Cars", vehicleGameScene.getCars()));
 
-            int balanceCP = gameScene.getAvailableParkingLots(); // if no car park will return -1
+            int balanceCP = vehicleGameScene.getAvailableParkingLots(); // if no car park will return -1
             if(balanceCP != -1)
                 balanceCarPark.setText(String.format("%d Available", balanceCP));
             else

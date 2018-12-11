@@ -1,11 +1,11 @@
 package Unit;
 
 
-import function.CheckInTicket;
-import function.Vehicle;
+import Abstract.CheckInTicket;
+import Class.Vehicle;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import main.GameObject;
+import Abstract.GameObject;
 
 public class Car extends GameObject {
 

@@ -1,16 +1,16 @@
 package Unit;
 
+import Abstract.BasicObj;
+import Abstract.CheckInTicket;
 import Unit.Enum.Direction;
 import Unit.Interface.Openable;
-import function.BasicObj;
-import function.CheckInStatus;
-import function.CheckInSystem;
-import function.CheckInTicket;
+import CheckSystem.Other.CheckInStatus;
+import CheckSystem.CheckInSystem;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import main.GameObject;
+import Abstract.GameObject;
 
 public class Gate extends GameObject implements Openable {
 

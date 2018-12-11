@@ -4,7 +4,7 @@ import Unit.Enum.Direction;
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import main.GameObject;
+import Abstract.GameObject;
 
 public class Wall extends GameObject {
 

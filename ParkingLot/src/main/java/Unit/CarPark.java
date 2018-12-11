@@ -1,12 +1,12 @@
 package Unit;
 
 import Unit.Enum.Direction;
-import function.Check;
-import function.CheckInSystem;
-import function.VehicleCheck;
+import CheckSystem.Other.Check;
+import CheckSystem.CheckInSystem;
+import CheckSystem.VehicleCheck;
 import javafx.scene.layout.Pane;
-import main.GameObject;
-import main.Side;
+import Abstract.GameObject;
+import Unit.Enum.Side;
 
 import java.util.ArrayList;
 

@@ -1,10 +1,12 @@
 package Unit;
 
+import Abstract.CheckInTicket;
+import CheckSystem.Other.CheckInStatus;
+import CheckSystem.CheckInSystem;
 import Unit.Enum.Direction;
-import function.*;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
-import main.GameObject;
+import Abstract.GameObject;
 
 public class PaymentMachine extends GameObject {
 
