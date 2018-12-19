@@ -2,69 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a02c18ce-64a2-4c57-bac0-62c4fc1bbdb9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/CheckInSystem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/Other/Check.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/Other/CheckInStatus.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/Other/CheckInType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/Other/Gender.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/PersonCheck.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/PersonCheckInTicket.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/VehicleCheck.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/CheckSystem/VehicleCheckInTicket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/CarPark.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/CarPark.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Gate.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/Gate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/ParkingLot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/ParkingLot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/PaymentMachine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/PaymentMachine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Wall.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Unit/Wall.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/BasicObj.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/Check.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/CheckInStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/CheckInSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/CheckInTicket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/CheckInType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/PersonCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/PersonCheckInTicket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/VehicleCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/function/VehicleCheckInTicket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Collision.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/GameObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/GameScene$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/GameScene$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/GameScene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Side$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Side.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/CarPark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/CarPark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Gate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/ParkingLot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/ParkingLot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/PaymentMachine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Wall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/BasicObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Abstract/BasicObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/Check.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/Other/Check.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/CheckInStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/Other/CheckInStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/CheckInSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/CheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/CheckInType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/Other/CheckInType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/Other/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Class/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/PersonCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/PersonCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/PersonCheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/PersonCheckInTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Class/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/VehicleCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/VehicleCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/function/VehicleCheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/VehicleCheckInTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Collision.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/GameObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Abstract/GameObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/GameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Side.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Enum/Side.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Abstract/GameObject.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Abstract/GameObject.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -88,37 +27,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/GameObject.java">
+      <file leaf-file-name="VehicleGameScene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
+            <state relative-caret-position="15">
+              <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2642#2643#0" expanded="true" />
-                <element signature="e#2669#2670#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VehicleCheck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/VehicleCheck.java">
+      <file leaf-file-name="gameScene.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/gameScene.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="73" column="63" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
+            <state relative-caret-position="270">
+              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonCheck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/PersonCheck.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state relative-caret-position="243">
+              <caret line="31" column="46" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="config.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/out/production/classes/config.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="18" selection-start-column="18" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.gradle">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="gradlew" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradlew">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="521">
+              <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -547,6 +517,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -557,28 +528,25 @@
             <path>
               <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
               <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="production" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
               <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Abstract" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
@@ -588,9 +556,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -599,10 +566,10 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.side.proportion" value="0.20137298" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -718,49 +685,51 @@
       <workItem from="1544174960009" duration="23876000" />
       <workItem from="1544268113659" duration="2052000" />
       <workItem from="1544321315268" duration="12575000" />
-      <workItem from="1544448031607" duration="33197000" />
+      <workItem from="1544448031607" duration="33795000" />
+      <workItem from="1545205166798" duration="428000" />
+      <workItem from="1545208797984" duration="2369000" />
+      <workItem from="1545218768465" duration="932000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74092000" />
+    <option name="totallyTimeSpent" value="78419000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="953" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="10" weight="0.3296875" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.3287827" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="10" weight="0.3296875" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3287827" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3296875" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.330033" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3287827" />
+      <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Gradle" order="7" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="9" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Commander" order="1" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="11" weight="0.32918552" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287827" />
+      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.3296875" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,6 +750,8 @@
           <caret line="127" column="5" lean-forward="true" selection-start-line="127" selection-start-column="5" selection-end-line="127" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2642#2643#0" expanded="true" />
+            <element signature="e#2669#2670#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -792,13 +763,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Collision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Collision.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3885">
@@ -861,20 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradlew">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -889,13 +840,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Collision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Collision.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Enum/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -919,16 +864,6 @@
             <element signature="e#131#132#0" expanded="true" />
             <element signature="e#158#159#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/classes/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -970,58 +905,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/gameScene.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/BasicObj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/BasicObj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/BasicObj.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/BasicObj.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/BasicObj.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-          <folding>
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#530#531#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding>
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#843#844#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,13 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/Other/Gender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1081,30 +963,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="39" lean-forward="true" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/Other/Check.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1112,16 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1142,23 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/VehicleCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="73" column="63" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/PersonCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Enum/Side.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1173,15 +1008,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="55" column="9" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="217" column="8" selection-start-line="217" selection-start-column="8" selection-end-line="217" selection-end-column="8" />
+        <state relative-caret-position="501">
+          <caret line="192" column="56" selection-start-line="192" selection-start-column="56" selection-end-line="192" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2642#2643#0" expanded="true" />
             <element signature="e#2669#2670#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/BasicObj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/VehicleCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="73" column="63" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/PersonCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="68" column="45" selection-start-line="68" selection-start-column="45" selection-end-line="68" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/gameScene.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="31" column="46" selection-start-line="31" selection-start-column="38" selection-end-line="31" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="36" column="13" lean-forward="true" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/classes/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1239,11 +1174,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ParkingLot_main|ParkingLot</last-edited>
+          <last-edited>NewParkingLot--JavaFX-ParkingLot</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.20137298" />
                 <option value="0.6" />
               </list>
             </option>
