@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
@@ -12,11 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<TabPane fx:id="tabPane" maxHeight="720.0" maxWidth="1080.0" minHeight="720.0" minWidth="1080.0" prefHeight="720.0" prefWidth="1080.0" snapToPixel="false" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
+<TabPane fx:id="tabPane" maxHeight="720.0" maxWidth="1080.0" minHeight="720.0" minWidth="1080.0" prefHeight="720.0" prefWidth="1080.0" snapToPixel="false" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
   <tabs>
     <Tab fx:id="carSystem" text="Car System Simulator">
          <content>
-            <SplitPane dividerPositions="1.0" prefHeight="200.0" prefWidth="200.0">
+            <SplitPane fx:id="carSystemSP" dividerPositions="1.0" prefHeight="200.0" prefWidth="200.0">
                <items>
                   <Pane fx:id="gamePane" maxHeight="10000.0" maxWidth="10000.0" minHeight="-Infinity" minWidth="-Infinity" />
                   <VBox maxWidth="200.0" minWidth="250.0" prefHeight="200.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
@@ -171,7 +170,7 @@
          </content></Tab>
       <Tab fx:id="workSystem" text="Work System Simulator">
          <content>
-            <SplitPane dividerPositions="0.0" prefHeight="200.0" prefWidth="200.0">
+            <SplitPane fx:id="worksystem" dividerPositions="0.0" prefHeight="200.0" prefWidth="200.0">
                <items>
                   <Pane fx:id="gamePane1" prefHeight="200.0" prefWidth="200.0" />
                   <VBox maxWidth="200.0" minWidth="250.0" prefHeight="200.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
@@ -184,7 +183,7 @@
                               <Font size="21.0" />
                            </font>
                         </Label>
-                        <Label id="tv_balance" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="Balance" textAlignment="CENTER" textFill="#ff0101">
+                        <Label fx:id="personStatusLabel"  alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="Balance" textAlignment="CENTER" textFill="#ff0101">
                            <font>
                               <Font size="30.0" />
                            </font>
@@ -192,7 +191,7 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </Label>
-                        <Label id="tv_balance" alignment="CENTER" layoutX="10.0" layoutY="60.0" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="No Staff" textAlignment="CENTER" textFill="#ff0101">
+                        <Label fx:id="ticketStatusLabel" alignment="CENTER" layoutX="10.0" layoutY="60.0" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="No Staff" textAlignment="CENTER" textFill="#ff0101">
                            <font>
                               <Font size="30.0" />
                            </font>
@@ -200,10 +199,64 @@
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                         </Label>
+                        <VBox maxHeight="80.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0" style="-fx-background-color: gray;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" text="Status" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" minWidth="125.0" text="ID: ">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="personIDLabel" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white; -fx-background-radius: 5;" text="N/A" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" minWidth="125.0" text="Check IN: ">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="checkInTimeLabel" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white; -fx-background-radius: 5;" text="N/A" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="15.0" layoutY="85.0" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" minWidth="125.0" text="Check OUT: ">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="checkOutTimeLabel" alignment="CENTER_RIGHT" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: white; -fx-background-radius: 5;" text="N/A" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                            <children>
-                              <Button fx:id="CheckIn1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Check In" />
-                              <Button fx:id="Checkout1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Check Out" />
+                              <JFXButton fx:id="CheckIn1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Get In" style="-fx-background-color: cornflowerblue"/>
+                              <JFXButton fx:id="Checkout1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Go Out" style="-fx-background-color: cornflowerblue" />
                            </children>
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

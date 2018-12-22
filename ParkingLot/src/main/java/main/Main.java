@@ -1,5 +1,6 @@
 package main;
 
+import Unit.Office;
 import config.ConfigManager;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -9,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -19,6 +21,7 @@ import java.time.format.DateTimeFormatter;
 public class Main extends Application {
 
     VehicleGameScene vehicleGameScene;
+    PersonGameScene personGameScene;
 
     Label carTimeLabel;
     Label workTimeLabel;
@@ -46,6 +49,10 @@ public class Main extends Application {
         VehicleGameScene.init(root);
         vehicleGameScene = VehicleGameScene.getInstance();
         vehicleGameScene.startTimer();
+
+        PersonGameScene.init(root);
+        personGameScene = PersonGameScene.getInstance();
+        personGameScene.startTimer();
 
         // Schedule update time
         timeInterval(event -> {
