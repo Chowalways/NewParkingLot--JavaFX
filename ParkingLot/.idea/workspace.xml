@@ -2,59 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a02c18ce-64a2-4c57-bac0-62c4fc1bbdb9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unit/Door.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unit/Office.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unit/PersonObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unit/PunchMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Unit/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/res/images/person.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/res/images/time.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/BasicObj.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/CheckIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/CheckInSystem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/CheckInTicket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/CheckInType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/Gender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/PersonCheckIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/PersonCheckInTicket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/Vehicle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/VehicleCheckIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/function/VehincleCheckInTicket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/res/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/res/images/car.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/res/images/down-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/res/images/down-arrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/res/images/left-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/res/images/right-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/res/images/up-arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/GameObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/GameScene$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/GameScene$Car.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/GameScene$CarPark.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/GameScene.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/gameScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ParkingLot/sample/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Class/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Class/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/testing.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Class/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Class/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Abstract/BasicObj.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Abstract/CheckInTicket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Abstract/GameObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/CheckInSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/Other/Check.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/Other/CheckInStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/Other/CheckInType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/Other/Gender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/PersonCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/PersonCheckInTicket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/VehicleCheck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/CheckSystem/VehicleCheckInTicket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Class/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Class/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/CarPark.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Door.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Enum/Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Enum/Side$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Enum/Side.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Gate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Interface/Openable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Office.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/ParkingLot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/PaymentMachine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/PersonObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/PunchMachine.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Room.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Unit/Wall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/config/ConfigManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/down-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/down-arrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/left-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/payment-machine.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/payment-machine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/person.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/right-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/time.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/res/images/up-arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/testing.txt" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -121,7 +120,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -242,74 +241,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
               <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Unit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -498,16 +437,17 @@
       <workItem from="1545312643117" duration="8069000" />
       <workItem from="1545358409390" duration="10365000" />
       <workItem from="1545395958134" duration="32802000" />
+      <workItem from="1545500170466" duration="43000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150670000" />
+    <option name="totallyTimeSpent" value="150713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21447721" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21715818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
