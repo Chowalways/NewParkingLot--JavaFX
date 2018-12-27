@@ -82,7 +82,7 @@ public class Door extends GameObject implements Openable {
 
     public CheckInStatus checkOut(BasicObj basicObj) {
         CheckInTicket ticket = basicObj.getTicket();
-        CheckInStatus status = checkInSystem.checkOut(ticket);
+        CheckInStatus status = checkInSystem.checkOut(ticket, "per");
         if(status == CheckInStatus.Done) {
             basicObj.setTicket(null);
         }

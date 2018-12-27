@@ -9,7 +9,7 @@ import javafx.scene.image.ImageView;
 
 public class PersonObject extends GameObject {
 
-    Person person;
+    static Person person;
 
     private PersonObject(ImageView image, String id, Gender gender, int age){
         super(image);
@@ -21,6 +21,7 @@ public class PersonObject extends GameObject {
     }
 
     public static PersonObject createPerson(String id, Gender gender, int age) {
+        person = new Person(id, gender, age);
         ImageView imViewer = new ImageView();
         Image image = new Image("res/images/person.png");
         imViewer.setImage(image);

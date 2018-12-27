@@ -1,9 +1,11 @@
 package main;
 
 import Abstract.GameObject;
+import CheckSystem.CheckInSystem;
 import CheckSystem.Other.Gender;
+import CheckSystem.PersonCheckInTicket;
 import Unit.*;
-
+import Class.Person; // TO CHANGE
 import Unit.Enum.Side;
 import com.jfoenix.controls.JFXButton;
 import javafx.animation.AnimationTimer;
@@ -18,6 +20,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +42,7 @@ public class PersonGameScene {
     private Label personIDLabel;
     private Label checkInTimeLabel;
     private Label checkOutTimeLabel;
+
 
     Scene scene;
 
@@ -144,6 +148,7 @@ public class PersonGameScene {
 
     private EventHandler checkOut1Handler = e -> {
         System.out.println("Check Out");
+        door.checkOut(selectedPerson.getPerson()); //ADDED FOR CHECKING OUT
         checkOutWithPhone();
         door.open();
         //Person check out by Phone no need to checking ticket.
@@ -167,7 +172,6 @@ public class PersonGameScene {
     void generatePerson() {
         System.out.println("Generate Person");
         Bounds bound = pane.getLayoutBounds();
-
         PersonObject pObj = PersonObject.createPerson(String.format("Person%08d", human.size() + 1), Gender.MALE,28);
         Bounds personBound = pObj.getView().getLayoutBounds();
         addPersonObj(pObj, 500, bound.getHeight() - 50);

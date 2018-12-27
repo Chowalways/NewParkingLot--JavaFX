@@ -6,6 +6,8 @@ import CheckSystem.Other.Check;
 import CheckSystem.Other.CheckInStatus;
 import config.ConfigManager;
 
+import Class.Vehicle;
+import Class.Person;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -13,19 +15,51 @@ import java.util.ArrayList;
 public class CheckInSystem {
 
     protected Check check;
-    public ArrayList<CheckInTicket> tickets = new ArrayList<>();
+    // TO KEEP PROPER TRACK OF ALL ACTIVITY
+    public static ArrayList<CheckInTicket> tickets = new ArrayList<>();
+    public static ArrayList<CheckInTicket> pInTickets = new ArrayList<>();
+    public static ArrayList<CheckInTicket> pOutTickets = new ArrayList<>();
+    public static ArrayList<CheckInTicket> vInTickets = new ArrayList<>();
+    public static ArrayList<CheckInTicket> vOutTickets = new ArrayList<>();
 
     public CheckInSystem(Check check) {
         this.check = check;
     }
 
+    //GET TICKET COUNT FOR EACH TYPE OF TICKET
+    public static int getTicketCount(String arg){
+        if(arg.equalsIgnoreCase("pin")) {
+            return pInTickets.size();
+        }else if(arg.equalsIgnoreCase("pout")){
+            return pOutTickets.size();
+        }else
+        if(arg.equalsIgnoreCase("vin")) {
+            return vInTickets.size();
+        }else if(arg.equalsIgnoreCase("vout")){
+            return vOutTickets.size();
+        }
+        return 0;
+    }
+
+    //GIVE TICKET BASED ON WHO IS REQUESTING IT
     public final void giveTicket(BasicObj basic) {
-        CheckInTicket ticket = check.signIn(basic, String.format("D%06d", tickets.size() + 1));
+       if(Vehicle.class.isInstance(basic)){
+           CheckInTicket ticket = check.signIn(basic, String.format("D%06d", vInTickets.size() + 1));
+           basic.setTicket(ticket.clone());
+           this.vInTickets.add(ticket);
+           this.tickets.add(ticket);
+       }
+       if(Person.class.isInstance(basic)){
+           CheckInTicket ticket = check.signIn(basic, String.format("D%06d", pInTickets.size() + 1));
+           basic.setTicket(ticket.clone());
+           this.pInTickets.add(ticket);
+           this.tickets.add(ticket);
+       }
 
         // if not clone it will direct use the address,
         // ex: when user do payment will also change the ticket in Check In System Ticket Array.
-        basic.setTicket(ticket.clone());
-        this.tickets.add(ticket);
+
+        //this.tickets.add(ticket);
     }
 
     public CheckInStatus validTicket(CheckInTicket ticket) {
@@ -63,8 +97,12 @@ public class CheckInSystem {
         ticket.setPayTime(updateTicket.getPayTime());
     }
 
-    public CheckInStatus checkOut(CheckInTicket ticket) {
+    public CheckInStatus checkOut(CheckInTicket ticket, String arg) {
         CheckInTicket updateTicket = findTicket(ticket);
+        if(arg.equalsIgnoreCase("veh"))
+            vOutTickets.add(updateTicket);
+        if(arg.equalsIgnoreCase("per"))
+            pOutTickets.add(updateTicket);
         CheckInStatus status = validTicket(updateTicket);
 
         if(status == CheckInStatus.Done) {

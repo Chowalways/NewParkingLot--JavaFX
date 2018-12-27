@@ -14,4 +14,8 @@ public class Person extends BasicObj {
         this.age = age;
     }
 
+    public String getID(){
+        return super.getId();
+    }
+
 }
