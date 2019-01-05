@@ -144,7 +144,7 @@ public class VehicleGameScene {
                 }
         );
 
-        setControl();
+//        setControl();
 
         carPark = new CarPark(pane, 120);
         carPark.generateParkingLot();

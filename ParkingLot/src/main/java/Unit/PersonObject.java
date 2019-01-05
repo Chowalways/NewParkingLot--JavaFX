@@ -22,12 +22,12 @@ public class PersonObject extends GameObject {
 
     public static PersonObject createPerson(String id, Gender gender, int age) {
         person = new Person(id, gender, age);
-        ImageView imViewer = new ImageView();
+        ImageView iViewer = new ImageView();
         Image image = new Image("res/images/person.png");
-        imViewer.setImage(image);
-        imViewer.setFitWidth(35);
-        imViewer.setFitHeight(30);
-        return new PersonObject(imViewer, id, gender, age);
+        iViewer.setImage(image);
+        iViewer.setFitWidth(25);
+        iViewer.setFitHeight(20);
+        return new PersonObject(iViewer, id, gender, age);
     }
 
     public final void checkIn(CheckInTicket ticket) {

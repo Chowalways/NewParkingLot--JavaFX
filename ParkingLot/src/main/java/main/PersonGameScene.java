@@ -1,5 +1,6 @@
 package main;
 
+import Abstract.CheckInTicket;
 import Abstract.GameObject;
 import CheckSystem.CheckInSystem;
 import CheckSystem.Other.Gender;
@@ -42,7 +43,6 @@ public class PersonGameScene {
     private Label personIDLabel;
     private Label checkInTimeLabel;
     private Label checkOutTimeLabel;
-
 
     Scene scene;
 
@@ -127,9 +127,7 @@ public class PersonGameScene {
         );
 
         this.personStatus.setText("0 Person");
-        this.ticketStatus.setText("ticket");
-
-        setHumanControl();
+        this.ticketStatus.setText("");
 
         office = new Office(pane);
         office.generateOffice();
@@ -142,7 +140,6 @@ public class PersonGameScene {
         System.out.println("Check In");
         //this need to put at when get in to checking room then check in with punch card. But having some problems.
         door.checkinCard(selectedPerson.getPerson());
-        checkInWithPhone();
         door.open();
     };
 
@@ -318,12 +315,12 @@ public class PersonGameScene {
                 }
 
                 // collide with punch machine change to punch card machine.
-                for (PunchMachine punchMachine : office.getPunchCardMachines()) {
-                    if(office.getMoveSide().compare(office.isColliding(punchMachine))) {
-                        collide = true;
-                        break;
-                    }
-                }
+//                for (PunchMachine punchMachine : office.getPunchCardMachines()) {
+//                    if(office.getMoveSide().compare(office.isColliding(punchMachine))) {
+//                        collide = true;
+//                        break;
+//                    }
+//                }
             }
 
             if(!collide) {
@@ -333,6 +330,17 @@ public class PersonGameScene {
 
         if (selectedPerson != null && selectedPerson instanceof PersonObject) {
             PersonObject selectedPerson = this.selectedPerson;
+
+            //has ticket means customer have check in status or not.
+            if(selectedPerson.hasTicket()) {
+                this.ticketStatus.setText("GET IN OFFICE");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd hh:mm");
+                CheckInTicket ticket = selectedPerson.getTicket();
+                personIDLabel.setText(ticket.getId());
+                checkInTimeLabel.setText(formatter.format(ticket.getCheckInTime()));
+            } else {
+                resetTicketDetail();
+            }
 
             // check door (CheckIn Use)
             Door door = office.checkPersonNearbyDoor(selectedPerson);
@@ -370,15 +378,9 @@ public class PersonGameScene {
         ticketStatus.setText("");
     }
 
-    private void checkInWithPhone(){
-        this.ticketStatus.setText("GET IN OFFICE");
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");
-        checkInTimeLabel.setText(formatter.format(door.getPersonCheckInTime()));
-    }
-
     private void checkOutWithPhone(){
         this.ticketStatus.setText("CHECK OUT");
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("hh:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd hh:mm");
         checkOutTimeLabel.setText(formatter.format(door.getPersonCheckOutTime()));
     }
 }

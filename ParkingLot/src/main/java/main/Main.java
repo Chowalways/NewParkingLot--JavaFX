@@ -10,7 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
-import javafx.scene.control.SplitPane;
+import javafx.scene.control.TabPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -30,6 +30,8 @@ public class Main extends Application {
     private Label balanceCarPark;
     Label carNumberLbl;
 
+    TabPane tabPaneStatus;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
 
@@ -47,8 +49,10 @@ public class Main extends Application {
         carNumberLbl = (Label) root.lookup("#carNumberLbl");
         balanceCarPark = (Label) root.lookup("#balanceLabel");
         statusTimeLabel = (Label) root.lookup("#statusTimeLabel");
+        tabPaneStatus = (TabPane) root.lookup("#tabPane");
 
-
+        tabPaneStatus.getTabs();
+        System.out.println(tabPaneStatus.getSelectionModel().getSelectedItem().getText());
 
         // Create Game Scene
         VehicleGameScene.init(root);
@@ -71,6 +75,17 @@ public class Main extends Application {
             workTimeLabel.setText(formatter.format(localDateTime));
             statusTimeLabel.setText(formatter.format(localDateTime));
             carNumberLbl.setText(String.format("%d Cars", vehicleGameScene.getCars()));
+
+            //Checking control
+            String Status = tabPaneStatus.getSelectionModel().getSelectedItem().getText();
+            if(Status.startsWith("Car")){
+                personGameScene.removeHumanControl();
+                vehicleGameScene.setControl();
+            }
+            if(Status.startsWith("Work")){
+                vehicleGameScene.removeControl();
+                personGameScene.setHumanControl();
+            }
 
             int balanceCP = vehicleGameScene.getAvailableParkingLots(); // if no car park will return -1
             if(balanceCP != -1)
