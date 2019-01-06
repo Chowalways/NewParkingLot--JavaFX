@@ -3,7 +3,7 @@ package Unit;
 import Abstract.GameObject;
 import CheckSystem.CheckInSystem;
 import CheckSystem.Other.Check;
-import CheckSystem.VehicleCheck;
+import CheckSystem.PersonCheck;
 import Unit.Enum.Direction;
 import Unit.Enum.Side;
 import javafx.scene.layout.Pane;
@@ -19,14 +19,11 @@ public class Office extends GameObject {
     private CheckInSystem checkInSystem;
     private Pane pane;
 
-    public final int roomSize = 20;
-    public final int roomsWidth = 5;
-
     public Office(Pane pane) {
         super(pane);
         this.pane = pane;
 
-        Check check = new VehicleCheck(0);
+        Check check = new PersonCheck(0);
         checkInSystem = new CheckInSystem(check);
     }
 
@@ -36,8 +33,6 @@ public class Office extends GameObject {
         int OfficePadding = 20;
         int x = OfficePadding;
         int y = OfficePadding;
-        int xSpacing = 100; // Room xSpacing
-        int ySpacing = 20; // Room ySpacing
 
         // Wall Size
         int wallPadding = OfficePadding - 10;
@@ -140,104 +135,5 @@ public class Office extends GameObject {
         return null;
     }
 
-    public PunchMachine checkPersonNearbyPunchMachine(PersonObject person) {
-        for (PunchMachine machine : this.punchCardMachines) {
-            if(machine.isColliding(person) != Side.NONE) {
-                return machine;
-            }
-        }
-        return null;
-    }
-
-    //CheckingArea
-//    public void generate_in_out(){
-//        System.out.println("Check in & out area");
-//        int checkPadding = 150;
-//        int x = checkPadding + 100;
-//        int y = checkPadding;
-//        int xSpacing = 100; // Room xSpacing
-//        int ySpacing = 20; // Room ySpacing
-//
-//        // Wall Size
-//        int wallPadding = checkPadding - 140;
-//        int roomWidth = x + Room.WIDTH + 600;
-//        int roomHeight = y + 600;
-//
-//        // Generate TOP Wall
-//        for (int i = 0; i * Wall.LONG < roomWidth; i ++ ) {
-//            spawnHorizontalWall(i * Wall.LONG + wallPadding, 0 + wallPadding);
-//        }
-//
-//        // Generate Bottom Wall
-//        for (int i = 0; i * Wall.LONG < roomWidth; i ++ ) {
-//            spawnHorizontalWall(i * Wall.LONG + wallPadding, roomHeight + wallPadding);
-//        }
-//
-//        // Generate LEFT Wall
-//        for (int i = 0; i * Wall.LONG < roomHeight; i ++ ) {
-//            spawnVerticalWall(0 + wallPadding, i * Wall.LONG + wallPadding);
-//        }
-//
-//        // Generate RIGHT Wall
-//        for (int i = 0; i * Wall.LONG < roomHeight; i ++ ) {
-//            spawnVerticalWall(roomWidth + wallPadding + 10, i * Wall.LONG + wallPadding);
-//        }
-//
-//        for (Wall wall : walls) {
-//            for (Door door : this.door) {
-//                if(door.isColliding(wall) == Side.INSIDE) {
-//                    wall.setAlive(false);
-//                    pane.getChildren().remove(wall.getView());
-//                }
-//            }
-//        }
-//        walls.removeIf(GameObject::isDead);
-//    }
-//
-//    public void generate_Exit(){
-//        System.out.println("Check Exit area");
-//        int checkPadding = 150;
-//        int x = checkPadding + 100;
-//        int y = checkPadding;
-//        int xSpacing = 190; // Room xSpacing
-//        int ySpacing = 20; // Room ySpacing
-//
-//        // Wall Size
-//        int wallPadding = checkPadding - 140;
-//        int roomWidth = x + Room.WIDTH + 130;
-//        int roomHeight = y + 550;
-//
-//        // Generate TOP Wall
-//        for (int i = 0; i * Wall.LONG < roomWidth; i ++ ) {
-//            spawnHorizontalWall(i * Wall.LONG + wallPadding, 0 + wallPadding);
-//        }
-//
-//        // Generate Bottom Wall
-//        for (int i = 0; i * Wall.LONG < roomWidth; i ++ ) {
-//            spawnHorizontalWall(i * Wall.LONG + wallPadding, roomHeight + wallPadding);
-//        }
-//
-//        // Generate LEFT Wall
-//        for (int i = 0; i * Wall.LONG < roomHeight; i ++ ) {
-//            spawnVerticalWall(0 + wallPadding, i * Wall.LONG + wallPadding);
-//        }
-//
-//        // Generate RIGHT Wall
-//        for (int i = 0; i * Wall.LONG < roomHeight; i ++ ) {
-//            spawnVerticalWall(roomWidth + wallPadding + 10, i * Wall.LONG + wallPadding);
-//        }
-//
-//        spawnVerticalDoor( x + xSpacing,roomHeight + wallPadding - 155);
-//
-//        for (Wall wall : walls) {
-//            for (Door door : this.door) {
-//                if(door.isColliding(wall) == Side.INSIDE) {
-//                    wall.setAlive(false);
-//                    pane.getChildren().remove(wall.getView());
-//                }
-//            }
-//        }
-//        walls.removeIf(GameObject::isDead);
-//    }
 
 }

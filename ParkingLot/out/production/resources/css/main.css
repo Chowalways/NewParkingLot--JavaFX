@@ -1,0 +1,7 @@
+.car-park {
+    -fx-background-color: silver;
+    -fx-border-style: solid;
+    -fx-border-width: 5;
+    -fx-border-color: green;
+    -fx-padding: 5;
+}
