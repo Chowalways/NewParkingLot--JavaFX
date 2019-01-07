@@ -1,16 +1,18 @@
 package main;
 
-import Unit.Office;
+import com.sun.javafx.scene.control.skin.LabeledText;
 import config.ConfigManager;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.event.EventTarget;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -22,9 +24,9 @@ public class Main extends Application {
 
     VehicleGameScene vehicleGameScene;
     PersonGameScene personGameScene;
-    SystemStatus systemStatus;
+    WorkCheckTableViewTab workCheckTableViewTab;
+    CarTicketTableViewTab carTicketTableViewTab;
 
-    Label statusTimeLabel;
     Label carTimeLabel;
     Label workTimeLabel;
     private Label balanceCarPark;
@@ -48,7 +50,6 @@ public class Main extends Application {
         workTimeLabel = (Label) root.lookup("#workTimeLabel");
         carNumberLbl = (Label) root.lookup("#carNumberLbl");
         balanceCarPark = (Label) root.lookup("#balanceLabel");
-        statusTimeLabel = (Label) root.lookup("#statusTimeLabel");
         tabPaneStatus = (TabPane) root.lookup("#tabPane");
 
         tabPaneStatus.getTabs();
@@ -57,17 +58,18 @@ public class Main extends Application {
         // Create Game Scene
         VehicleGameScene.init(root);
         vehicleGameScene = VehicleGameScene.getInstance();
+        vehicleGameScene.setControl();
         vehicleGameScene.startTimer();
 
         PersonGameScene.init(root);
         personGameScene = PersonGameScene.getInstance();
         personGameScene.startTimer();
 
-        SystemStatus.init(root);
-        systemStatus = SystemStatus.getInstance();
-
         WorkCheckTableViewTab.initialize(root);
+        workCheckTableViewTab = WorkCheckTableViewTab.getInstance();
 
+        CarTicketTableViewTab.initialize(root);
+        carTicketTableViewTab = CarTicketTableViewTab.getInstance();
 
         // Schedule update time
         timeInterval(event -> {
@@ -75,19 +77,7 @@ public class Main extends Application {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
             carTimeLabel.setText(formatter.format(localDateTime));
             workTimeLabel.setText(formatter.format(localDateTime));
-            statusTimeLabel.setText(formatter.format(localDateTime));
             carNumberLbl.setText(String.format("%d Cars", vehicleGameScene.getCars()));
-
-            //Checking control
-            String Status = tabPaneStatus.getSelectionModel().getSelectedItem().getText();
-            if(Status.startsWith("Car")){
-                personGameScene.removeHumanControl();
-                vehicleGameScene.setControl();
-            }
-            if(Status.startsWith("Work")){
-                vehicleGameScene.removeControl();
-                personGameScene.setHumanControl();
-            }
 
             int balanceCP = vehicleGameScene.getAvailableParkingLots(); // if no car park will return -1
             if(balanceCP != -1)
@@ -97,6 +87,36 @@ public class Main extends Application {
 
             WorkCheckTableViewTab.getInstance().updateTableView();
         }, 1);
+        tabPaneStatus.addEventFilter(MouseEvent.MOUSE_CLICKED, onTabChange);
+    }
+
+    private EventHandler onTabChange = e -> {
+        EventTarget events = e.getTarget();
+        if(events instanceof  LabeledText) {
+            String text = ((LabeledText)events).getText();
+            System.out.println(((LabeledText)events).getText());
+
+            personGameScene.removeHumanControl();
+            vehicleGameScene.removeControl();
+
+            if(text.equalsIgnoreCase("Car System Simulator")){
+                vehicleGameScene.setControl();
+            }
+            else if(text.equalsIgnoreCase("Work System Simulator")){
+                personGameScene.setHumanControl();
+            }
+            else if(text.equalsIgnoreCase("Work Check History")){
+                workCheckTableViewTab.updateTableView();
+            } else if(text.equalsIgnoreCase("Car Tickets")) {
+                carTicketTableViewTab.updateTableView();
+            }
+        }
+    };
+
+    private void controlInterval(EventHandler event, long second) {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(second),event));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
     }
 
     private void timeInterval(EventHandler event, long secondDuration) {

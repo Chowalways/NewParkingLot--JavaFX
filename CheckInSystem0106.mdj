@@ -330,8 +330,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 240,
-											"top": 688,
+											"left": 304,
+											"top": -176,
 											"height": 13
 										},
 										{
@@ -341,8 +341,8 @@
 												"$ref": "AAAAAAFoIUNzQAk0Lxc="
 											},
 											"font": "Arial;13;3",
-											"left": 581,
-											"top": 479,
+											"left": 613,
+											"top": 47,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "CheckInTicket"
@@ -355,8 +355,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 240,
-											"top": 688,
+											"left": 304,
+											"top": -176,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -369,15 +369,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": 240,
-											"top": 688,
+											"left": 304,
+											"top": -176,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 576,
-									"top": 472,
+									"left": 608,
+									"top": 40,
 									"width": 334.74609375,
 									"height": 25,
 									"stereotypeLabel": {
@@ -413,8 +413,8 @@
 												"$ref": "AAAAAAFoIUQ/WwlcsFI="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 502,
+											"left": 613,
+											"top": 70,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "#id: String",
@@ -430,8 +430,8 @@
 												"$ref": "AAAAAAFoIURKzAliraw="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 517,
+											"left": 613,
+											"top": 85,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "#checkInTime: LocalDateTime",
@@ -447,8 +447,8 @@
 												"$ref": "AAAAAAFoIURVwQloOuQ="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 532,
+											"left": 613,
+											"top": 100,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "#checkOutTime: LocalDateTime",
@@ -464,8 +464,8 @@
 												"$ref": "AAAAAAFoIURhQwluhO4="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 547,
+											"left": 613,
+											"top": 115,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "#payTime: LocalDateTime",
@@ -473,8 +473,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 576,
-									"top": 497,
+									"left": 608,
+									"top": 65,
 									"width": 334.74609375,
 									"height": 68
 								},
@@ -498,8 +498,8 @@
 												"$ref": "AAAAAAFoIUXCTQl5cMk="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 570,
+											"left": 613,
+											"top": 138,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+getId(): String",
@@ -515,8 +515,8 @@
 												"$ref": "AAAAAAFoIUXrggl/YoA="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 585,
+											"left": 613,
+											"top": 153,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+getCheckOutTIme(): LocalDateTIme",
@@ -532,8 +532,8 @@
 												"$ref": "AAAAAAFoIUYPpQmFeJ8="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 600,
+											"left": 613,
+											"top": 168,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+getCheckInTime(): LocalDateTime",
@@ -549,8 +549,8 @@
 												"$ref": "AAAAAAFoIUb0kAmUuvA="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 615,
+											"left": 613,
+											"top": 183,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+getPayTime(): LocalDateTime",
@@ -566,8 +566,8 @@
 												"$ref": "AAAAAAFoIUb/Gwma2gk="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 630,
+											"left": 613,
+											"top": 198,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+setCheckOutTime(LocalDateTime checkOutTime): void",
@@ -583,8 +583,8 @@
 												"$ref": "AAAAAAFoIUcWTAmgEIs="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 645,
+											"left": 613,
+											"top": 213,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+setPayTime(LocalDateTime payTime): void",
@@ -600,8 +600,8 @@
 												"$ref": "AAAAAAFoIUcqmgmmlro="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 660,
+											"left": 613,
+											"top": 228,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+isPaid(): boolean",
@@ -617,8 +617,8 @@
 												"$ref": "AAAAAAFoIUk1mwm8T4o="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 675,
+											"left": 613,
+											"top": 243,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+checkOut(LocalDateTime time): void",
@@ -634,8 +634,8 @@
 												"$ref": "AAAAAAFoIUmf/gnINJ8="
 											},
 											"font": "Arial;13;2",
-											"left": 581,
-											"top": 690,
+											"left": 613,
+											"top": 258,
 											"width": 324.74609375,
 											"height": 13,
 											"text": "+clone(): CheckInTicket",
@@ -643,8 +643,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 576,
-									"top": 565,
+									"left": 608,
+									"top": 133,
 									"width": 334.74609375,
 									"height": 143
 								},
@@ -659,8 +659,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 104,
-									"top": 344,
+									"left": 136,
+									"top": -88,
 									"width": 10,
 									"height": 10
 								},
@@ -675,18 +675,18 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 104,
-									"top": 344,
+									"left": 136,
+									"top": -88,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 576,
-							"top": 472,
+							"left": 608,
+							"top": 40,
 							"width": 334.74609375,
-							"height": 251,
+							"height": 236,
 							"nameCompartment": {
 								"$ref": "AAAAAAFoIUNzQAk0Lxc="
 							},
@@ -1909,8 +1909,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -336,
-											"top": -208,
+											"left": -224,
+											"top": 256,
 											"width": 64.32080078125,
 											"height": 13,
 											"text": "«interface»"
@@ -1922,8 +1922,8 @@
 												"$ref": "AAAAAAFoIVpIDQutenU="
 											},
 											"font": "Arial;13;1",
-											"left": 965,
-											"top": 270,
+											"left": 1021,
+											"top": 502,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "Check"
@@ -1936,8 +1936,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -336,
-											"top": -208,
+											"left": -224,
+											"top": 256,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -1950,15 +1950,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -336,
-											"top": -208,
+											"left": -224,
+											"top": 256,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 960,
-									"top": 263,
+									"left": 1016,
+									"top": 495,
 									"width": 312.630859375,
 									"height": 25,
 									"stereotypeLabel": {
@@ -1985,8 +1985,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -168,
-									"top": -104,
+									"left": -112,
+									"top": 128,
 									"width": 10,
 									"height": 10
 								},
@@ -2010,8 +2010,8 @@
 												"$ref": "AAAAAAFoIVpwLQvUjcI="
 											},
 											"font": "Arial;13;0",
-											"left": 965,
-											"top": 293,
+											"left": 1021,
+											"top": 525,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+signIn(BasicObj obj, String id): CheckInTicket",
@@ -2027,8 +2027,8 @@
 												"$ref": "AAAAAAFoIVtumAv7H/Y="
 											},
 											"font": "Arial;13;0",
-											"left": 965,
-											"top": 308,
+											"left": 1021,
+											"top": 540,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+checkout(CheckInTicket ticket): boolean",
@@ -2044,8 +2044,8 @@
 												"$ref": "AAAAAAFoIVt3NgwBTcE="
 											},
 											"font": "Arial;13;0",
-											"left": 965,
-											"top": 323,
+											"left": 1021,
+											"top": 555,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+validate(CheckInTicket ticket): CheckInStatus",
@@ -2061,8 +2061,8 @@
 												"$ref": "AAAAAAFoIVt7tgwH+pY="
 											},
 											"font": "Arial;13;0",
-											"left": 965,
-											"top": 338,
+											"left": 1021,
+											"top": 570,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+calculatePrice(CheckInTicket ticket): double",
@@ -2078,8 +2078,8 @@
 												"$ref": "AAAAAAFoIVt/RAwNnAM="
 											},
 											"font": "Arial;13;0",
-											"left": 965,
-											"top": 353,
+											"left": 1021,
+											"top": 585,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+calculatePriceExceed(CheckInTicket ticket): double",
@@ -2087,8 +2087,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 960,
-									"top": 288,
+									"left": 1016,
+									"top": 520,
 									"width": 312.630859375,
 									"height": 83
 								},
@@ -2103,8 +2103,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -168,
-									"top": -104,
+									"left": -112,
+									"top": 128,
 									"width": 10,
 									"height": 10
 								},
@@ -2119,16 +2119,16 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -168,
-									"top": -104,
+									"left": -112,
+									"top": 128,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 960,
-							"top": 240,
+							"left": 1016,
+							"top": 472,
 							"width": 312.630859375,
 							"height": 132,
 							"stereotypeDisplay": "icon",
@@ -2664,8 +2664,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -1344,
-											"top": -160,
+											"left": -1232,
+											"top": 304,
 											"height": 13
 										},
 										{
@@ -2675,8 +2675,8 @@
 												"$ref": "AAAAAAFoIWY70wzEsvM="
 											},
 											"font": "Arial;13;1",
-											"left": 581,
-											"top": 247,
+											"left": 637,
+											"top": 479,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "VehicleCheck"
@@ -2689,8 +2689,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -1344,
-											"top": -160,
+											"left": -1232,
+											"top": 304,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -2703,15 +2703,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -1344,
-											"top": -160,
+											"left": -1232,
+											"top": 304,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 576,
-									"top": 240,
+									"left": 632,
+									"top": 472,
 									"width": 312.630859375,
 									"height": 25,
 									"stereotypeLabel": {
@@ -2747,8 +2747,8 @@
 												"$ref": "AAAAAAFoIWbC5g1icy8="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 270,
+											"left": 637,
+											"top": 502,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+pricePerHour: double",
@@ -2756,8 +2756,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 576,
-									"top": 265,
+									"left": 632,
+									"top": 497,
 									"width": 312.630859375,
 									"height": 23
 								},
@@ -2781,8 +2781,8 @@
 												"$ref": "AAAAAAFoIWdw4g1pazc="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 293,
+											"left": 637,
+											"top": 525,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+signIn(BasicObj obj, String id): CheckInTicket",
@@ -2798,8 +2798,8 @@
 												"$ref": "AAAAAAFoIWhK+w149X4="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 308,
+											"left": 637,
+											"top": 540,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+checkout(CheckInTicket ticket): boolean",
@@ -2815,8 +2815,8 @@
 												"$ref": "AAAAAAFoIWjRYA2DLms="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 323,
+											"left": 637,
+											"top": 555,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+validate(CheckInTicket ticket): CheckInStatus",
@@ -2832,8 +2832,8 @@
 												"$ref": "AAAAAAFoIWktZg2OeiI="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 338,
+											"left": 637,
+											"top": 570,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+calculatePrice(CheckInTicket ticket): double",
@@ -2849,8 +2849,8 @@
 												"$ref": "AAAAAAFoIWl1sA2ZqNg="
 											},
 											"font": "Arial;13;0",
-											"left": 581,
-											"top": 353,
+											"left": 637,
+											"top": 585,
 											"width": 302.630859375,
 											"height": 13,
 											"text": "+calculatePriceExceed(CheckInTicket ticket): double",
@@ -2858,8 +2858,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 576,
-									"top": 288,
+									"left": 632,
+									"top": 520,
 									"width": 312.630859375,
 									"height": 83
 								},
@@ -2874,8 +2874,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -688,
-									"top": -80,
+									"left": -632,
+									"top": 152,
 									"width": 10,
 									"height": 10
 								},
@@ -2890,16 +2890,16 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -688,
-									"top": -80,
+									"left": -632,
+									"top": 152,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 576,
-							"top": 240,
+							"left": 632,
+							"top": 472,
 							"width": 312.630859375,
 							"height": 131,
 							"nameCompartment": {
@@ -2939,8 +2939,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 992,
-									"top": 258,
+									"left": 1048,
+									"top": 490,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -2960,8 +2960,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 989,
-									"top": 243,
+									"left": 1045,
+									"top": 475,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -2981,8 +2981,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 999,
-									"top": 287,
+									"left": 1055,
+									"top": 519,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3000,7 +3000,7 @@
 								"$ref": "AAAAAAFoIWY70wzD83U="
 							},
 							"lineStyle": 1,
-							"points": "889:305;1104.3154296875:254.69850510817307",
+							"points": "945:537;1160.3154296875:486.6985051081731",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFoIWagnQ1SOjA="
@@ -3040,8 +3040,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -256,
-											"top": -96,
+											"left": -144,
+											"top": 368,
 											"height": 13
 										},
 										{
@@ -3051,8 +3051,8 @@
 												"$ref": "AAAAAAFoIXAp0w6HU7o="
 											},
 											"font": "Arial;13;1",
-											"left": 1381,
-											"top": 271,
+											"left": 1437,
+											"top": 503,
 											"width": 268.658203125,
 											"height": 13,
 											"text": "PersonCheck"
@@ -3065,8 +3065,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -256,
-											"top": -96,
+											"left": -144,
+											"top": 368,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -3079,15 +3079,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -256,
-											"top": -96,
+											"left": -144,
+											"top": 368,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 1376,
-									"top": 264,
+									"left": 1432,
+									"top": 496,
 									"width": 278.658203125,
 									"height": 25,
 									"stereotypeLabel": {
@@ -3113,8 +3113,8 @@
 										"$ref": "AAAAAAFoIXAp0g6EIGk="
 									},
 									"font": "Arial;13;0",
-									"left": 1376,
-									"top": 289,
+									"left": 1432,
+									"top": 521,
 									"width": 278.658203125,
 									"height": 10
 								},
@@ -3138,8 +3138,8 @@
 												"$ref": "AAAAAAFoIXCAvA6uIic="
 											},
 											"font": "Arial;13;0",
-											"left": 1381,
-											"top": 304,
+											"left": 1437,
+											"top": 536,
 											"width": 268.658203125,
 											"height": 13,
 											"text": "+signIn(BasicObj obj, String id): CheckInTicket",
@@ -3155,8 +3155,8 @@
 												"$ref": "AAAAAAFoIXE1dQ7O3dc="
 											},
 											"font": "Arial;13;0",
-											"left": 1381,
-											"top": 319,
+											"left": 1437,
+											"top": 551,
 											"width": 268.658203125,
 											"height": 13,
 											"text": "+boolean checkout(CheckInTicket ticket)",
@@ -3172,8 +3172,8 @@
 												"$ref": "AAAAAAFoIXGFRQ7XY5s="
 											},
 											"font": "Arial;13;0",
-											"left": 1381,
-											"top": 334,
+											"left": 1437,
+											"top": 566,
 											"width": 268.658203125,
 											"height": 13,
 											"text": "+validate(CheckInTicket ticket): CheckInStatus",
@@ -3181,8 +3181,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 1376,
-									"top": 299,
+									"left": 1432,
+									"top": 531,
 									"width": 278.658203125,
 									"height": 53
 								},
@@ -3197,8 +3197,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -128,
-									"top": -48,
+									"left": -72,
+									"top": 184,
 									"width": 10,
 									"height": 10
 								},
@@ -3213,16 +3213,16 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -128,
-									"top": -48,
+									"left": -72,
+									"top": 184,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 1376,
-							"top": 264,
+							"left": 1432,
+							"top": 496,
 							"width": 278.658203125,
 							"height": 88,
 							"nameCompartment": {
@@ -3262,8 +3262,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1248,
-									"top": 288,
+									"left": 1304,
+									"top": 520,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3283,8 +3283,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1245,
-									"top": 303,
+									"left": 1301,
+									"top": 535,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -3304,8 +3304,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1253,
-									"top": 259,
+									"left": 1309,
+									"top": 491,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3323,7 +3323,7 @@
 								"$ref": "AAAAAAFoIXAp0w6GOmI="
 							},
 							"lineStyle": 1,
-							"points": "1375:306;1127.3154296875:255.28701666337025",
+							"points": "1431:538;1183.3154296875:487.28701666337025",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFoIXD86w6+29Q="
@@ -3363,8 +3363,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -144,
-											"top": 784,
+											"left": -464,
+											"top": -656,
 											"height": 13
 										},
 										{
@@ -3374,8 +3374,8 @@
 												"$ref": "AAAAAAFoIXK3eg7mMcQ="
 											},
 											"font": "Arial;13;1",
-											"left": 549,
-											"top": 799,
+											"left": 389,
+											"top": 79,
 											"width": 136.43017578125,
 											"height": 13,
 											"text": "PersonCheckInTicket"
@@ -3388,8 +3388,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -144,
-											"top": 784,
+											"left": -464,
+											"top": -656,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -3402,15 +3402,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -144,
-											"top": 784,
+											"left": -464,
+											"top": -656,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 544,
-									"top": 792,
+									"left": 384,
+									"top": 72,
 									"width": 146.43017578125,
 									"height": 25,
 									"stereotypeLabel": {
@@ -3436,8 +3436,8 @@
 										"$ref": "AAAAAAFoIXK3eQ7jV5E="
 									},
 									"font": "Arial;13;0",
-									"left": 544,
-									"top": 817,
+									"left": 384,
+									"top": 97,
 									"width": 146.43017578125,
 									"height": 10
 								},
@@ -3461,8 +3461,8 @@
 												"$ref": "AAAAAAFoIXLxyA8No6s="
 											},
 											"font": "Arial;13;0",
-											"left": 549,
-											"top": 832,
+											"left": 389,
+											"top": 112,
 											"width": 136.43017578125,
 											"height": 13,
 											"text": "+clone(): CheckInTicket",
@@ -3470,8 +3470,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 544,
-									"top": 827,
+									"left": 384,
+									"top": 107,
 									"width": 146.43017578125,
 									"height": 23
 								},
@@ -3486,8 +3486,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -88,
-									"top": 392,
+									"left": -248,
+									"top": -328,
 									"width": 10,
 									"height": 10
 								},
@@ -3502,16 +3502,16 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -88,
-									"top": 392,
+									"left": -248,
+									"top": -328,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 544,
-							"top": 792,
+							"left": 384,
+							"top": 72,
 							"width": 146.43017578125,
 							"height": 58,
 							"nameCompartment": {
@@ -3558,8 +3558,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -192,
-											"top": 768,
+											"left": -912,
+											"top": -464,
 											"height": 13
 										},
 										{
@@ -3569,8 +3569,8 @@
 												"$ref": "AAAAAAFoIXM4+g8ZG4E="
 											},
 											"font": "Arial;13;1",
-											"left": 749,
-											"top": 807,
+											"left": 389,
+											"top": 191,
 											"width": 136.43017578125,
 											"height": 13,
 											"text": "VehicleCheckInTicket"
@@ -3583,8 +3583,8 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -192,
-											"top": 768,
+											"left": -912,
+											"top": -464,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -3597,15 +3597,15 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
-											"left": -192,
-											"top": 768,
+											"left": -912,
+											"top": -464,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 744,
-									"top": 800,
+									"left": 384,
+									"top": 184,
 									"width": 146.43017578125,
 									"height": 25,
 									"stereotypeLabel": {
@@ -3641,8 +3641,8 @@
 												"$ref": "AAAAAAFoIXS0tg95Nnk="
 											},
 											"font": "Arial;13;0",
-											"left": 749,
-											"top": 830,
+											"left": 389,
+											"top": 214,
 											"width": 136.43017578125,
 											"height": 13,
 											"text": "#type: CheckInType",
@@ -3650,8 +3650,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 744,
-									"top": 825,
+									"left": 384,
+									"top": 209,
 									"width": 146.43017578125,
 									"height": 23
 								},
@@ -3675,8 +3675,8 @@
 												"$ref": "AAAAAAFoIXOHUA9AEHY="
 											},
 											"font": "Arial;13;0",
-											"left": 749,
-											"top": 853,
+											"left": 389,
+											"top": 237,
 											"width": 136.43017578125,
 											"height": 13,
 											"text": "+clone(): CheckInTicket",
@@ -3684,8 +3684,8 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 744,
-									"top": 848,
+									"left": 384,
+									"top": 232,
 									"width": 146.43017578125,
 									"height": 23
 								},
@@ -3700,8 +3700,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -112,
-									"top": 376,
+									"left": -472,
+									"top": -240,
 									"width": 10,
 									"height": 10
 								},
@@ -3716,16 +3716,16 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": -112,
-									"top": 376,
+									"left": -472,
+									"top": -240,
 									"width": 10,
 									"height": 10
 								}
 							],
 							"font": "Arial;13;0",
 							"containerChangeable": true,
-							"left": 744,
-							"top": 800,
+							"left": 384,
+							"top": 184,
 							"width": 146.43017578125,
 							"height": 71,
 							"nameCompartment": {
@@ -3765,8 +3765,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 638,
-									"top": 743,
+									"left": 570,
+									"top": 99,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3786,8 +3786,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 625,
-									"top": 735,
+									"left": 573,
+									"top": 84,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -3807,8 +3807,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 663,
-									"top": 758,
+									"left": 565,
+									"top": 128,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3826,7 +3826,7 @@
 								"$ref": "AAAAAAFoIXK3eg7lXls="
 							},
 							"lineStyle": 1,
-							"points": "632:791;671:723",
+							"points": "530:113;607:127",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFoIXP4tg9PlDI="
@@ -3859,8 +3859,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 778,
-									"top": 759,
+									"left": 565,
+									"top": 176,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -3880,8 +3880,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 764,
-									"top": 764,
+									"left": 562,
+									"top": 161,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -3901,8 +3901,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 807,
-									"top": 750,
+									"left": 570,
+									"top": 205,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -3920,7 +3920,7 @@
 								"$ref": "AAAAAAFoIXM4+g8Y3/M="
 							},
 							"lineStyle": 1,
-							"points": "805:799;781:723",
+							"points": "530:204;607:190",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFoIXQEDg9gR+o="
@@ -3961,7 +3961,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -416,
-											"top": -128,
+											"top": -1008,
 											"height": 13
 										},
 										{
@@ -3972,7 +3972,7 @@
 											},
 											"font": "Arial;13;1",
 											"left": 997,
-											"top": 487,
+											"top": 47,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "CheckInSystem"
@@ -3986,7 +3986,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -416,
-											"top": -128,
+											"top": -1008,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -4000,14 +4000,14 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": -416,
-											"top": -128,
+											"top": -1008,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 992,
-									"top": 480,
+									"top": 40,
 									"width": 352.34814453125,
 									"height": 25,
 									"stereotypeLabel": {
@@ -4044,7 +4044,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 510,
+											"top": 70,
 											"width": 342.34814453125,
 											"height": 13,
 											"underline": true,
@@ -4062,7 +4062,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 525,
+											"top": 85,
 											"width": 342.34814453125,
 											"height": 13,
 											"underline": true,
@@ -4080,7 +4080,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 540,
+											"top": 100,
 											"width": 342.34814453125,
 											"height": 13,
 											"underline": true,
@@ -4098,7 +4098,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 555,
+											"top": 115,
 											"width": 342.34814453125,
 											"height": 13,
 											"underline": true,
@@ -4116,7 +4116,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 570,
+											"top": 130,
 											"width": 342.34814453125,
 											"height": 13,
 											"underline": true,
@@ -4134,7 +4134,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 585,
+											"top": 145,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "#check: Check",
@@ -4143,7 +4143,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 992,
-									"top": 505,
+									"top": 65,
 									"width": 352.34814453125,
 									"height": 98
 								},
@@ -4168,7 +4168,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 608,
+											"top": 168,
 											"width": 342.34814453125,
 											"height": 13,
 											"underline": true,
@@ -4186,7 +4186,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 623,
+											"top": 183,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "+giveTicket(BasicObj basic): void",
@@ -4203,7 +4203,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 638,
+											"top": 198,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "+validTicket(CheckInTicket ticket): CheckInStatus",
@@ -4220,7 +4220,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 653,
+											"top": 213,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "+calculatePrice(CheckInTicket ticket): double",
@@ -4237,7 +4237,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 668,
+											"top": 228,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "+calculatePriceExceed(CheckInTicket ticket): double",
@@ -4254,7 +4254,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 683,
+											"top": 243,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "-findTicket(CheckInTicket ticket): CheckInTicket",
@@ -4271,7 +4271,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 698,
+											"top": 258,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "+payTicket(CheckInTicket ticket): void",
@@ -4288,7 +4288,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 997,
-											"top": 713,
+											"top": 273,
 											"width": 342.34814453125,
 											"height": 13,
 											"text": "+checkOut(CheckInTicket ticket, String arg): CheckInStatus",
@@ -4297,7 +4297,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 992,
-									"top": 603,
+									"top": 163,
 									"width": 352.34814453125,
 									"height": 128
 								},
@@ -4313,7 +4313,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -208,
-									"top": -64,
+									"top": -504,
 									"width": 10,
 									"height": 10
 								},
@@ -4329,7 +4329,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": -208,
-									"top": -64,
+									"top": -504,
 									"width": 10,
 									"height": 10
 								}
@@ -4337,7 +4337,7 @@
 							"font": "Arial;13;0",
 							"containerChangeable": true,
 							"left": 992,
-							"top": 480,
+							"top": 40,
 							"width": 352.34814453125,
 							"height": 251,
 							"nameCompartment": {
@@ -4377,8 +4377,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 950,
-									"top": 609,
+									"left": 966,
+									"top": 169,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -4398,8 +4398,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 950,
-									"top": 624,
+									"left": 966,
+									"top": 184,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -4419,8 +4419,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 951,
-									"top": 580,
+									"left": 967,
+									"top": 139,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -4441,7 +4441,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 964,
-									"top": 610,
+									"top": 169,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -4462,7 +4462,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 962,
-									"top": 623,
+									"top": 182,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -4483,7 +4483,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 969,
-									"top": 582,
+									"top": 142,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -4503,8 +4503,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 936,
-									"top": 609,
+									"left": 968,
+									"top": 169,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -4523,8 +4523,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 938,
-									"top": 622,
+									"left": 970,
+									"top": 182,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -4543,8 +4543,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 932,
-									"top": 582,
+									"left": 964,
+									"top": 141,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 25,
@@ -4563,8 +4563,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 56,
-									"top": 16,
+									"left": 120,
+									"top": 120,
 									"width": 10,
 									"height": 10
 								},
@@ -4579,8 +4579,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 56,
-									"top": 16,
+									"left": 120,
+									"top": 120,
 									"width": 10,
 									"height": 10
 								}
@@ -4593,7 +4593,7 @@
 								"$ref": "AAAAAAFoIXhhDQ+D5c8="
 							},
 							"lineStyle": 1,
-							"points": "991:602;911:600",
+							"points": "991:161;943:160",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFoIYRFSRBUC1M="
@@ -4650,8 +4650,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1115,
-									"top": 366,
+									"left": 1183,
+									"top": 374,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -4671,8 +4671,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1100,
-									"top": 368,
+									"left": 1198,
+									"top": 374,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -4692,8 +4692,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1144,
-									"top": 363,
+									"left": 1154,
+									"top": 375,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -4711,7 +4711,7 @@
 								"$ref": "AAAAAAFoIXhhDQ+D5c8="
 							},
 							"lineStyle": 1,
-							"points": "1145:479;1116.190082644628:263",
+							"points": "1168:291;1170.0833333333333:472",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFoIYbjMRWtsxs="
@@ -4826,7 +4826,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFoIUIpuwkilos="
 									},
-									"name": "CheckInTicket ticket"
+									"name": "CheckInTicket ticket",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -6361,7 +6362,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFoIXy7fw/ktds="
 									},
-									"name": "String arg"
+									"name": "String arg",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -6448,7 +6450,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFoIXzjIQ/2XH8="
 									},
-									"name": "CheckInTicket ticket"
+									"name": "CheckInTicket ticket",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
@@ -6532,7 +6535,8 @@
 									"_parent": {
 										"$ref": "AAAAAAFoIYAifxA161c="
 									},
-									"name": "CheckInTicket ticket"
+									"name": "CheckInTicket ticket",
+									"type": ""
 								},
 								{
 									"_type": "UMLParameter",

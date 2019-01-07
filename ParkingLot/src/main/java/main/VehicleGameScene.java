@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.Random;
 
 public class VehicleGameScene {
+
     private List<GameObject> cars = new ArrayList<>();
     private Car selectedCar = null;
 
@@ -132,19 +133,6 @@ public class VehicleGameScene {
         if(this.carStatusLabel == null) {
             throw new Error("Car Status Label must not null");
         }
-
-        this.tabPane.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    // set Event Listener with to selected tab
-                    if(newValue.getId().compareToIgnoreCase("carSystem") == 0) {
-                        setControl();
-                    } else if (newValue.getId().compareToIgnoreCase("workSystem") == 0) {
-                        removeControl();
-                    }
-                }
-        );
-
-//        setControl();
 
         carPark = new CarPark(pane, 120);
         carPark.generateParkingLot();

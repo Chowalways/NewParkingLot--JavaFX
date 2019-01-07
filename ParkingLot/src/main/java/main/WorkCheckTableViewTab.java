@@ -1,17 +1,14 @@
 package main;
 
 import Abstract.CheckInTicket;
+import Abstract.TableViewController;
 import CheckSystem.CheckInSystem;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.Parent;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
 
-public class WorkCheckTableViewTab {
+public class WorkCheckTableViewTab extends TableViewController {
 
 
     private static WorkCheckTableViewTab _instance;
@@ -19,7 +16,7 @@ public class WorkCheckTableViewTab {
     public static WorkCheckTableViewTab getInstance() {
 
         if(_instance == null) {
-            throw new Error("No Initial WOrk Check TableViewTab");
+            throw new Error("No Initial Work Check TableView Tab");
         }
 
         return _instance;
@@ -30,38 +27,16 @@ public class WorkCheckTableViewTab {
         _instance = new WorkCheckTableViewTab(parent);
     }
 
-    TableView workCheck;
-
     private WorkCheckTableViewTab(Parent parent) {
 
+        super((TableView) parent.lookup("#workTableView"));
 
-        workCheck = (TableView) parent.lookup("#workTableView");
-        AnchorPane pane = (AnchorPane) parent.lookup("#carTicketPane");
         setColumnValue();
     }
 
-    public void setColumnValue() {
-        // ID
-        ((TableColumn)workCheck.getColumns().get(0)).setCellValueFactory(
-                new PropertyValueFactory<CheckInTicket, String>("ID")
-        );
-        // CheckInTicket
-        ((TableColumn)workCheck.getColumns().get(1)).setCellValueFactory(
-                new PropertyValueFactory<CheckInTicket, String>("checkInTime")
-        );
-        // CheckOutTicket
-        ((TableColumn)workCheck.getColumns().get(2)).setCellValueFactory(
-                new PropertyValueFactory<CheckInTicket, String>("checkOutTime")
-        );
-        // Pay Ticket
-//        ((TableColumn)workCheck.getColumns().get(3)).setCellValueFactory(
-//                new PropertyValueFactory<CheckInTicket, String>("")
-//        );
-    }
-
-
     public void updateTableView() {
-        ObservableList<CheckInTicket> data = FXCollections.observableArrayList(CheckInSystem.tickets);
-        workCheck.getColumns();
+        ObservableList<CheckInTicket> data = FXCollections.observableArrayList(CheckInSystem.personCheckInTickets);
+        tableView.setItems(data);
+        tableView.refresh();
     }
 }

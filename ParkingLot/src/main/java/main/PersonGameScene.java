@@ -30,7 +30,7 @@ public class PersonGameScene {
 
     private List<GameObject> human = new ArrayList<>();
     private PersonObject selectedPerson = null;
-    private Office office = null;
+    private Office office;
     private Door door = null;
     private PunchMachine punchMachine = null;
 
@@ -115,16 +115,16 @@ public class PersonGameScene {
             throw new Error("Check Out Time Label is null");
         }
 
-        this.tabPane.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    // set Event Listener with to selected tab
-                    if(newValue.getId().compareToIgnoreCase("workSystem") == 0) {
-                        setHumanControl();
-                    } else if (newValue.getId().compareToIgnoreCase("carSystem") == 0) {
-                        removeHumanControl();
-                    }
-                }
-        );
+//        this.tabPane.getSelectionModel().selectedItemProperty().addListener(
+//                (observable, oldValue, newValue) -> {
+//                    // set Event Listener with to selected tab
+//                    if(newValue.getId().compareToIgnoreCase("workSystem") == 0) {
+//                        setHumanControl();
+//                    } else if (newValue.getId().compareToIgnoreCase("carSystem") == 0) {
+//                        removeHumanControl();
+//                    }
+//                }
+//        );
 
         this.personStatus.setText("0 Person");
         this.ticketStatus.setText("");
@@ -179,36 +179,38 @@ public class PersonGameScene {
     }
 
     public EventHandler events = (EventHandler<KeyEvent>) e -> {
-        //Game Start with number keypad 7;
+        //Game Start with ENTER;
         if(e.getCode() == KeyCode.ENTER) {
             generatePerson();
             this.personStatus.setText(String.format("%d Person" ,getPerson()));
         }
 
-        //remove person by number keypad 9;
-        if(e.getCode() == KeyCode.BACK_SPACE) {
-            removePersonObject(selectedPerson);
-            this.personStatus.setText(String.format("%d Person" ,getPerson()));
-        }
+        if(selectedPerson != null) {
+            //remove person by BACK_SPACE;
+            if(e.getCode() == KeyCode.BACK_SPACE) {
+                removePersonObject(selectedPerson);
+                this.personStatus.setText(String.format("%d Person" ,getPerson()));
+            }
 
-        // go back with number keypad 5;
-        if(e.getCode() == KeyCode.S) {
-            selectedPerson.toggleReverse();
-        }
+            // go back with KEY S;
+            if(e.getCode() == KeyCode.S) {
+                selectedPerson.toggleReverse();
+            }
 
-        //button stop is number keypad 8;
-        if(e.getCode() == KeyCode.W) {
-            selectedPerson.toggleStop();
-        }
+            //button stop with KEY W;
+            if(e.getCode() == KeyCode.W) {
+                selectedPerson.toggleStop();
+            }
 
-        //move to left using number keypad4;
-        if(e.getCode() == KeyCode.A) {
-            selectedPerson.rotateLeft();
-        }
+            //move to left with KET A;
+            if(e.getCode() == KeyCode.A) {
+                selectedPerson.rotateLeft();
+            }
 
-        //move to right using number keypad6
-        if(e.getCode() == KeyCode.D) {
-            selectedPerson.rotateRight();
+            //move to right with KEY D
+            if(e.getCode() == KeyCode.D) {
+                selectedPerson.rotateRight();
+            }
         }
     };
 
@@ -241,6 +243,8 @@ public class PersonGameScene {
     }
 
     private void removePersonObject(GameObject object) {
+        if(object == null)
+            return;
         System.out.println("remove car");
         human.remove(object);
         //need to remove person;

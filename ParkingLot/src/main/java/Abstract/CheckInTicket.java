@@ -1,5 +1,8 @@
 package Abstract;
 
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
+
 import java.time.LocalDateTime;
 
 public abstract class CheckInTicket {
@@ -22,9 +25,13 @@ public abstract class CheckInTicket {
         return checkInTime;
     }
 
+    public StringProperty getCheckInTimeProperty() { return new SimpleStringProperty(checkInTime.toString().replaceFirst("T", " "));}
+
     public LocalDateTime getCheckOutTime() {
         return checkOutTime;
     }
+
+    public StringProperty getCheckOutTimeProperty() { return new SimpleStringProperty(checkOutTime.toString().replaceFirst("T", " "));}
 
     public LocalDateTime getPayTime() {
         return payTime;
