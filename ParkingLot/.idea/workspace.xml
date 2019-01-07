@@ -2,18 +2,11 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" line="384" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" line="381" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a02c18ce-64a2-4c57-bac0-62c4fc1bbdb9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Class/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Class/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -85,8 +78,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#getInstance#0;class#PersonGameScene#0" />
                 <element signature="method#PersonGameScene#0;class#PersonGameScene#0" />
                 <element signature="e#4391#4634#0" />
@@ -99,38 +93,19 @@
                 <element signature="method#addPersonObj#0;class#PersonGameScene#0" />
                 <element signature="method#removePersonObject#0;class#PersonGameScene#0" />
                 <element signature="method#startTimer#0;class#PersonGameScene#0" />
+                <element signature="method#onUpdate#0;class#PersonGameScene#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="329" column="15" lean-forward="true" selection-start-line="329" selection-start-column="15" selection-end-line="329" selection-end-column="15" />
+            <state relative-caret-position="304">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <element signature="method#getInstance#0;class#VehicleGameScene#0" />
-                <element signature="method#getAvailableParkingLots#0;class#VehicleGameScene#0" />
-                <element signature="method#startTimer#0;class#VehicleGameScene#0" />
-                <element signature="method#removeControl#0;class#VehicleGameScene#0" />
-                <element signature="method#addGameObject#0;class#VehicleGameScene#0" />
-                <element signature="method#spawnCar#0;class#VehicleGameScene#0" />
-                <element signature="method#removeCar#0;class#VehicleGameScene#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-              <folding>
-                <element signature="method#CheckInTicket#0;class#CheckInTicket#0" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#436#437#0" expanded="true" />
+                <element signature="method#createCar#0;class#Car#0" />
               </folding>
             </state>
           </provider>
@@ -282,14 +257,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Class" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
@@ -511,7 +478,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Learn" order="0" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.20509383" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.20509383" />
       <window_info id="Structure" order="2" sideWeight="0.49601594" side_tool="true" weight="0.21313673" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -680,45 +647,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Gate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="66" column="66" selection-start-line="66" selection-start-column="66" selection-end-line="66" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createGate#0;class#Gate#0" />
-            <element signature="e#1722#1723#0" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#2104#2105#0" expanded="true" />
-            <element signature="e#2133#2134#0" expanded="true" />
-            <element signature="method#update#0;class#Gate#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Door.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="84" column="66" selection-start-line="84" selection-start-column="66" selection-end-line="84" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createDoor#0;class#Door#0" />
-            <element signature="e#2114#2115#0" expanded="true" />
-            <element signature="e#2155#2156#0" expanded="true" />
-            <element signature="method#getPersonCheckOutTime#0;class#Door#0" />
-            <element signature="method#close#0;class#Door#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -948,12 +877,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="method#createCar#0;class#Car#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Unit/PersonObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="171">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#PersonObject#0;class#PersonObject#0" />
+            <element signature="method#createPerson#0;class#PersonObject#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Door.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Door#0;class#Door#0" />
+            <element signature="method#createDoor#0;class#Door#0" />
+            <element signature="method#checkinCard#0;class#Door#0" />
+            <element signature="method#getPersonCheckOutTime#0;class#Door#0" />
+            <element signature="method#close#0;class#Door#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Gate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="64" column="53" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Gate#0;class#Gate#0" />
+            <element signature="method#createGate#0;class#Gate#0" />
+            <element signature="method#checkOut#0;class#Gate#0" />
+            <element signature="method#update#0;class#Gate#0" />
           </folding>
         </state>
       </provider>
@@ -961,8 +931,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
           <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#getInstance#0;class#PersonGameScene#0" />
             <element signature="method#PersonGameScene#0;class#PersonGameScene#0" />
             <element signature="e#4391#4634#0" />
@@ -975,6 +946,7 @@
             <element signature="method#addPersonObj#0;class#PersonGameScene#0" />
             <element signature="method#removePersonObject#0;class#PersonGameScene#0" />
             <element signature="method#startTimer#0;class#PersonGameScene#0" />
+            <element signature="method#onUpdate#0;class#PersonGameScene#0" />
           </folding>
         </state>
       </provider>
