@@ -2,9 +2,7 @@ package main;
 
 import Abstract.CheckInTicket;
 import Abstract.GameObject;
-import CheckSystem.CheckInSystem;
 import CheckSystem.Other.Gender;
-import CheckSystem.PersonCheckInTicket;
 import Unit.*;
 import Class.Person; // TO CHANGE
 import Unit.Enum.Side;
@@ -16,12 +14,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TabPane;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -180,34 +180,34 @@ public class PersonGameScene {
 
     public EventHandler events = (EventHandler<KeyEvent>) e -> {
         //Game Start with number keypad 7;
-        if(e.getCode() == KeyCode.NUMPAD7) {
+        if(e.getCode() == KeyCode.ENTER) {
             generatePerson();
             this.personStatus.setText(String.format("%d Person" ,getPerson()));
         }
 
         //remove person by number keypad 9;
-        if(e.getCode() == KeyCode.NUMPAD9) {
+        if(e.getCode() == KeyCode.BACK_SPACE) {
             removePersonObject(selectedPerson);
             this.personStatus.setText(String.format("%d Person" ,getPerson()));
         }
 
         // go back with number keypad 5;
-        if(e.getCode() == KeyCode.NUMPAD5) {
+        if(e.getCode() == KeyCode.S) {
             selectedPerson.toggleReverse();
         }
 
         //button stop is number keypad 8;
-        if(e.getCode() == KeyCode.NUMPAD8) {
+        if(e.getCode() == KeyCode.W) {
             selectedPerson.toggleStop();
         }
 
         //move to left using number keypad4;
-        if(e.getCode() == KeyCode.NUMPAD4) {
+        if(e.getCode() == KeyCode.A) {
             selectedPerson.rotateLeft();
         }
 
         //move to right using number keypad6
-        if(e.getCode() == KeyCode.NUMPAD6) {
+        if(e.getCode() == KeyCode.D) {
             selectedPerson.rotateRight();
         }
     };

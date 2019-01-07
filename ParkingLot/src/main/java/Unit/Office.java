@@ -36,8 +36,8 @@ public class Office extends GameObject {
 
         // Wall Size
         int wallPadding = OfficePadding - 10;
-        int roomWidth = x + Room.WIDTH + 360;
-        int roomHeight = y + 500;
+        int roomWidth = x + Room.WIDTH + 200;
+        int roomHeight = y + 200;
 
         // Generate TOP Wall
         for (int i = 0; i * Wall.LONG < roomWidth; i ++ ) {

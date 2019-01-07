@@ -6,15 +6,15 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <TabPane fx:id="tabPane" maxHeight="720.0" maxWidth="1080.0" minHeight="720.0" minWidth="1080.0" prefHeight="720.0" prefWidth="1080.0" snapToPixel="false" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainController">
    <tabs>
       <Tab fx:id="carSystem" text="Car System Simulator">
@@ -176,7 +176,10 @@
          <content>
             <SplitPane fx:id="worksystem" dividerPositions="0.0" prefHeight="200.0" prefWidth="200.0">
                <items>
-                  <Pane fx:id="gamePane1" prefHeight="200.0" prefWidth="200.0" />
+                  <Pane fx:id="gamePane1" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="220.0" prefWidth="280.0" style="-fx-background-color: #8DDCA4;" text="WORKSHOP" textAlignment="CENTER" textFill="WHITE"/>
+                     </children></Pane>
                   <VBox maxWidth="200.0" minWidth="250.0" prefHeight="200.0" prefWidth="100.0" SplitPane.resizableWithParent="false">
                      <children>
                         <Label fx:id="workTimeLabel" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" prefHeight="50.0" style="-fx-background-color: gray;" text="0000-00-00 00:00:00" textFill="WHITE">
@@ -187,7 +190,7 @@
                               <Font size="21.0" />
                            </font>
                         </Label>
-                        <Label fx:id="personStatusLabel"  alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="Balance" textAlignment="CENTER" textFill="#ff0101">
+                        <Label fx:id="personStatusLabel" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="20.0" style="-fx-background-color: white;" text="Balance" textAlignment="CENTER" textFill="#ff0101">
                            <font>
                               <Font size="30.0" />
                            </font>
@@ -259,8 +262,8 @@
                         </VBox>
                         <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                            <children>
-                              <JFXButton fx:id="CheckIn1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Get In" style="-fx-background-color: cornflowerblue"/>
-                              <JFXButton fx:id="Checkout1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Go Out" style="-fx-background-color: cornflowerblue" />
+                              <JFXButton fx:id="CheckIn1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: cornflowerblue" text="Get In" />
+                              <JFXButton fx:id="Checkout1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: cornflowerblue" text="Go Out" />
                            </children>
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -279,7 +282,7 @@
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
                      <children>
-                        <Label id="statusTimeLabel" style="-fx-background-color: grey;" alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="12.0" prefHeight="59.0" prefWidth="208.0" text="statusTime" textAlignment="CENTER" textFill="#0ab4e8" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="12.0">
+                        <Label id="statusTimeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="209.0" layoutY="12.0" prefHeight="59.0" prefWidth="208.0" style="-fx-background-color: grey;" text="statusTime" textAlignment="CENTER" textFill="#0ab4e8" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="209.0" AnchorPane.rightAnchor="169.0" AnchorPane.topAnchor="12.0">
                            <font>
                               <Font size="29.0" />
                            </font>
@@ -299,7 +302,7 @@
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <Label id="statusCarIn" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="300.0"  textAlignment="CENTER">
+                              <Label id="statusCarIn" alignment="CENTER" contentDisplay="CENTER" prefHeight="38.0" prefWidth="300.0" textAlignment="CENTER">
                                  <font>
                                     <Font size="26.0" />
                                  </font>
