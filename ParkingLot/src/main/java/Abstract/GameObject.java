@@ -143,7 +143,7 @@ public abstract class GameObject {
     }
 
     public Side isColliding(GameObject other) {
-        int checkLoop = 5;
+        int checkLoop = 7;
 
         if(other == this) {
             return Side.NONE;
@@ -161,27 +161,27 @@ public abstract class GameObject {
         }
 
         // Detect Left
-        for(double i = 1; i < checkLoop; i += 0.5) {
+        for(double i = 0; i < checkLoop; i += 0.5) {
             temp = new BoundingBox(selfBound.getMinX() - i, selfBound.getMinY() + 1, selfBound.getWidth(), selfBound.getHeight() - 2);
             if(temp.intersects(otherBound))
                 return Side.LEFT;
         }
 
         // Detect Right
-        for(double i = 1; i < checkLoop; i += 0.5) {
+        for(double i = 0; i < checkLoop; i += 0.5) {
             temp = new BoundingBox(selfBound.getMinX() + i, selfBound.getMinY() + 1, selfBound.getWidth(), selfBound.getHeight() - 2);
             if(temp.intersects(otherBound))
                 return Side.RIGHT;
         }
 
         // Detect Top
-        for(double i = 1; i < checkLoop; i += 0.5) {
+        for(double i = 0; i < checkLoop; i += 0.5) {
             temp = new BoundingBox(selfBound.getMinX() + 1, selfBound.getMinY() - i, selfBound.getWidth() - 2, selfBound.getHeight());
             if (temp.intersects(otherBound))
                 return Side.TOP;
         }
         // Detect Bottom
-        for(double i = 1; i < checkLoop; i += 0.5) {
+        for(double i = 0; i < checkLoop; i += 0.5) {
             temp = new BoundingBox(selfBound.getMinX() + 1, selfBound.getMinY() + i, selfBound.getWidth() - 2, selfBound.getHeight());
             if (temp.intersects(otherBound))
                 return Side.BOTTOM;
@@ -189,31 +189,31 @@ public abstract class GameObject {
 
 //        Haven't this part implement
 //        // Detect Top Left
-//        for(double i = 1; i < checkLoop; i += 0.5) {
-//            temp = new BoundingBox(selfBound.getMinX() - i, selfBound.getMinY() + 1, selfBound.getWidth(), selfBound.getHeight() - 2);
-//            if(temp.intersects(otherBound))
-//                return Side.LEFT;
-//        }
+        for(double i = 0; i < checkLoop; i += 0.5) {
+            temp = new BoundingBox(selfBound.getMinX() - i, selfBound.getMinY() - i, selfBound.getWidth(), selfBound.getHeight());
+            if(temp.intersects(otherBound))
+                return Side.TOPLEFT;
+        }
 //
 //        // Detect Top Right
-//        for(double i = 1; i < checkLoop; i += 0.5) {
-//            temp = new BoundingBox(selfBound.getMinX() + i, selfBound.getMinY() + 1, selfBound.getWidth(), selfBound.getHeight() - 2);
-//            if(temp.intersects(otherBound))
-//                return Side.RIGHT;
-//        }
+        for(double i = 0; i < checkLoop; i += 0.5) {
+            temp = new BoundingBox(selfBound.getMinX() + i, selfBound.getMinY() - i, selfBound.getWidth(), selfBound.getHeight() - 2);
+            if(temp.intersects(otherBound))
+                return Side.TOPRIGHT;
+        }
 //
 //        // Detect Bottom Left
-//        for(double i = 1; i < checkLoop; i += 0.5) {
-//            temp = new BoundingBox(selfBound.getMinX() + 1, selfBound.getMinY() - i, selfBound.getWidth() - 2, selfBound.getHeight());
-//            if (temp.intersects(otherBound))
-//                return Side.TOP;
-//        }
+        for(double i = 0; i < checkLoop; i += 0.5) {
+            temp = new BoundingBox(selfBound.getMinX() - i, selfBound.getMinY() + i, selfBound.getWidth() - 2, selfBound.getHeight());
+            if (temp.intersects(otherBound))
+                return Side.BOTTOMLEFT;
+        }
 //        // Detect Bottom Right
-//        for(double i = 1; i < checkLoop; i += 0.5) {
-//            temp = new BoundingBox(selfBound.getMinX() + 1, selfBound.getMinY() + i, selfBound.getWidth() - 2, selfBound.getHeight());
-//            if (temp.intersects(otherBound))
-//                return Side.BOTTOM;
-//        }
+        for(double i = 0; i < checkLoop; i += 0.5) {
+            temp = new BoundingBox(selfBound.getMinX() + i, selfBound.getMinY() + i, selfBound.getWidth() - 2, selfBound.getHeight());
+            if (temp.intersects(otherBound))
+                return Side.BOTTOMRIGHT;
+        }
 //
         
         return Side.NONE;

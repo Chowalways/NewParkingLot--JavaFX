@@ -182,30 +182,32 @@ public class PersonGameScene {
             this.personStatus.setText(String.format("%d Person" ,getPerson()));
         }
 
-        //remove person by BACK_SPACE;
-        if(e.getCode() == KeyCode.BACK_SPACE) {
-            removePersonObject(selectedPerson);
-            this.personStatus.setText(String.format("%d Person" ,getPerson()));
-        }
+        if(selectedPerson != null) {
+            //remove person by BACK_SPACE;
+            if(e.getCode() == KeyCode.BACK_SPACE) {
+                removePersonObject(selectedPerson);
+                this.personStatus.setText(String.format("%d Person" ,getPerson()));
+            }
 
-        // go back with KEY S;
-        if(e.getCode() == KeyCode.S) {
-            selectedPerson.toggleReverse();
-        }
+            // go back with KEY S;
+            if(e.getCode() == KeyCode.S) {
+                selectedPerson.toggleReverse();
+            }
 
-        //button stop with KEY W;
-        if(e.getCode() == KeyCode.W) {
-            selectedPerson.toggleStop();
-        }
+            //button stop with KEY W;
+            if(e.getCode() == KeyCode.W) {
+                selectedPerson.toggleStop();
+            }
 
-        //move to left with KET A;
-        if(e.getCode() == KeyCode.A) {
-            selectedPerson.rotateLeft();
-        }
+            //move to left with KET A;
+            if(e.getCode() == KeyCode.A) {
+                selectedPerson.rotateLeft();
+            }
 
-        //move to right with KEY D
-        if(e.getCode() == KeyCode.D) {
-            selectedPerson.rotateRight();
+            //move to right with KEY D
+            if(e.getCode() == KeyCode.D) {
+                selectedPerson.rotateRight();
+            }
         }
     };
 
