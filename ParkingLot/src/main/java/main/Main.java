@@ -61,6 +61,7 @@ public class Main extends Application {
         // Create Game Scene
         VehicleGameScene.init(root);
         vehicleGameScene = VehicleGameScene.getInstance();
+        vehicleGameScene.setControl();
         vehicleGameScene.startTimer();
 
         PersonGameScene.init(root);

@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a02c18ce-64a2-4c57-bac0-62c4fc1bbdb9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/SystemStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/SystemStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/SystemStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/SystemStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -84,11 +74,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="214" column="31" selection-start-line="214" selection-start-column="16" selection-end-line="214" selection-end-column="31" />
+            <state relative-caret-position="19">
+              <caret line="189" column="38" lean-forward="true" selection-start-line="189" selection-start-column="38" selection-end-line="189" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getInstance#0;class#PersonGameScene#0" />
@@ -105,8 +95,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="146">
-              <caret line="103" column="47" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="47" />
+            <state relative-caret-position="190">
+              <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4565#4566#0" expanded="true" />
@@ -116,11 +106,42 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="145" column="10" selection-start-line="145" selection-start-column="10" selection-end-line="145" selection-end-column="10" />
+              <folding>
+                <element signature="method#getInstance#0;class#VehicleGameScene#0" />
+                <element signature="e#2670#2732#1" />
+                <element signature="e#2767#2833#1" />
+                <element signature="e#2866#2929#1" />
+                <element signature="e#2964#3037#1" />
+                <element signature="e#3073#3147#1" />
+                <element signature="e#3185#3268#1" />
+                <element signature="e#3299#3367#1" />
+                <element signature="e#3408#3481#1" />
+                <element signature="e#3526#3604#1" />
+                <element signature="e#3650#3729#1" />
+                <element signature="e#3773#3849#1" />
+                <element signature="e#3891#3965#1" />
+                <element signature="e#4060#4450#0" />
+                <element signature="method#getAvailableParkingLots#0;class#VehicleGameScene#0" />
+                <element signature="method#startTimer#0;class#VehicleGameScene#0" />
+                <element signature="method#removeControl#0;class#VehicleGameScene#0" />
+                <element signature="method#addGameObject#0;class#VehicleGameScene#0" />
+                <element signature="method#spawnCar#0;class#VehicleGameScene#0" />
+                <element signature="method#removeCar#0;class#VehicleGameScene#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/gameScene.fxml">
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="616">
               <caret line="180" column="235" selection-start-line="180" selection-start-column="235" selection-end-line="180" selection-end-column="235" />
             </state>
           </provider>
@@ -225,9 +246,9 @@
         <option value="$PROJECT_DIR$/src/main/java/Class/Person.java" />
         <option value="$PROJECT_DIR$/src/main/java/CheckSystem/PersonCheck.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/SystemStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
       </list>
     </option>
   </component>
@@ -237,7 +258,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="915" />
     <option name="y" value="130" />
     <option name="width" value="1360" />
@@ -248,8 +269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,6 +314,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -493,7 +514,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Learn" order="0" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.20241287" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.20509383" />
       <window_info id="Structure" order="2" sideWeight="0.49601594" side_tool="true" weight="0.21313673" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
@@ -893,14 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/gameScene.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="180" column="235" selection-start-line="180" selection-start-column="235" selection-end-line="180" selection-end-column="235" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -908,10 +921,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/gameScene.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="180" column="235" selection-start-line="180" selection-start-column="235" selection-end-line="180" selection-end-column="235" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="189" column="38" lean-forward="true" selection-start-line="189" selection-start-column="38" selection-end-line="189" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getInstance#0;class#PersonGameScene#0" />
+            <element signature="method#generatePerson#0;class#PersonGameScene#0" />
+            <element signature="method#addGameObject#0;class#PersonGameScene#0" />
+            <element signature="method#addPersonObj#0;class#PersonGameScene#0" />
+            <element signature="method#startTimer#0;class#PersonGameScene#0" />
+            <element signature="method#onUpdate#0;class#PersonGameScene#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4565#4566#0" expanded="true" />
+            <element signature="e#4593#4594#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
+        <state relative-caret-position="295">
+          <caret line="145" column="10" selection-start-line="145" selection-start-column="10" selection-end-line="145" selection-end-column="10" />
           <folding>
             <element signature="method#getInstance#0;class#VehicleGameScene#0" />
             <element signature="e#2670#2732#1" />
@@ -933,34 +982,6 @@
             <element signature="method#addGameObject#0;class#VehicleGameScene#0" />
             <element signature="method#spawnCar#0;class#VehicleGameScene#0" />
             <element signature="method#removeCar#0;class#VehicleGameScene#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="103" column="47" selection-start-line="103" selection-start-column="32" selection-end-line="103" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4565#4566#0" expanded="true" />
-            <element signature="e#4593#4594#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="214" column="31" selection-start-line="214" selection-start-column="16" selection-end-line="214" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getInstance#0;class#PersonGameScene#0" />
-            <element signature="method#generatePerson#0;class#PersonGameScene#0" />
-            <element signature="method#addGameObject#0;class#PersonGameScene#0" />
-            <element signature="method#addPersonObj#0;class#PersonGameScene#0" />
-            <element signature="method#startTimer#0;class#PersonGameScene#0" />
-            <element signature="method#onUpdate#0;class#PersonGameScene#0" />
           </folding>
         </state>
       </provider>

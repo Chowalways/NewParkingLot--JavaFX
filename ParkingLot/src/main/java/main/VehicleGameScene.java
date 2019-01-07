@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.Random;
 
 public class VehicleGameScene {
+
     private List<GameObject> cars = new ArrayList<>();
     private Car selectedCar = null;
 
@@ -143,8 +144,6 @@ public class VehicleGameScene {
                     }
                 }
         );
-
-        setControl();
 
         carPark = new CarPark(pane, 120);
         carPark.generateParkingLot();
