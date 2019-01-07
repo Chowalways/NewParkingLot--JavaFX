@@ -1,16 +1,20 @@
 package main;
 
 import Unit.Office;
+import com.sun.javafx.scene.control.skin.LabeledText;
 import config.ConfigManager;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.event.EventHandler;
+import javafx.event.EventTarget;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -76,17 +80,6 @@ public class Main extends Application {
             statusTimeLabel.setText(formatter.format(localDateTime));
             carNumberLbl.setText(String.format("%d Cars", vehicleGameScene.getCars()));
 
-            //Checking control
-            String Status = tabPaneStatus.getSelectionModel().getSelectedItem().getText();
-            if(Status.startsWith("Car")){
-                personGameScene.removeHumanControl();
-                vehicleGameScene.setControl();
-            }
-            if(Status.startsWith("Work")){
-                vehicleGameScene.removeControl();
-                personGameScene.setHumanControl();
-            }
-
             int balanceCP = vehicleGameScene.getAvailableParkingLots(); // if no car park will return -1
             if(balanceCP != -1)
                 balanceCarPark.setText(String.format("%d Available", balanceCP));
@@ -94,6 +87,29 @@ public class Main extends Application {
                 balanceCarPark.setText("No Available.");
         }, 1);
 
+        tabPaneStatus.addEventFilter(MouseEvent.MOUSE_CLICKED, onTabChange);
+    }
+
+    private EventHandler onTabChange = e -> {
+        EventTarget events = e.getTarget();
+        if(events instanceof  LabeledText) {
+            String target = ((LabeledText)events).getText();
+            System.out.println(((LabeledText)events).getText());
+            if(((LabeledText)events).getText().equalsIgnoreCase("Car System Simulator")){
+                personGameScene.removeHumanControl();
+                vehicleGameScene.setControl();
+            }
+            if(((LabeledText)events).getText().equalsIgnoreCase("Work System Simulator")){
+                vehicleGameScene.removeControl();
+                personGameScene.setHumanControl();
+            }
+        }
+    };
+
+    private void controlInterval(EventHandler event, long second) {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(second),event));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
     }
 
     private void timeInterval(EventHandler event, long secondDuration) {
