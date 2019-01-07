@@ -2,30 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54dda0e6-bc94-4081-938b-b20521442e0d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Abstract/TableViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckInSystem0106.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckInSystem0106.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace-old.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace-old.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Abstract/CheckInTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Abstract/CheckInTicket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/Class/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Class/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/SystemStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/SystemStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/WorkCheckTableViewTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/WorkCheckTableViewTab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Gate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/CarTicketTableViewTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/CarTicketTableViewTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Class/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Class/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/SystemStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/WorkCheckTableViewTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/WorkCheckTableViewTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -77,7 +60,7 @@
       <file leaf-file-name="TableViewController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/TableViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="435">
               <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -184,7 +167,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="24" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
@@ -396,12 +379,12 @@
       <workItem from="1546690597504" duration="1019000" />
       <workItem from="1546692348238" duration="8000" />
       <workItem from="1546864806945" duration="5711000" />
-      <workItem from="1546871317843" duration="4015000" />
+      <workItem from="1546871317843" duration="4377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4361000" />
+    <option name="totallyTimeSpent" value="4723000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1680" height="1027" extended-state="6" />
@@ -424,7 +407,7 @@
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49798927" visible="true" weight="0.32738718" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49798927" weight="0.32738718" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.330033" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.225" />
@@ -930,7 +913,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/TableViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
+        <state relative-caret-position="435">
           <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
