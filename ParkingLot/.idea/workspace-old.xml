@@ -2,47 +2,17 @@
 <project version="4">
 <<<<<<< HEAD
   <component name="ChangeListManager">
-    <list default="true" id="54dda0e6-bc94-4081-938b-b20521442e0d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Abstract/TableViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CheckInSystem0106.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../CheckInSystem0106.mdj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Abstract/CheckInTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Abstract/CheckInTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/SystemStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/SystemStatus.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/WorkCheckTableViewTab.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/WorkCheckTableViewTab.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Door.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Unit/Gate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Unit/Gate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/CarTicketTableViewTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/CarTicketTableViewTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/SystemStatus.java" beforeDir="false" />
+    <list default="true" id="54dda0e6-bc94-4081-938b-b20521442e0d" name="Default" comment="" />
 =======
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/out/production/classes/main/gameScene.fxml" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" line="384" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" line="381" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a02c18ce-64a2-4c57-bac0-62c4fc1bbdb9" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/main/VehicleGameScene.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Class/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Class/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" afterDir="false" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/WorkCheckTableViewTab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/WorkCheckTableViewTab.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" afterDir="false" />
     </list>
+>>>>>>> eaca263d6064557177d57084c8e511ed972b2826
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -66,21 +36,60 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PersonGameScene.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
+          <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+            <state relative-caret-position="165">
+              <caret line="281" lean-forward="true" selection-start-line="281" selection-end-line="281" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1622#1623#0" expanded="true" />
+                <element signature="e#1693#1694#0" expanded="true" />
+                <element signature="method#removePersonObject#0;class#PersonGameScene#0" />
+                <element signature="e#8271#8410#0" expanded="true" />
+                <element signature="e#8409#8410#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CheckInSystem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="WorkCheckTableViewTab.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/WorkCheckTableViewTab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+            <state relative-caret-position="540">
+              <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarTicketTableViewTab.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/main/CarTicketTableViewTab.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
 =======
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="19">
-              <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#getInstance#0;class#PersonGameScene#0" />
                 <element signature="method#PersonGameScene#0;class#PersonGameScene#0" />
                 <element signature="e#4391#4634#0" />
@@ -93,72 +102,43 @@
                 <element signature="method#addPersonObj#0;class#PersonGameScene#0" />
                 <element signature="method#removePersonObject#0;class#PersonGameScene#0" />
                 <element signature="method#startTimer#0;class#PersonGameScene#0" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
+                <element signature="method#onUpdate#0;class#PersonGameScene#0" />
+>>>>>>> eaca263d6064557177d57084c8e511ed972b2826
               </folding>
             </state>
           </provider>
         </entry>
       </file>
 <<<<<<< HEAD
-      <file leaf-file-name="CarTicketTableViewTab.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/CarTicketTableViewTab.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TableViewController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TableViewController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/TableViewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
+            <state relative-caret-position="240">
+              <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-=======
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="329" column="15" lean-forward="true" selection-start-line="329" selection-start-column="15" selection-end-line="329" selection-end-column="15" />
-              <folding>
-                <element signature="method#getInstance#0;class#VehicleGameScene#0" />
-                <element signature="method#getAvailableParkingLots#0;class#VehicleGameScene#0" />
-                <element signature="method#startTimer#0;class#VehicleGameScene#0" />
-                <element signature="method#removeControl#0;class#VehicleGameScene#0" />
-                <element signature="method#addGameObject#0;class#VehicleGameScene#0" />
-                <element signature="method#spawnCar#0;class#VehicleGameScene#0" />
-                <element signature="method#removeCar#0;class#VehicleGameScene#0" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
       <file leaf-file-name="CheckInTicket.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+            <state relative-caret-position="75">
+              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#CheckInTicket#0;class#CheckInTicket#0" />
 =======
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="304">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <element signature="method#CheckInTicket#0;class#CheckInTicket#0" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#436#437#0" expanded="true" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
+                <element signature="method#createCar#0;class#Car#0" />
+>>>>>>> eaca263d6064557177d57084c8e511ed972b2826
               </folding>
             </state>
           </provider>
@@ -175,7 +155,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-<<<<<<< HEAD
       <find>carStatusLabel</find>
       <find>connect</find>
       <find>spawnHorizontalD</find>
@@ -186,8 +165,6 @@
       <find>selectedCar</find>
       <find>new Car</find>
       <find>checkInSystem</find>
-=======
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
       <find>Check</find>
       <find>pun</find>
       <find>STOP</find>
@@ -204,27 +181,10 @@
       <find>Work System Sim</find>
       <find>VehicleCheck</find>
       <find>sethuman</find>
-<<<<<<< HEAD
       <find>_instance</find>
       <find>Key</find>
       <find>selected</find>
       <find>statusTimeLabel</find>
-=======
-      <find>back</find>
-      <find>human</find>
-      <find>humanc</find>
-      <find>humanC</find>
-      <find>setHumanControl</find>
-      <find>personIDLabel</find>
-      <find>ticketIDLabel</find>
-      <find>Enter</find>
-      <find>ID</find>
-      <find>IDLabel</find>
-      <find>selectedCar</find>
-      <find>addEventFilter</find>
-      <find>mouse</find>
-      <find>selectedPerson</find>
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -251,25 +211,12 @@
         <option value="$PROJECT_DIR$/src/main/java/Unit/Door.java" />
         <option value="$PROJECT_DIR$/src/main/java/Unit/Gate.java" />
         <option value="$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/WorkCheckTableViewTab.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/CarTicketTableViewTab.java" />
         <option value="$PROJECT_DIR$/src/main/java/Abstract/TableViewController.java" />
-=======
-        <option value="$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Unit/Office.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/gameScene.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/CheckSystem/PersonCheck.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/SystemStatus.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/VehicleGameScene.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Class/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Unit/PersonObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
       </list>
     </option>
   </component>
@@ -282,7 +229,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="24" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
@@ -292,8 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -345,25 +291,25 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
 <<<<<<< HEAD
               <item name="Abstract" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="CheckSystem" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Class" type="462c0819:PsiDirectoryNode" />
 =======
-              <item name="Class" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
-            </path>
-            <path>
-              <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ParkingLot" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Class" type="462c0819:PsiDirectoryNode" />
+>>>>>>> eaca263d6064557177d57084c8e511ed972b2826
             </path>
             <path>
               <item name="ParkingLot" type="b2602c69:ProjectViewProjectNode" />
@@ -384,7 +330,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -506,69 +453,60 @@
       <workItem from="1546690597504" duration="1019000" />
       <workItem from="1546692348238" duration="8000" />
       <workItem from="1546864806945" duration="5711000" />
-      <workItem from="1546871317843" duration="4015000" />
+      <workItem from="1546871317843" duration="4377000" />
+      <workItem from="1546875916772" duration="276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4361000" />
+    <option name="totallyTimeSpent" value="4999000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1680" height="1027" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
     <editor active="true" />
     <layout>
 <<<<<<< HEAD
       <window_info anchor="right" id="Palette" order="5" />
+      <window_info anchor="bottom" id="TODO" order="8" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="9" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.32843652" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+=======
+      <window_info id="Learn" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.20509383" />
+      <window_info id="Structure" order="2" sideWeight="0.49601594" side_tool="true" weight="0.21313673" />
+      <window_info id="Designer" order="3" />
+>>>>>>> eaca263d6064557177d57084c8e511ed972b2826
+      <window_info id="Image Layers" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5020107" side_tool="true" weight="0.30878186" />
       <window_info anchor="right" id="Maven Projects" order="10" weight="0.3296875" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49798927" visible="true" weight="0.32738718" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.330033" />
       <window_info id="Capture Tool" order="7" />
-=======
-      <window_info id="Learn" order="0" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.20509383" />
-      <window_info id="Structure" order="2" sideWeight="0.49601594" side_tool="true" weight="0.21313673" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
       <window_info id="Designer" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.225" />
       <window_info anchor="right" id="Database" order="11" side_tool="true" weight="0.3297587" />
+      <window_info anchor="right" id="Gradle" order="7" weight="0.3297587" />
       <window_info id="Structure" order="2" sideWeight="0.49601594" side_tool="true" weight="0.21313673" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info id="UI Designer" order="5" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.39943343" />
-      <window_info anchor="bottom" id="TODO" order="8" />
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.32843652" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info id="Image Layers" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="4" sideWeight="0.49798927" visible="true" weight="0.32738718" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.330033" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.50398403" visible="true" weight="0.225" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.32843652" />
-      <window_info anchor="right" id="Gradle" order="7" weight="0.3297587" />
       <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="bottom" id="Debug" order="5" weight="0.39943343" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
       <window_info anchor="bottom" id="Duplicate detector" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="2" />
-<<<<<<< HEAD
-=======
-      <window_info anchor="bottom" id="Find" order="3" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49731904" weight="0.22237961" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.39943343" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
       <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="13" weight="0.3286119" />
-<<<<<<< HEAD
       <window_info id="Learn" order="0" />
-=======
-      <window_info anchor="bottom" id="Messages" order="14" weight="0.3286119" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.50268096" side_tool="true" weight="0.30878186" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
       <window_info anchor="right" id="Maven" order="0" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.32843652" />
       <window_info anchor="right" id="Coverage" order="1" side_tool="true" weight="0.3296875" />
     </layout>
     <layout-to-restore>
@@ -592,7 +530,6 @@
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5020107" side_tool="true" weight="0.30878186" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.32843652" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="3" weight="0.3286119" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Maven Projects" order="10" weight="0.3296875" />
@@ -607,6 +544,7 @@
       <window_info id="Structure" order="2" sideWeight="0.49601594" side_tool="true" weight="0.21313673" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="Coverage" order="1" side_tool="true" weight="0.3296875" />
+      <window_info anchor="bottom" id="Find" order="3" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.39943343" />
     </layout-to-restore>
   </component>
@@ -689,6 +627,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/classes/main/PersonGameScene.class" />
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/PersonObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="265">
@@ -696,6 +645,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> eaca263d6064557177d57084c8e511ed972b2826
     <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -732,7 +683,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/out/production/classes/res/css/main.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -756,9 +706,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="32" />
-          <folding>
-            <element signature="method#clone#0;class#PersonCheckInTicket#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -766,12 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="684">
           <caret line="67" column="60" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="60" />
-          <folding>
-            <element signature="method#signIn#0;class#VehicleCheck#0" />
-            <element signature="method#checkout#0;class#VehicleCheck#0" />
-            <element signature="method#validate#0;class#VehicleCheck#0" />
-            <element signature="method#calculatePriceExceed#0;class#VehicleCheck#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -783,9 +724,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Class/Vehicle.java">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/Other/Check.java">
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -826,15 +764,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Interface/TableViewDelegate.java" />
     <entry file="file://$PROJECT_DIR$/out/production/classes/main/Main.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#4203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/out/production/classes/CheckSystem/PersonCheck.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -843,9 +774,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/out/production/classes/CheckSystem/VehicleCheck.class">
-=======
-    <entry file="file://$PROJECT_DIR$/src/main/java/Class/Vehicle.java">
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
@@ -863,40 +791,13 @@
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/SystemStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Interface/Singleton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/classes/main/SystemStatus.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#1634#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/SystemStatus.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Interface/Singleton.java" />
+    <entry file="file://$PROJECT_DIR$/out/production/classes/main/SystemStatus.class" />
     <entry file="file://$PROJECT_DIR$/out/production/classes/main/CarTicketTableViewTab.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#421#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -904,16 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="91" column="31" selection-start-line="91" selection-start-column="31" selection-end-line="91" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,10 +841,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="27" column="27" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#checkout#0;class#PersonCheck#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -998,66 +885,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="235">
-          <caret line="34" column="45" lean-forward="true" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1622#1623#0" expanded="true" />
-            <element signature="e#1693#1694#0" expanded="true" />
-            <element signature="e#5915#5916#0" expanded="true" />
-            <element signature="e#5950#5951#0" expanded="true" />
-            <element signature="method#removePersonObject#0;class#PersonGameScene#0" />
-            <element signature="method#startTimer#0;class#PersonGameScene#0" />
-=======
-        <state relative-caret-position="76">
-          <caret line="57" column="32" lean-forward="true" selection-start-line="57" selection-start-column="32" selection-end-line="58" selection-end-column="90" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4565#4566#0" expanded="true" />
-            <element signature="e#4593#4594#0" expanded="true" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding>
-            <element signature="method#CheckInTicket#0;class#CheckInTicket#0" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Class/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state relative-caret-position="312">
           <caret line="59" column="34" lean-forward="true" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-=======
-        <state relative-caret-position="247">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#Person#0;class#Person#0" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/CheckInTicket.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-6">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="75">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#CheckInTicket#0;class#CheckInTicket#0" />
@@ -1067,8 +906,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/WorkCheckTableViewTab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="36" column="35" lean-forward="true" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
+        <state relative-caret-position="540">
+          <caret line="36" column="35" selection-start-line="36" selection-start-column="35" selection-end-line="36" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1085,45 +924,91 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/main/java/Abstract/TableViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
+        <state relative-caret-position="240">
+          <caret line="16" column="34" lean-forward="true" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
 =======
-        <state relative-caret-position="192">
-          <caret line="329" column="15" lean-forward="true" selection-start-line="329" selection-start-column="15" selection-end-line="329" selection-end-column="15" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
-            <element signature="method#getInstance#0;class#VehicleGameScene#0" />
-            <element signature="method#getAvailableParkingLots#0;class#VehicleGameScene#0" />
-            <element signature="method#startTimer#0;class#VehicleGameScene#0" />
-            <element signature="method#removeControl#0;class#VehicleGameScene#0" />
-            <element signature="method#addGameObject#0;class#VehicleGameScene#0" />
-            <element signature="method#spawnCar#0;class#VehicleGameScene#0" />
-            <element signature="method#removeCar#0;class#VehicleGameScene#0" />
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
+            <element signature="method#createCar#0;class#Car#0" />
           </folding>
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-=======
     <entry file="file://$PROJECT_DIR$/src/main/java/Unit/PersonObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="171">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+>>>>>>> eaca263d6064557177d57084c8e511ed972b2826
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#PersonObject#0;class#PersonObject#0" />
+            <element signature="method#createPerson#0;class#PersonObject#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Door.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="84" column="31" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Door#0;class#Door#0" />
+            <element signature="method#createDoor#0;class#Door#0" />
+            <element signature="method#checkinCard#0;class#Door#0" />
+            <element signature="method#getPersonCheckOutTime#0;class#Door#0" />
+            <element signature="method#close#0;class#Door#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Unit/Gate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="64" column="53" selection-start-line="64" selection-start-column="53" selection-end-line="64" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#Gate#0;class#Gate#0" />
+            <element signature="method#createGate#0;class#Gate#0" />
+            <element signature="method#checkOut#0;class#Gate#0" />
+            <element signature="method#update#0;class#Gate#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+<<<<<<< HEAD
+        <state relative-caret-position="165">
+          <caret line="281" lean-forward="true" selection-start-line="281" selection-end-line="281" />
           <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+            <element signature="method#removePersonObject#0;class#PersonGameScene#0" />
+            <element signature="e#8271#8410#0" expanded="true" />
+            <element signature="e#8409#8410#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CheckSystem/CheckInSystem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+=======
+        <state relative-caret-position="19">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
             <element signature="method#getInstance#0;class#PersonGameScene#0" />
             <element signature="method#PersonGameScene#0;class#PersonGameScene#0" />
             <element signature="e#4391#4634#0" />
@@ -1136,100 +1021,11 @@
             <element signature="method#addPersonObj#0;class#PersonGameScene#0" />
             <element signature="method#removePersonObject#0;class#PersonGameScene#0" />
             <element signature="method#startTimer#0;class#PersonGameScene#0" />
+            <element signature="method#onUpdate#0;class#PersonGameScene#0" />
+>>>>>>> eaca263d6064557177d57084c8e511ed972b2826
           </folding>
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>JavaFXApp</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.5" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>NewParkingLot--JavaFX-ParkingLot</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.20137298" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Gradle: com.jfoenix:jfoenix:8.0.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
->>>>>>> cf45decf19f2efc2e29eaa7f0519390760830583
   </component>
 </project>

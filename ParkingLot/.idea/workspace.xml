@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54dda0e6-bc94-4081-938b-b20521442e0d" name="Default" comment="" />
+    <list default="true" id="54dda0e6-bc94-4081-938b-b20521442e0d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace-old.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace-old.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/PersonGameScene.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -29,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="281" lean-forward="true" selection-start-line="281" selection-end-line="281" />
+              <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1622#1623#0" expanded="true" />
@@ -114,7 +118,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>carStatusLabel</find>
       <find>connect</find>
       <find>spawnHorizontalD</find>
       <find>generate</find>
@@ -144,6 +147,7 @@
       <find>Key</find>
       <find>selected</find>
       <find>statusTimeLabel</find>
+      <find>onupdate</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -293,21 +297,6 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/out/production/classes/main" />
-      <recent name="$PROJECT_DIR$/out/production/classes" />
-      <recent name="C:\Users\eugen\Desktop\OO_project\V4\NewParkingLot--JavaFX\ParkingLot\out\production\classes\main" />
-      <recent name="C:\Users\eugen\Desktop\OO_project\V4\NewParkingLot--JavaFX\ParkingLot\out\production\classes" />
-      <recent name="C:\Users\eugen\Desktop\OO_project\V3\NewParkingLot--JavaFX\ParkingLot\out\production\classes\main" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/res/images" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -409,12 +398,12 @@
       <workItem from="1546692348238" duration="8000" />
       <workItem from="1546864806945" duration="5711000" />
       <workItem from="1546871317843" duration="4377000" />
-      <workItem from="1546875916772" duration="276000" />
+      <workItem from="1546875916772" duration="330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4999000" />
+    <option name="totallyTimeSpent" value="5053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
@@ -430,7 +419,7 @@
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.5020107" side_tool="true" weight="0.30878186" />
       <window_info anchor="right" id="Maven Projects" order="10" weight="0.3296875" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49798927" visible="true" weight="0.32738718" />
+      <window_info anchor="bottom" id="Run" order="4" sideWeight="0.49798927" weight="0.32738718" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.330033" />
       <window_info id="Capture Tool" order="7" />
@@ -882,7 +871,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/main/PersonGameScene.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="281" lean-forward="true" selection-start-line="281" selection-end-line="281" />
+          <caret line="278" lean-forward="true" selection-start-line="278" selection-end-line="278" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1622#1623#0" expanded="true" />
