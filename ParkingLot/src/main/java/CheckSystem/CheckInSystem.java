@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class CheckInSystem {
 
     protected Check check;
-    // TO KEEP PROPER TRACK OF ALL ACTIVITY
+    // TO KEEP PROPER TRACK OF ALL ACTIVITY (MOCK Database)
     public static ArrayList<CheckInTicket> tickets = new ArrayList<>();
     public static ArrayList<CheckInTicket> pInTickets = new ArrayList<>();
     public static ArrayList<CheckInTicket> pOutTickets = new ArrayList<>();

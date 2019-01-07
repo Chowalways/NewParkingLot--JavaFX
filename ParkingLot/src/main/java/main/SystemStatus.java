@@ -55,39 +55,39 @@ public class SystemStatus {
         statusPersonOut.setText("Workers checked-out: " + 0);
 
 
-        this.statusTab.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    // set Event Listener with to selected tab
-                    if(newValue.getId().compareToIgnoreCase("systemStatus") == 0) {
-
-
-                        if(!CheckInSystem.pInTickets.isEmpty()){
-                            int count = CheckInSystem.getTicketCount("pin");
-                            statusPersonIn.setText("Workers checked-in: " + count);
-                        }else{
-                            statusPersonIn.setText("Workers checked-in: " + 0);
-                        }
-                        if(!CheckInSystem.pOutTickets.isEmpty()){
-                            int count = CheckInSystem.getTicketCount("pout");
-                            statusPersonOut.setText("Workers checked-Out: " + count);
-                        }else{
-                            statusPersonOut.setText("Workers checked-Out: " + 0);
-                        }
-                        if(!CheckInSystem.vInTickets.isEmpty()){
-                            int count = CheckInSystem.getTicketCount("vin");
-                            statusCarIn.setText("Cars checked-in: " + count);
-                        }else{
-                            statusCarIn.setText("Cars checked-in: " + 0);
-                        }
-                        if(!CheckInSystem.vOutTickets.isEmpty()){
-                            int count = CheckInSystem.getTicketCount("vout");
-                            statusCarOut.setText("Cars checked-Out: " + count);
-                        }else{
-                            statusCarOut.setText("Cars checked-Out: " + 0);
-                        }
-                    }
-                }
-        );
+//        this.statusTab.getSelectionModel().selectedItemProperty().addListener(
+//                (observable, oldValue, newValue) -> {
+//                    // set Event Listener with to selected tab
+//                    if(newValue.getId().compareToIgnoreCase("systemStatus") == 0) {
+//
+//
+//                        if(!CheckInSystem.pInTickets.isEmpty()){
+//                            int count = CheckInSystem.getTicketCount("pin");
+//                            statusPersonIn.setText("Workers checked-in: " + count);
+//                        }else{
+//                            statusPersonIn.setText("Workers checked-in: " + 0);
+//                        }
+//                        if(!CheckInSystem.pOutTickets.isEmpty()){
+//                            int count = CheckInSystem.getTicketCount("pout");
+//                            statusPersonOut.setText("Workers checked-Out: " + count);
+//                        }else{
+//                            statusPersonOut.setText("Workers checked-Out: " + 0);
+//                        }
+//                        if(!CheckInSystem.vInTickets.isEmpty()){
+//                            int count = CheckInSystem.getTicketCount("vin");
+//                            statusCarIn.setText("Cars checked-in: " + count);
+//                        }else{
+//                            statusCarIn.setText("Cars checked-in: " + 0);
+//                        }
+//                        if(!CheckInSystem.vOutTickets.isEmpty()){
+//                            int count = CheckInSystem.getTicketCount("vout");
+//                            statusCarOut.setText("Cars checked-Out: " + count);
+//                        }else{
+//                            statusCarOut.setText("Cars checked-Out: " + 0);
+//                        }
+//                    }
+//                }
+//        );
 
 
     }

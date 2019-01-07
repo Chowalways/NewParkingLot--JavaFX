@@ -33,7 +33,7 @@ public class Main extends Application {
     TabPane tabPaneStatus;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
 
         ConfigManager.init("config");
         Parent root = FXMLLoader.load(getClass().getResource("gameScene.fxml"));
@@ -66,6 +66,8 @@ public class Main extends Application {
         SystemStatus.init(root);
         systemStatus = SystemStatus.getInstance();
 
+        WorkCheckTableViewTab.initialize(root);
+
 
         // Schedule update time
         timeInterval(event -> {
@@ -92,8 +94,9 @@ public class Main extends Application {
                 balanceCarPark.setText(String.format("%d Available", balanceCP));
             else
                 balanceCarPark.setText("No Available.");
-        }, 1);
 
+            WorkCheckTableViewTab.getInstance().updateTableView();
+        }, 1);
     }
 
     private void timeInterval(EventHandler event, long secondDuration) {
