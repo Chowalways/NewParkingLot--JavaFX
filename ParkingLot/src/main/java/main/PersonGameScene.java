@@ -169,9 +169,9 @@ public class PersonGameScene {
     void generatePerson() {
         System.out.println("Generate Person");
         Bounds bound = pane.getLayoutBounds();
-        PersonObject pObj = PersonObject.createPerson(String.format("Person%08d", human.size() + 1), Gender.MALE,28);
+        PersonObject pObj = PersonObject.createPerson(String.format("P%05d", human.size() + 1), Gender.MALE,28);
         Bounds personBound = pObj.getView().getLayoutBounds();
-        addPersonObj(pObj, 500, bound.getHeight() - 50);
+        addPersonObj(pObj, personBound.getHeight() + 100, bound.getHeight() - 200);
     }
 
     public int getPerson(){
@@ -243,7 +243,7 @@ public class PersonGameScene {
     private void removePersonObject(GameObject object) {
         if(object == null)
             return;
-        System.out.println("remove car");
+        System.out.println("removed");
         human.remove(object);
         //need to remove person;
         pane.getChildren().remove(object.getView());
@@ -330,18 +330,23 @@ public class PersonGameScene {
             }
         });
 
+        if(selectedPerson == null){
+            return;
+        }
+
         if (selectedPerson != null && selectedPerson instanceof PersonObject) {
             PersonObject selectedPerson = this.selectedPerson;
+            personIDLabel.setText(selectedPerson.getPerson().getId());
 
             //has ticket means customer have check in status or not.
             if(selectedPerson.hasTicket()) {
                 this.ticketStatus.setText("GET IN OFFICE");
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd hh:mm");
                 CheckInTicket ticket = selectedPerson.getTicket();
-                personIDLabel.setText(ticket.getId());
+//                personIDLabel.setText(selectedPerson.getPerson().getId());
                 checkInTimeLabel.setText(formatter.format(ticket.getCheckInTime()));
             } else {
-                resetTicketDetail();
+//                resetTicketDetail();
             }
 
             // check door (CheckIn Use)
@@ -374,10 +379,10 @@ public class PersonGameScene {
     }
 
     private void resetTicketDetail() {
-        personIDLabel.setText("");
-        checkInTimeLabel.setText("");
-        checkOutTimeLabel.setText("");
-        ticketStatus.setText("");
+        personIDLabel.setText("N/A");
+        checkInTimeLabel.setText("N/A");
+        checkOutTimeLabel.setText("N/A");
+        ticketStatus.setText("N/A");
     }
 
     private void checkOutWithPhone(){

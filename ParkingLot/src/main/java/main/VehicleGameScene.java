@@ -134,17 +134,6 @@ public class VehicleGameScene {
             throw new Error("Car Status Label must not null");
         }
 
-        this.tabPane.getSelectionModel().selectedItemProperty().addListener(
-                (observable, oldValue, newValue) -> {
-                    // set Event Listener with to selected tab
-                    if(newValue.getId().compareToIgnoreCase("carSystem") == 0) {
-                        setControl();
-                    } else if (newValue.getId().compareToIgnoreCase("workSystem") == 0) {
-                        removeControl();
-                    }
-                }
-        );
-
         carPark = new CarPark(pane, 120);
         carPark.generateParkingLot();
 
