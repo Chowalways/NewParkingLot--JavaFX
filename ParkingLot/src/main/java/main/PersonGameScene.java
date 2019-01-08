@@ -136,9 +136,8 @@ public class PersonGameScene extends GameScene {
 
     @Override
     protected void bindControl() {
-        System.out.println(checkIn1Handler);
-//        CheckIn1.addEventFilter(MouseEvent.MOUSE_CLICKED, checkIn1Handler);
-//        Checkout1.addEventFilter(MouseEvent.MOUSE_CLICKED, checkOut1Handler);
+        CheckIn1.addEventFilter(MouseEvent.MOUSE_CLICKED, checkIn1Handler);
+        Checkout1.addEventFilter(MouseEvent.MOUSE_CLICKED, checkOut1Handler);
     }
 
     @Override
