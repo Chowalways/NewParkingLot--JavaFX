@@ -13,20 +13,15 @@ import java.util.List;
 
 public class PersonCheck implements Check {
 
-    protected String personId;
     private double pricePerHour;
-    private BasicObj obj;
 
     public PersonCheck(double pricePerHour) {
         this.pricePerHour = pricePerHour;
     }
 
-    public List<CheckInTicket> ticketHistory = new ArrayList();
-
     public CheckInTicket signIn(BasicObj obj, String id){
-        this.obj = obj;
         PersonCheckInTicket ticket =
-                new PersonCheckInTicket("0", LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE"))));
+                new PersonCheckInTicket(id, LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE"))));
 
         obj.setTicket(ticket);
         return ticket;

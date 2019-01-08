@@ -4,6 +4,7 @@ import Abstract.BasicObj;
 import Abstract.CheckInTicket;
 import CheckSystem.Other.Check;
 import CheckSystem.Other.CheckInStatus;
+import Unit.PersonObject;
 import config.ConfigManager;
 
 import Class.Vehicle;
@@ -31,7 +32,7 @@ public class CheckInSystem {
            this.vehicleCheckInTickets.add(ticket);
        }
        if(Person.class.isInstance(basic)){
-           CheckInTicket ticket = check.signIn(basic, String.format("D%06d", personCheckInTickets.size() + 1));
+           CheckInTicket ticket = check.signIn(basic, basic.getId());
            basic.setTicket(ticket.clone());
            this.personCheckInTickets.add(ticket);
        }
@@ -71,7 +72,7 @@ public class CheckInSystem {
             }
         } else {
             for (CheckInTicket checkInTicket: personCheckInTickets) {
-                if (ticket.getId().compareToIgnoreCase(checkInTicket.getId()) == 0)
+                if (ticket.getId().compareToIgnoreCase(checkInTicket.getId()) == 0 && ticket.getCheckInTime().compareTo(checkInTicket.getCheckInTime()) == 0)
                     return checkInTicket;
             }
         }

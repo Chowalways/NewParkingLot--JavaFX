@@ -12,13 +12,13 @@ public class CarTicketTableViewTab extends TableViewController {
 
     private static CarTicketTableViewTab _instance;
 
-    public static void initialize(Parent parent) {
+    public static void init(Parent parent) {
         _instance = new CarTicketTableViewTab(parent);
     }
 
     public static CarTicketTableViewTab getInstance() {
         if(_instance == null) {
-            throw new Error("No Initial Car Ticker TableView Tab");
+            throw new Error("You need to run init before you use");
         }
         return _instance;
     }

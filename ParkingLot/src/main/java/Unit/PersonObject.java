@@ -25,8 +25,8 @@ public class PersonObject extends GameObject {
         ImageView iViewer = new ImageView();
         Image image = new Image("res/images/person.png");
         iViewer.setImage(image);
-        iViewer.setFitWidth(25);
-        iViewer.setFitHeight(20);
+        iViewer.setFitWidth(20);
+        iViewer.setFitHeight(25);
         return new PersonObject(iViewer, id, gender, age);
     }
 

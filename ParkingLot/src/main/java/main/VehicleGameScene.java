@@ -2,6 +2,7 @@ package main;
 
 import Abstract.CheckInTicket;
 import Abstract.GameObject;
+import Abstract.GameScene;
 import CheckSystem.Other.CheckInStatus;
 import Unit.*;
 
@@ -26,7 +27,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
-public class VehicleGameScene {
+public class VehicleGameScene extends GameScene {
 
     private List<GameObject> cars = new ArrayList<>();
     private Car selectedCar = null;
@@ -35,7 +36,7 @@ public class VehicleGameScene {
     private PaymentMachine paymentMachine = null;
     private Gate gate = null;
 
-    private CarPark carPark = null;
+    private CarPark carPark;
 
     private Label ticketIDLabel;
     private Label ticketTimeInLabel;
@@ -68,6 +69,12 @@ public class VehicleGameScene {
     }
 
     private VehicleGameScene(Parent parent) {
+        super(parent);
+    }
+
+    @Override
+    protected void preInit(Parent parent) {
+
 
         // initial default UI
         // get UI object from parent
@@ -133,15 +140,20 @@ public class VehicleGameScene {
         if(this.carStatusLabel == null) {
             throw new Error("Car Status Label must not null");
         }
+    }
 
-        carPark = new CarPark(pane, 120);
+    @Override
+    protected void generate() {
+        this.carPark = new CarPark(pane, 120);
         carPark.generateParkingLot();
+    }
 
+    @Override
+    protected void bindControl() {
         checkIn.addEventFilter(MouseEvent.MOUSE_CLICKED, checkInHandler);
         checkOut.addEventFilter(MouseEvent.MOUSE_CLICKED, checkOutHandler);
         insertCard.addEventFilter(MouseEvent.MOUSE_CLICKED, insertCardHandler);
         pay.addEventFilter(MouseEvent.MOUSE_CLICKED, payHandler);
-
     }
 
     private EventHandler checkInHandler = e -> {
@@ -221,128 +233,8 @@ public class VehicleGameScene {
         alert.showAndWait();
     };
 
-    public int getCars() {
-        return cars.size();
-    }
-
-//    public void setCarPark(CarPark carPark) {
-//        this.carPark = carPark;
-//    }
-
-    public void removeCarPark() {
-        this.carPark = null;
-    }
-
-    public int getAvailableParkingLots() {
-        // get Available Parking Lot from car Park Object
-        if(carPark == null) {
-            return -1;
-        }
-
-        int count = 0;
-        for (ParkingLot parkingLot : carPark.getParkingLots()) {
-
-            if (!parkingLot.isParked()) {
-                count += 1;
-            }
-        }
-
-        return count;
-    }
-
-    void startTimer() {
-        // Update scene timer
-        AnimationTimer timer = new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-                onUpdate();
-            }
-        };
-        timer.start();
-    }
-
-    // This is a variable
-    // Car System Simulator keyboard event Handler
-    public EventHandler event = (EventHandler<KeyEvent>) e -> {
-        if(e.getCode() == KeyCode.ENTER) {
-            spawnCar();
-        }
-
-        // ensure there has one car (Testing use)
-        if(selectedCar == null) {
-            return;
-        }
-
-        if(e.getCode() == KeyCode.BACK_SPACE) {
-            removeCar(selectedCar);
-        }
-
-        if(e.getCode() == KeyCode.S) {
-            selectedCar.toggleReverse();
-        }
-
-        if(e.getCode() == KeyCode.W) {
-            selectedCar.toggleStop();
-        }
-
-        if(e.getCode() == KeyCode.A) {
-            selectedCar.rotateLeft();
-        }
-
-        if(e.getCode() == KeyCode.D) {
-            selectedCar.rotateRight();
-        }
-    };
-
-    public void setControl() {
-        // Set Control
-        scene.setOnKeyPressed(event);
-    }
-
-    public void removeControl() {
-        // remove eventHandler
-        scene.setOnKeyPressed(null);
-    }
-
-    private void addGameObject(GameObject object, double x, double y) {
-        object.getView().setTranslateX(x);
-        object.getView().setTranslateY(y);
-        pane.getChildren().add(object.getView());
-    }
-
-    void spawnCar() {
-        System.out.println("Spawn Car");
-        Random random = new Random();
-        random.setSeed(new Date().getTime());
-        Bounds bound = pane.getLayoutBounds();
-
-        Car car = Car.createCar(String.format("A%08d", cars.size() + 1), 4, 40.0);
-        Bounds carBound = car.getView().getLayoutBounds();
-        addCar(car, 20, bound.getHeight() - 50);
-    }
-
-    private void addCar(GameObject object, double x, double y) {
-
-        object
-            .addEventFilter(MouseEvent.MOUSE_CLICKED,
-            e -> {
-                selectedCar = (Car) object;
-            });
-
-        cars.add(object);
-        addGameObject(object, x, y);
-    }
-
-    private void removeCar(GameObject object) {
-        cars.remove(object);
-        pane.getChildren().remove(object.getView());
-        if(carPark != null) {
-            carPark.getParkingLots().forEach(c -> c.setStatus(false));
-        }
-        selectedCar = null;
-    }
-
-    private void onUpdate() {
+    @Override
+    protected void onUpdate() {
 
         // close Gate after pass
         carPark.getGates().forEach(gate1 -> {
@@ -499,6 +391,108 @@ public class VehicleGameScene {
             checkOut.setDisable(true);
             resetTicketDetail();
         }
+    }
+
+    public int getCars() {
+        return cars.size();
+    }
+
+    public int getAvailableParkingLots() {
+        // get Available Parking Lot from car Park Object
+        if(carPark == null) {
+            return -1;
+        }
+
+        int count = 0;
+        for (ParkingLot parkingLot : carPark.getParkingLots()) {
+
+            if (!parkingLot.isParked()) {
+                count += 1;
+            }
+        }
+
+        return count;
+    }
+
+    // This is a variable
+    // Car System Simulator keyboard event Handler
+    public EventHandler event = (EventHandler<KeyEvent>) e -> {
+        if(e.getCode() == KeyCode.ENTER) {
+            spawnCar();
+        }
+
+        // ensure there has one car (Testing use)
+        if(selectedCar == null) {
+            return;
+        }
+
+        if(e.getCode() == KeyCode.BACK_SPACE) {
+            removeCar(selectedCar);
+        }
+
+        if(e.getCode() == KeyCode.S) {
+            selectedCar.toggleReverse();
+        }
+
+        if(e.getCode() == KeyCode.W) {
+            selectedCar.toggleStop();
+        }
+
+        if(e.getCode() == KeyCode.A) {
+            selectedCar.rotateLeft();
+        }
+
+        if(e.getCode() == KeyCode.D) {
+            selectedCar.rotateRight();
+        }
+    };
+
+    public void setControl() {
+        // Set Control
+        scene.setOnKeyPressed(event);
+    }
+
+    public void removeControl() {
+        // remove eventHandler
+        scene.setOnKeyPressed(null);
+    }
+
+    private void addGameObject(GameObject object, double x, double y) {
+        object.getView().setTranslateX(x);
+        object.getView().setTranslateY(y);
+        pane.getChildren().add(object.getView());
+    }
+
+    void spawnCar() {
+        System.out.println("Spawn Car");
+        Random random = new Random();
+        random.setSeed(new Date().getTime());
+        Bounds bound = pane.getLayoutBounds();
+
+        Car car = Car.createCar(String.format("A%08d", cars.size() + 1), 4, 40.0);
+        Bounds carBound = car.getView().getLayoutBounds();
+        addCar(car, 20, bound.getHeight() - 50);
+    }
+
+    private void addCar(GameObject object, double x, double y) {
+
+        object
+            .addEventFilter(MouseEvent.MOUSE_CLICKED,
+            e -> {
+                selectedCar = (Car) object;
+            });
+
+        cars.add(object);
+        addGameObject(object, x, y);
+    }
+
+    private void removeCar(GameObject object) {
+        cars.remove(object);
+        pane.getChildren().remove(object.getView());
+        if(carPark != null) {
+            carPark.getParkingLots().forEach(c -> c.setStatus(false));
+        }
+        selectedCar = null;
     }
 
     private void resetTicketDetail() {

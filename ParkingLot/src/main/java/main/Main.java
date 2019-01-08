@@ -37,6 +37,29 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
+        initialize(primaryStage);
+
+        tabPaneStatus.addEventFilter(MouseEvent.MOUSE_CLICKED, onTabChange);
+
+        // Schedule update time
+        timeInterval(event -> {
+            LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE")));
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
+            carTimeLabel.setText(formatter.format(localDateTime));
+            workTimeLabel.setText(formatter.format(localDateTime));
+            carNumberLbl.setText(String.format("%d Cars", vehicleGameScene.getCars()));
+
+            int balanceCP = vehicleGameScene.getAvailableParkingLots(); // if no car park will return -1
+            if(balanceCP != -1)
+                balanceCarPark.setText(String.format("%d Available", balanceCP));
+            else
+                balanceCarPark.setText("No Available.");
+
+            WorkCheckTableViewTab.getInstance().updateTableView();
+        }, 1);
+    }
+    public void initialize(Stage primaryStage) throws Exception {
+
         ConfigManager.init("config");
         Parent root = FXMLLoader.load(getClass().getResource("gameScene.fxml"));
         primaryStage.setTitle("Hello World");
@@ -65,29 +88,11 @@ public class Main extends Application {
         personGameScene = PersonGameScene.getInstance();
         personGameScene.startTimer();
 
-        WorkCheckTableViewTab.initialize(root);
+        WorkCheckTableViewTab.init(root);
         workCheckTableViewTab = WorkCheckTableViewTab.getInstance();
 
-        CarTicketTableViewTab.initialize(root);
+        CarTicketTableViewTab.init(root);
         carTicketTableViewTab = CarTicketTableViewTab.getInstance();
-
-        // Schedule update time
-        timeInterval(event -> {
-            LocalDateTime localDateTime = LocalDateTime.now(ZoneId.of(ConfigManager.getString("TIMEZONE")));
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss");
-            carTimeLabel.setText(formatter.format(localDateTime));
-            workTimeLabel.setText(formatter.format(localDateTime));
-            carNumberLbl.setText(String.format("%d Cars", vehicleGameScene.getCars()));
-
-            int balanceCP = vehicleGameScene.getAvailableParkingLots(); // if no car park will return -1
-            if(balanceCP != -1)
-                balanceCarPark.setText(String.format("%d Available", balanceCP));
-            else
-                balanceCarPark.setText("No Available.");
-
-            WorkCheckTableViewTab.getInstance().updateTableView();
-        }, 1);
-        tabPaneStatus.addEventFilter(MouseEvent.MOUSE_CLICKED, onTabChange);
     }
 
     private EventHandler onTabChange = e -> {
@@ -113,21 +118,12 @@ public class Main extends Application {
         }
     };
 
-    private void controlInterval(EventHandler event, long second) {
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(second),event));
-        timeline.setCycleCount(Timeline.INDEFINITE);
-        timeline.play();
-    }
-
     private void timeInterval(EventHandler event, long secondDuration) {
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(secondDuration),
                 event));
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
     }
-
-
-
 
     public static void main(String[] args) {
         launch(args);

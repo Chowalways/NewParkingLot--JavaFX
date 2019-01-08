@@ -2,6 +2,7 @@ package main;
 
 import Abstract.CheckInTicket;
 import Abstract.GameObject;
+import Abstract.GameScene;
 import CheckSystem.Other.Gender;
 import Unit.*;
 import Class.Person; // TO CHANGE
@@ -23,7 +24,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonGameScene {
+public class PersonGameScene extends GameScene {
 
     private List<GameObject> human = new ArrayList<>();
     private PersonObject selectedPerson = null;
@@ -57,7 +58,11 @@ public class PersonGameScene {
     }
 
     private PersonGameScene(Parent parent) {
+        super(parent);
+    }
 
+    @Override
+    protected void preInit(Parent parent) {
         // initial default UI
         // get UI object from parent
         this.pane = (Pane) parent.lookup("#gamePane1");
@@ -112,26 +117,144 @@ public class PersonGameScene {
             throw new Error("Check Out Time Label is null");
         }
 
-//        this.tabPane.getSelectionModel().selectedItemProperty().addListener(
-//                (observable, oldValue, newValue) -> {
-//                    // set Event Listener with to selected tab
-//                    if(newValue.getId().compareToIgnoreCase("workSystem") == 0) {
-//                        setHumanControl();
-//                    } else if (newValue.getId().compareToIgnoreCase("carSystem") == 0) {
-//                        removeHumanControl();
-//                    }
-//                }
-//        );
-
         this.personStatus.setText("0 Person");
         this.ticketStatus.setText("");
+
+    }
+
+    @Override
+    protected void generate() {
 
         office = new Office(pane);
         office.generateOffice();
 
-        CheckIn1.addEventFilter(MouseEvent.MOUSE_CLICKED, checkIn1Handler);
-        Checkout1.addEventFilter(MouseEvent.MOUSE_CLICKED, checkOut1Handler);
     }
+
+    @Override
+    protected void bindControl() {
+        System.out.println(checkIn1Handler);
+//        CheckIn1.addEventFilter(MouseEvent.MOUSE_CLICKED, checkIn1Handler);
+//        Checkout1.addEventFilter(MouseEvent.MOUSE_CLICKED, checkOut1Handler);
+    }
+
+    @Override
+    protected void onUpdate() {
+
+        // close Gate after pass
+        office.getDoor().forEach(door1 -> {
+            boolean noPersonNearbyDoor = true;
+            if (door1.getDoorStatus()) {
+                for (GameObject person : human) {
+                    if (person.isColliding(door1) != Side.NONE) {
+                        noPersonNearbyDoor = false;
+                        break;
+                    }
+                }
+            }
+            if (noPersonNearbyDoor) {
+                door1.close();
+            }
+
+        });
+
+        office.getDoor().forEach(door1 -> {
+            door1.update();
+        });
+
+        human.removeIf(GameObject::isDead);
+
+        human.forEach(humans -> {
+            boolean collide = false;
+            for (GameObject person : human) {
+                if (humans.getMoveSide().compare(humans.isColliding(person))) {
+                    collide = true;
+                    break;
+                }
+            }
+
+            // check person collided
+            if(office != null) {
+
+                // collide with wall
+                for (Wall wall : office.getWalls()) {
+                    if(humans.getMoveSide().compare(humans.isColliding(wall))) {
+                        collide = true;
+                        break;
+                    }
+                }
+
+                // collide with door
+                for (Door door : office.getDoor()) {
+                    if(!door.getDoorStatus()) {
+                        if(humans.getMoveSide().compare(humans.isColliding(door))) {
+                            collide = true;
+                            break;
+                        }
+                    }
+                }
+
+                // collide with punch machine change to punch card machine.
+//                for (PunchMachine punchMachine : office.getPunchCardMachines()) {
+//                    if(office.getMoveSide().compare(office.isColliding(punchMachine))) {
+//                        collide = true;
+//                        break;
+//                    }
+//                }
+            }
+
+            if(!collide) {
+                humans.update();
+            }
+        });
+
+        if(selectedPerson == null){
+            return;
+        }
+
+        if (selectedPerson != null && selectedPerson instanceof PersonObject) {
+            PersonObject selectedPerson = this.selectedPerson;
+            personIDLabel.setText(selectedPerson.getPerson().getId());
+
+            //has ticket means customer have check in status or not.
+            if(selectedPerson.hasTicket()) {
+                this.ticketStatus.setText("GET IN OFFICE");
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd hh:mm");
+                CheckInTicket ticket = selectedPerson.getTicket();
+//                personIDLabel.setText(selectedPerson.getPerson().getId());
+                checkInTimeLabel.setText(formatter.format(ticket.getCheckInTime()));
+            } else {
+//                resetTicketDetail();
+            }
+
+            // check door (CheckIn Use)
+            Door door = office.checkPersonNearbyDoor(selectedPerson);
+            if (door != null) {
+                this.door = door;
+                // check has ticket or not
+                boolean status = door.personStatus(selectedPerson);
+                if (status) {
+                    CheckIn1.setDisable(true);
+                    Checkout1.setDisable(false);
+                } else {
+                    CheckIn1.setDisable(false);
+                    Checkout1.setDisable(true);
+                }
+            } else {
+                this.door = null;
+                CheckIn1.setDisable(true);
+                Checkout1.setDisable(true);
+            }
+        } else {
+            // reset to default
+            this.door = null;
+            this.punchMachine = null;
+            this.CheckIn1.setDisable(true);
+            this.Checkout1.setDisable(true);
+
+            resetTicketDetail();
+        }
+    }
+
 
     private EventHandler checkIn1Handler = e -> {
         System.out.println("Check In");
@@ -247,134 +370,6 @@ public class PersonGameScene {
         //need to remove person;
         pane.getChildren().remove(object.getView());
         selectedPerson = null;
-    }
-
-    public void startTimer() {
-        // Update scene timer
-        AnimationTimer timer = new AnimationTimer() {
-            @Override
-            public void handle(long now) {
-                onUpdate();
-            }
-        };
-        timer.start();
-    }
-
-    private void onUpdate() {
-
-        // close Gate after pass
-        office.getDoor().forEach(door1 -> {
-            boolean noPersonNearbyDoor = true;
-            if (door1.getDoorStatus()) {
-                for (GameObject person : human) {
-                    if (person.isColliding(door1) != Side.NONE) {
-                        noPersonNearbyDoor = false;
-                        break;
-                    }
-                }
-            }
-            if (noPersonNearbyDoor) {
-                door1.close();
-            }
-
-        });
-
-        office.getDoor().forEach(door1 -> {
-            door1.update();
-        });
-
-        human.removeIf(GameObject::isDead);
-
-        human.forEach(humans -> {
-            boolean collide = false;
-            for (GameObject person : human) {
-                if (humans.getMoveSide().compare(humans.isColliding(person))) {
-                    collide = true;
-                    break;
-                }
-            }
-
-            // check person collided
-            if(office != null) {
-
-                // collide with wall
-                for (Wall wall : office.getWalls()) {
-                    if(humans.getMoveSide().compare(humans.isColliding(wall))) {
-                        collide = true;
-                        break;
-                    }
-                }
-
-                // collide with door
-                for (Door door : office.getDoor()) {
-                    if(!door.getDoorStatus()) {
-                        if(humans.getMoveSide().compare(humans.isColliding(door))) {
-                            collide = true;
-                            break;
-                        }
-                    }
-                }
-
-                // collide with punch machine change to punch card machine.
-//                for (PunchMachine punchMachine : office.getPunchCardMachines()) {
-//                    if(office.getMoveSide().compare(office.isColliding(punchMachine))) {
-//                        collide = true;
-//                        break;
-//                    }
-//                }
-            }
-
-            if(!collide) {
-                humans.update();
-            }
-        });
-
-        if(selectedPerson == null){
-            return;
-        }
-
-        if (selectedPerson != null && selectedPerson instanceof PersonObject) {
-            PersonObject selectedPerson = this.selectedPerson;
-            personIDLabel.setText(selectedPerson.getPerson().getId());
-
-            //has ticket means customer have check in status or not.
-            if(selectedPerson.hasTicket()) {
-                this.ticketStatus.setText("GET IN OFFICE");
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd hh:mm");
-                CheckInTicket ticket = selectedPerson.getTicket();
-//                personIDLabel.setText(selectedPerson.getPerson().getId());
-                checkInTimeLabel.setText(formatter.format(ticket.getCheckInTime()));
-            } else {
-//                resetTicketDetail();
-            }
-
-            // check door (CheckIn Use)
-            Door door = office.checkPersonNearbyDoor(selectedPerson);
-            if (door != null) {
-                this.door = door;
-                // check has ticket or not
-                boolean status = door.personStatus(selectedPerson);
-                if (status) {
-                    CheckIn1.setDisable(true);
-                    Checkout1.setDisable(false);
-                } else {
-                    CheckIn1.setDisable(false);
-                    Checkout1.setDisable(true);
-                }
-            } else {
-                this.door = null;
-                CheckIn1.setDisable(true);
-                Checkout1.setDisable(true);
-            }
-        } else {
-            // reset to default
-            this.door = null;
-            this.punchMachine = null;
-            this.CheckIn1.setDisable(true);
-            this.Checkout1.setDisable(true);
-
-            resetTicketDetail();
-        }
     }
 
     private void resetTicketDetail() {

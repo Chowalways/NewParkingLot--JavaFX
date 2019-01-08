@@ -16,7 +16,7 @@ public class ParkingLot extends GameObject {
             super(rectangle);
         }
 
-        public static ParkingLot createCarPark() {
+        public static ParkingLot createParkingLot() {
             Rectangle rectangle = new Rectangle(WIDTH, HEIGHT);
 
             rectangle.setFill(Color.GREEN);

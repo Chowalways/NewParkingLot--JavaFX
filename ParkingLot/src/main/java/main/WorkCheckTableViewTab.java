@@ -16,13 +16,13 @@ public class WorkCheckTableViewTab extends TableViewController {
     public static WorkCheckTableViewTab getInstance() {
 
         if(_instance == null) {
-            throw new Error("No Initial Work Check TableView Tab");
+            throw new Error("You need to run init before you use");
         }
 
         return _instance;
     }
 
-    public static void initialize(Parent parent) {
+    public static void init(Parent parent) {
         assert parent != null;
         _instance = new WorkCheckTableViewTab(parent);
     }

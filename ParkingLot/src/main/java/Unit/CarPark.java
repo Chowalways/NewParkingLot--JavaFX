@@ -112,7 +112,7 @@ public class CarPark extends GameObject {
     }
 
     void spawnParkingLot(int x, int y) {
-        ParkingLot parkingLot = ParkingLot.createCarPark();
+        ParkingLot parkingLot = ParkingLot.createParkingLot();
         addParkingLot(parkingLot, x, y);
     }
 
