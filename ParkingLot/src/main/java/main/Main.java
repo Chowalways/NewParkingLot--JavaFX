@@ -5,12 +5,14 @@ import config.ConfigManager;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
+import javafx.beans.value.ChangeListener;
 import javafx.event.EventHandler;
 import javafx.event.EventTarget;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -39,7 +41,8 @@ public class Main extends Application {
 
         initialize(primaryStage);
 
-        tabPaneStatus.addEventFilter(MouseEvent.MOUSE_CLICKED, onTabChange);
+        // tab change listener
+        tabPaneStatus.getSelectionModel().selectedItemProperty().addListener(onTabChange);
 
         // Schedule update time
         timeInterval(event -> {
@@ -58,6 +61,7 @@ public class Main extends Application {
             WorkCheckTableViewTab.getInstance().updateTableView();
         }, 1);
     }
+
     public void initialize(Stage primaryStage) throws Exception {
 
         ConfigManager.init("config");
@@ -76,7 +80,6 @@ public class Main extends Application {
         tabPaneStatus = (TabPane) root.lookup("#tabPane");
 
         tabPaneStatus.getTabs();
-        System.out.println(tabPaneStatus.getSelectionModel().getSelectedItem().getText());
 
         // Create Game Scene
         VehicleGameScene.init(root);
@@ -95,11 +98,10 @@ public class Main extends Application {
         carTicketTableViewTab = CarTicketTableViewTab.getInstance();
     }
 
-    private EventHandler onTabChange = e -> {
-        EventTarget events = e.getTarget();
-        if(events instanceof  LabeledText) {
-            String text = ((LabeledText)events).getText();
-            System.out.println(((LabeledText)events).getText());
+    private ChangeListener<Tab> onTabChange = (observeble, oldValue, newValue) -> {
+
+            String text = newValue.getText();
+            System.out.println(text);
 
             personGameScene.removeHumanControl();
             vehicleGameScene.removeControl();
@@ -115,7 +117,6 @@ public class Main extends Application {
             } else if(text.equalsIgnoreCase("Car Tickets")) {
                 carTicketTableViewTab.updateTableView();
             }
-        }
     };
 
     private void timeInterval(EventHandler event, long secondDuration) {

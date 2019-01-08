@@ -75,6 +75,10 @@ public class PersonGameScene extends GameScene {
         this.checkInTimeLabel = (Label) parent.lookup("#checkInTimeLabel");
         this.checkOutTimeLabel = (Label) parent.lookup("#checkOutTimeLabel");
 
+        pane.sceneProperty().addListener(((observable, oldValue, newValue) -> {
+            System.out.println("here");
+            System.out.println(newValue);
+        }));
         this.scene = parent.getScene();
 
         if(this.pane == null) {
